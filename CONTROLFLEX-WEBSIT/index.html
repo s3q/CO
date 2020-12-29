@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!--viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--description-->
+    <meta name="description" content="Build fast, responsive sites with controlflex... , The best library Html, CSS and javascript in the world.">
+
+    <!--author-->
+    <meta name="author" content="s3dev">
+
+    <!--title-->
+    <title>Controlfex CSS & js Library</title>
+
+    <!--language-->
+    <script src="langscript.js"></script>
+
+    <!--css-->
+    <link rel="stylesheet" href="controlfex.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!--icon-->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+    <!--window icon-->
+    <link rel="apple-touch-icon" href="basis-icon.svg" sizes="180x180">
+    <link rel="icon" href="basis-icon.svg" type="image/svg">
+</head>
+<body>
+
+    <div class="loading-overlay">
+        <div class="spinner spinner-pink-trans"></div>
+    </div>
+
+    <!--navbar-->
+    <nav class="navbar navbar-purple m-0">
+        <a class="navbar-link align-items-center" href="#"><i class="fas fa-fire io-sm mr-6"></i> <span class="dp-none-md">CONTROLFLEX</span></a>
+        <div class="opt-navbar">
+            <button class="bn-navbar bn-close" id="open-menu-window" style="font-size: 24px;"><i class="fas fa-bars"></i></button>
+            <a class="p-2" href="https://github.com/CONTROLFLEX/CONTROLFLEX"><i class="link-noactive fab fa-github text-lg"></i></a>
+            <a class="p-2" href="https://twitter.com/CONTROLFLEX_CSS"><i class="link-noactive fab fa-twitter text-lg"></i></a>
+        </div>
+        <div class="collapse_ navbar-collapse">
+            <ul class="nav-collapse">
+                <li><a class="link-active-light p-3" href="#">Home</a></li>
+                <li class="tooltip-menu"><a class="link-noactive-light p-3" href="get-start.html">Get Start <i class="fas fa-angle-down ml-2"></i></a>
+                    <div class="tooltip-content">
+                        <div class="header"><a class="p-3" href="get-start.html">Get Start</a></div>
+                        <div class="box">
+                            <div class="box-content"><a class="p-3" href="download.html">Download <i class="fas fa-angle-right"></i></a></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="tooltip-menu"><a class="link-noactive-light p-3" href="explore.html">Explore <i class="fas fa-angle-down ml-2"></i></a>
+                    <div class="tooltip-content">
+                        <div class="header"><a class="p-3" href="explore.html">Explore</a></div>
+                        <div class="box">
+                            <div class="box-content"><a class="p-3" href="layout/screens.html">Layout <i class="fas fa-angle-right"></i></a></div>
+                            <div class="box-content"><a class="p-3" href="components/alert.html">Components <i class="fas fa-angle-right"></i></a></div>
+                            <div class="box-content"><a class="p-3" href="utilities/align.html">Utilities <i class="fas fa-angle-right"></i></a></div>
+                            <div class="box-content"><a class="p-3" href="blog.html">Blog <i class="fas fa-angle-right"></i></a></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="tooltip-menu"><a class="link-noactive-light p-3" href="support.html">Support</a></li>
+                <li class="tooltip-menu"><a class="link-noactive-light p-3" href="blog.html">Blog <i class="fas fa-angle-down ml-2"></i></a>
+                    <div class="tooltip-content">
+                        <div class="header"><a class="p-3" href="blog.html">Blog</a></div>
+                        <div class="box">
+                            <div class="box-content"><a class="p-3" href="versions/V.0.3.html">V.0.3 <i class="fas fa-angle-right"></i></a></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!---->
+
+
+    <div class="menu-window navbar-dark-blue menu_" id="menu-window">
+        <div class="align-items-center">
+            <a><i class="fas fa-fire io-sm mr-6"></i> <span>CONTROLFLEX</span></a>
+            <button class="bn-close ml-auto" id="close-menu-window"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="menu-content_">
+            <ul class="nav-vr w-100 mt-3 p-3 align-items-center">
+                <li class="w-85 link-menu_"><a class="link-active-light p-4 dp-block" href="#">Home <span class="fas fa-angle-right float-right"></span></a></li>
+                <li class="w-85 link-menu_"><a class="link-noactive-light p-4 dp-block" href="get-start.html">Get Start <span class="fas fa-angle-right float-right"></span></a></li>
+                <li class="w-85 link-menu_"><a class="link-noactive-light p-4 dp-block" href="explore.html">Explore <span class="fas fa-angle-right float-right"></span></a></li>
+                <li class="w-85 link-menu_"><a class="link-noactive-light p-4 dp-block" href="support.html">Support <span class="fas fa-angle-right float-right"></span></a></li>
+                <li class="w-85 link-menu_"><a class="link-noactive-light p-4 dp-block" href="blog.html">Blog <span class="fas fa-angle-right float-right"></span></a></li>
+            </ul>
+            <div class="bn-lang-menu_ bn-lang_">
+                <div class="custom-form change-lang_js" data-lang="ar">
+                    <input type="checkbox" class="custom-switch_" name="" id="menu-switch-lang">
+                    <label for="menu-switch-lang" class="custom-switch-label_ color-light-trans">Arabic</label>
+                </div>
+            </div>
+            <div class="menu-footer_">
+                <a class="p-2" href="https://github.com/CONTROLFLEX/CONTROLFLEX"><i class="link-noactive fab fa-github text-lg"></i></a>
+                <a class="p-2" href="https://twitter.com/CONTROLFLEX_CSS"><i class="link-noactive fab fa-twitter text-lg"></i></a>
+                <a class="p-2" href="explore.html"><i class="link-noactive fas fa-search text-lg"></i></a>
+                <a class="p-2" href="about.html"><i class="link-noactive fas fa-users text-lg"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <header class="pt-50 pb-50 bgc-purple text-center color-light-trans overflow-hidden relative">
+        <div class="bn-lang-header_ bn-lang_">
+            <div class="custom-form change-lang_js" data-lang="ar">
+                <input type="checkbox" class="custom-switch_" name="" id="header-switch-lang">
+                <label for="header-switch-lang" class="custom-switch-label_ color-light-trans">Arabic</label>
+            </div>
+        </div>
+        <div class="p-4">
+            <h1 class="h1_">CONTROLFLEX</h1>
+            <p class="pragraph-header_">
+                Build fast, responsive sites with controlflex... ,  is an open source library dedicated to facilitate responsive web design that is compatible with all screens .. It also supports Arabic and English languages .. It includes powerful JavaScript plugins. 
+            </p>
+        </div>
+        <div class="bn-header">
+            <a class="bn bn-light-blue bn_ pill-lg" href="get-start.html">Start <i class="fas fa-play text-sm ml-6"></i></a>
+            <a class="bn outline-light bn_ pill-lg" aria-controls="alert-window" data-fade="alert" data-duration="100">Dowload <i class="fas fa-arrow-down text-sm ml-6"></i></a>
+        </div>
+    </header>
+    <div class="text-center mt-5">
+        <a class="mr-4 ml-4" href="versions/V.0.3.html" style="white-space: nowrap;"><kbd class="p-4">Version <span class="bgc-light p-1 version-info_">V.0.3</span></kbd></a>
+        <a class="ml-4 mr-4" href="https://github.com/CONTROLFLEX/CONTROLFLEX" style="white-space: nowrap;"><kbd class="p-4">Github <i class="fab fa-github"></i></kbd></a>
+    </div>
+
+
+    <!--alert-window-->
+    <div class="backdrop-window" id="alert-window" aria-expanded="false" data-event="click" style="display: none;" role="alert">
+        <div class="alert-window">
+            <div class="alert-window-head">
+                <button aria-controls="alert-window" data-fade="alert" data-duration="100" class="bn-close"><i class="fas fa-times"></i></button>
+                <span class="color-red">DOWNLOAD</span>
+            </div>
+            <div class="mt-10">
+                <p>
+                    Download a website development package that helps you easily build your site .. This package contains the library files without the source! <a href="download.html" class="color-red">Package with source</a> 
+                </p>
+                <a class="bn-block bn-dark-blue bn_" style="margin: 20px auto;" href="https://github.com/CONTROLFLEX/CONTROLFLEX.git">Download <i class="fas fa-arrow-down text-sm ml-6"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="body_ p-6">
+        <div class="container-full">
+            <div class="section-12-lxs section-8-xs section-4-md dp-flex center-center m-center">
+                <svg width="230" height="270" viewBox="0 0 319 400" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M166.854 18.6411C166.854 0.0473722 143.178 -6.96043 132.749 8.45361C37.0787 149.883 173.034 156.25 173.034 225C173.034 252.836 150.547 275.36 122.939 274.992C95.7711 274.641 74.1573 251.735 74.1573 224.258V157.453C74.1573 140.5 53.71 132.274 42.1538 144.563C21.4747 166.532 0 204.164 0 250C0 332.711 66.533 400 148.315 400C230.096 400 296.629 332.711 296.629 250C296.629 116.961 166.854 99.2191 166.854 18.6411V18.6411Z" fill="url(#paint0_linear)"/><path d="M188.427 18.6411C188.427 0.0473722 164.751 -6.96043 154.322 8.45361C58.6517 149.883 194.607 156.25 194.607 225C194.607 252.836 172.12 275.36 144.512 274.992C117.344 274.641 95.7304 251.735 95.7304 224.258V157.453C95.7304 140.5 75.283 132.274 63.7269 144.563C43.0478 166.532 21.5731 204.164 21.5731 250C21.5731 332.711 88.1061 400 169.888 400C251.669 400 318.202 332.711 318.202 250C318.202 116.961 188.427 99.2191 188.427 18.6411V18.6411Z" fill="url(#paint1_linear)"/><defs><linearGradient id="paint0_linear" x1="148.315" y1="0" x2="148.315" y2="400" gradientUnits="userSpaceOnUse"><stop stop-color="#6F42C1"/><stop offset="1" stop-color="#AD00FF"/></linearGradient><linearGradient id="paint1_linear" x1="169.888" y1="0" x2="169.888" y2="400" gradientUnits="userSpaceOnUse"><stop stop-color="#6F42C1" stop-opacity="0.4"/><stop offset="1" stop-color="#EB00FF" stop-opacity="0.4"/></linearGradient></defs></svg>
+            </div>
+     
+            <div class="section-12 section-7-md align-items-center offset-left-1-md mt-20 mt-0-md">
+                <div id="getStartCo">
+                    <h2 class="h2_ link-h_">Get start <a href="#getStartCo"><span class="fas fa-play-circle"></span></a></h2>
+                    <article class="pragraph_ p-5" style="color: #717171;">Start using the controlflex library to create a modern site that outperforms other sites in terms of performance and appearance.</article>
+                    <div class="justify-content-center mt-10">
+                        <a class="bn bn-purple bn2_ bn-lg lower-shadow-lg" href="get-start.html">Get Start <i class="fas fa-play text-sm ml-6"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-full" style="margin-top: 180px;">     
+            <div class="section-12 section-7-md align-items-center offset-right-1-md or-last or-first-md">
+                <div id="ExamplesCo">
+                    <h2 class="h2_ link-h_">Examples <a href="#ExamplesCo"><span class="fas fa-info-circle"></span></a></h2>
+                    <article class="pragraph_ p-5" style="color: #717171;">We also provide examples that make you more creative with this library and understand its work ... and how you will use it properly ..</article>
+                    <div class="justify-content-center mt-10">
+                        <a class="bn bn-pink bn2_ bn-lg lower-shadow-lg" href="explore.html">Learn More <i class="fas fa-info-circle text-sm ml-6"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-12-lxs section-8-xs section-4-md dp-flex io_ or-first or-last-md">
+                <svg width="400" height="300" viewBox="0 0 670 631" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="335.278" y="435.94" width="165.418" height="9.97781" rx="4.98891" fill="#69B4FF"/><rect x="22.7038" y="361.052" width="168.859" height="28.9335" rx="2.5" stroke="#B0B0B0"/><rect x="430.254" y="280.229" width="164.198" height="80.8226" rx="9.5" stroke="#AE85FA" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M313.074 431.131C313.074 427.052 316.385 423.745 320.47 423.745H512.783C516.868 423.745 520.18 427.052 520.18 431.131V527.246C520.18 531.326 516.868 534.633 512.783 534.633H426.72C425.157 534.632 423.657 535.25 422.549 536.352L417.67 541.194C417.093 541.767 416.161 541.767 415.584 541.194L410.705 536.352C409.597 535.25 408.097 534.632 406.533 534.633H320.47C316.385 534.633 313.074 531.326 313.074 527.246V431.131ZM320.47 425.222C318.901 425.222 317.396 425.845 316.286 426.953C315.176 428.061 314.553 429.564 314.553 431.131V452.552H518.7V431.131C518.7 429.564 518.077 428.061 516.967 426.953C515.858 425.845 514.353 425.222 512.783 425.222H320.47ZM518.7 454.029H314.553V527.246C314.553 528.814 315.176 530.317 316.286 531.425C317.396 532.533 318.901 533.155 320.47 533.155H406.533C408.487 533.156 410.362 533.928 411.748 535.303L416.627 540.147L421.506 535.303C422.891 533.928 424.766 533.156 426.72 533.155H512.783C514.353 533.155 515.858 532.533 516.967 531.425C518.077 530.317 518.7 528.814 518.7 527.246V454.029Z" fill="#74B9FF"/><path fill-rule="evenodd" clip-rule="evenodd" d="M76.556 428.699H149.043V462.676H76.556V428.699ZM150.522 427.222V464.154H75.0767V427.222H150.522Z" fill="#FFD15A"/><path fill-rule="evenodd" clip-rule="evenodd" d="M149.412 428.548H215.242C216.616 428.548 217.932 429.093 218.903 430.063C219.874 431.032 220.42 432.347 220.42 433.719V457.355C220.42 458.726 219.874 460.041 218.903 461.011C217.932 461.981 216.616 462.525 215.242 462.525H149.412V428.548ZM215.242 427.071C217.008 427.071 218.701 427.771 219.95 429.018C221.198 430.265 221.899 431.956 221.899 433.719V457.355C221.899 459.118 221.198 460.809 219.95 462.056C218.701 463.302 217.008 464.003 215.242 464.003H147.933V427.071H215.242ZM6.79308 427.071C3.0415 427.071 0 430.047 0 433.719V457.355C0 461.027 3.0415 464.003 6.79308 464.003H73.9664V427.071H6.79308ZM17.7519 442.582C16.9673 442.582 16.2147 442.894 15.6599 443.448C15.105 444.002 14.7933 444.753 14.7933 445.537C14.7933 446.32 15.105 447.072 15.6599 447.626C16.2147 448.18 16.9673 448.491 17.7519 448.491H56.2145C56.9992 448.491 57.7517 448.18 58.3066 447.626C58.8614 447.072 59.1732 446.32 59.1732 445.537C59.1732 444.753 58.8614 444.002 58.3066 443.448C57.7517 442.894 56.9992 442.582 56.2145 442.582H17.7519Z" fill="#FFD15A"/><path fill-rule="evenodd" clip-rule="evenodd" d="M59.5437 326.029C61.113 326.029 62.6181 325.406 63.7278 324.298C64.8376 323.19 65.461 321.687 65.461 320.12C65.461 318.553 64.8376 317.05 63.7278 315.941C62.6181 314.833 61.113 314.211 59.5437 314.211C57.9743 314.211 56.4692 314.833 55.3595 315.941C54.2498 317.05 53.6264 318.553 53.6264 320.12C53.6264 321.687 54.2498 323.19 55.3595 324.298C56.4692 325.406 57.9743 326.029 59.5437 326.029V326.029ZM59.5437 327.506C63.6288 327.506 66.9403 324.199 66.9403 320.12C66.9403 316.04 63.6288 312.733 59.5437 312.733C55.4585 312.733 52.147 316.04 52.147 320.12C52.147 324.199 55.4585 327.506 59.5437 327.506ZM37.3537 327.506C41.4389 327.506 44.7504 324.199 44.7504 320.12C44.7504 316.04 41.4389 312.733 37.3537 312.733C33.2686 312.733 29.9571 316.04 29.9571 320.12C29.9571 324.199 33.2686 327.506 37.3537 327.506ZM37.3537 323.813C38.3346 323.813 39.2753 323.424 39.9688 322.731C40.6624 322.039 41.0521 321.099 41.0521 320.12C41.0521 319.14 40.6624 318.201 39.9688 317.508C39.2753 316.816 38.3346 316.427 37.3537 316.427C36.3729 316.427 35.4322 316.816 34.7386 317.508C34.0451 318.201 33.6554 319.14 33.6554 320.12C33.6554 321.099 34.0451 322.039 34.7386 322.731C35.4322 323.424 36.3729 323.813 37.3537 323.813ZM76.556 312.733C75.7713 312.733 75.0187 313.045 74.4639 313.599C73.909 314.153 73.5973 314.904 73.5973 315.688V324.552C73.5973 325.335 73.909 326.087 74.4639 326.641C75.0187 327.195 75.7713 327.506 76.556 327.506H85.4319C86.2166 327.506 86.9692 327.195 87.524 326.641C88.0789 326.087 88.3906 325.335 88.3906 324.552V315.688C88.3906 314.904 88.0789 314.153 87.524 313.599C86.9692 313.045 86.2166 312.733 85.4319 312.733H76.556ZM85.1923 316.666C85.1145 316.588 85.0218 316.527 84.9198 316.486C84.8178 316.445 84.7086 316.425 84.5987 316.428C84.4888 316.43 84.3804 316.454 84.2802 316.5C84.18 316.545 84.09 316.61 84.0155 316.69L80.2321 321.504L77.951 319.226C77.7968 319.077 77.5902 318.995 77.3758 318.996C77.1613 318.998 76.9562 319.084 76.8045 319.236C76.6529 319.387 76.567 319.592 76.5654 319.806C76.5637 320.02 76.6464 320.227 76.7956 320.381L79.6788 323.26C79.7564 323.337 79.8489 323.398 79.9507 323.439C80.0524 323.48 80.1615 323.5 80.2712 323.498C80.3809 323.496 80.4891 323.472 80.5893 323.427C80.6895 323.382 80.7795 323.318 80.8541 323.238L85.2041 317.808C85.3524 317.654 85.4343 317.448 85.4321 317.234C85.4299 317.021 85.3437 316.817 85.1923 316.666V316.666ZM107.622 314.211H98.7459C98.3535 314.211 97.9773 314.366 97.6998 314.643C97.4224 314.92 97.2666 315.296 97.2666 315.688V324.552C97.2666 324.943 97.4224 325.319 97.6998 325.596C97.9773 325.873 98.3535 326.029 98.7459 326.029H107.622C108.014 326.029 108.39 325.873 108.668 325.596C108.945 325.319 109.101 324.943 109.101 324.552V315.688C109.101 315.296 108.945 314.92 108.668 314.643C108.39 314.366 108.014 314.211 107.622 314.211ZM98.7459 312.733C97.9612 312.733 97.2087 313.045 96.6538 313.599C96.0989 314.153 95.7872 314.904 95.7872 315.688V324.552C95.7872 325.335 96.0989 326.087 96.6538 326.641C97.2087 327.195 97.9612 327.506 98.7459 327.506H107.622C108.407 327.506 109.159 327.195 109.714 326.641C110.269 326.087 110.581 325.335 110.581 324.552V315.688C110.581 314.904 110.269 314.153 109.714 313.599C109.159 313.045 108.407 312.733 107.622 312.733H98.7459Z" fill="#FF7373"/><path fill-rule="evenodd" clip-rule="evenodd" d="M533.885 89.143C534.024 89.0045 534.212 88.9267 534.408 88.9267C534.604 88.9267 534.792 89.0045 534.931 89.143L538.107 92.3139L541.282 89.143C541.35 89.0724 541.432 89.0162 541.522 88.9775C541.612 88.9387 541.709 88.9184 541.807 88.9175C541.906 88.9167 542.003 88.9353 542.094 88.9725C542.185 89.0096 542.268 89.0645 542.337 89.1338C542.406 89.2032 542.461 89.2856 542.498 89.3764C542.536 89.4672 542.554 89.5645 542.554 89.6625C542.553 89.7606 542.532 89.8575 542.494 89.9477C542.455 90.0378 542.398 90.1193 542.328 90.1874L539.152 93.3584L542.328 96.5293C542.398 96.5975 542.455 96.679 542.494 96.7691C542.532 96.8592 542.553 96.9561 542.554 97.0542C542.554 97.1523 542.536 97.2496 542.498 97.3403C542.461 97.4311 542.406 97.5136 542.337 97.5829C542.268 97.6523 542.185 97.7071 542.094 97.7443C542.003 97.7814 541.906 97.8001 541.807 97.7992C541.709 97.7984 541.612 97.778 541.522 97.7393C541.432 97.7006 541.35 97.6443 541.282 97.5738L538.107 94.4028L534.931 97.5738C534.863 97.6443 534.781 97.7006 534.691 97.7393C534.601 97.778 534.504 97.7984 534.406 97.7992C534.307 97.8001 534.21 97.7814 534.119 97.7443C534.028 97.7071 533.946 97.6523 533.876 97.5829C533.807 97.5136 533.752 97.4311 533.715 97.3403C533.677 97.2496 533.659 97.1523 533.659 97.0542C533.66 96.9561 533.681 96.8592 533.719 96.7691C533.758 96.679 533.815 96.5975 533.885 96.5293L537.061 93.3584L533.885 90.1874C533.747 90.0489 533.669 89.8611 533.669 89.6652C533.669 89.4693 533.747 89.2815 533.885 89.143Z" fill="#007BFF"/><path fill-rule="evenodd" clip-rule="evenodd" d="M589.377 222.34H380.791C379.418 222.34 378.101 222.885 377.13 223.854C376.159 224.824 375.614 226.139 375.614 227.51V251.147C375.614 252.518 376.159 253.833 377.13 254.803C378.101 255.772 379.418 256.317 380.791 256.317H589.377C590.75 256.317 592.067 255.772 593.038 254.803C594.009 253.833 594.554 252.518 594.554 251.147V227.51C594.554 226.139 594.009 224.824 593.038 223.854C592.067 222.885 590.75 222.34 589.377 222.34ZM380.791 220.863C379.026 220.863 377.332 221.563 376.084 222.81C374.836 224.056 374.134 225.747 374.134 227.51V251.147C374.134 252.91 374.836 254.601 376.084 255.847C377.332 257.094 379.026 257.794 380.791 257.794H589.377C591.142 257.794 592.835 257.094 594.084 255.847C595.332 254.601 596.034 252.91 596.034 251.147V227.51C596.034 225.747 595.332 224.056 594.084 222.81C592.835 221.563 591.142 220.863 589.377 220.863H380.791ZM610.087 220.863C608.322 220.863 606.628 221.563 605.38 222.81C604.132 224.056 603.43 225.747 603.43 227.51V251.147C603.43 252.91 604.132 254.601 605.38 255.847C606.628 257.094 608.322 257.794 610.087 257.794H663.343C665.109 257.794 666.802 257.094 668.05 255.847C669.299 254.601 670 252.91 670 251.147V227.51C670 225.747 669.299 224.056 668.05 222.81C666.802 221.563 665.109 220.863 663.343 220.863H610.087ZM617.484 236.374C616.699 236.374 615.947 236.685 615.392 237.239C614.837 237.793 614.525 238.545 614.525 239.328C614.525 240.112 614.837 240.864 615.392 241.418C615.947 241.972 616.699 242.283 617.484 242.283H655.946C656.731 242.283 657.484 241.972 658.039 241.418C658.593 240.864 658.905 240.112 658.905 239.328C658.905 238.545 658.593 237.793 658.039 237.239C657.484 236.685 656.731 236.374 655.946 236.374H617.484Z" fill="#FF71B2"/><path fill-rule="evenodd" clip-rule="evenodd" d="M16.6431 230.745C15.4661 230.745 14.3373 231.212 13.505 232.043C12.6727 232.874 12.2051 234.001 12.2051 235.177V255.858C12.2051 257.034 12.6727 258.161 13.505 258.992C14.3373 259.823 15.4661 260.29 16.6431 260.29H76.9369C78.1137 260.29 79.2423 260.757 80.0745 261.588L85.6486 267.154C85.7873 267.293 85.9755 267.371 86.1716 267.371C86.3677 267.371 86.5558 267.293 86.6945 267.154L92.2686 261.588C93.1008 260.757 94.2295 260.29 95.4063 260.29H155.7C156.877 260.29 158.006 259.823 158.838 258.992C159.67 258.161 160.138 257.034 160.138 255.858V235.177C160.138 234.001 159.67 232.874 158.838 232.043C158.006 231.212 156.877 230.745 155.7 230.745H16.6431ZM41.0521 242.563C40.2674 242.563 39.5148 242.874 38.96 243.428C38.4051 243.982 38.0934 244.734 38.0934 245.517C38.0934 246.301 38.4051 247.053 38.96 247.607C39.5148 248.161 40.2674 248.472 41.0521 248.472H131.291C132.076 248.472 132.828 248.161 133.383 247.607C133.938 247.053 134.25 246.301 134.25 245.517C134.25 244.734 133.938 243.982 133.383 243.428C132.828 242.874 132.076 242.563 131.291 242.563H41.0521Z" fill="#69B4FF"/><path fill-rule="evenodd" clip-rule="evenodd" d="M161.617 146.54C161.617 142.461 158.306 139.154 154.221 139.154H78.7749C74.6898 139.154 71.3783 142.461 71.3783 146.54V175.347C71.3783 175.543 71.4562 175.731 71.5949 175.869C71.7337 176.008 71.9218 176.086 72.118 176.086C72.3141 176.086 72.5023 176.008 72.641 175.869C72.7797 175.731 72.8576 175.543 72.8576 175.347V146.54C72.8576 144.973 73.481 143.47 74.5908 142.362C75.7005 141.254 77.2056 140.631 78.7749 140.631H154.221C155.79 140.631 157.295 141.254 158.405 142.362C159.515 143.47 160.138 144.973 160.138 146.54V175.347C160.138 175.543 160.216 175.731 160.355 175.869C160.493 176.008 160.682 176.086 160.878 176.086H307.331C307.527 176.086 307.716 176.008 307.854 175.869C307.993 175.731 308.071 175.543 308.071 175.347C308.071 175.151 307.993 174.963 307.854 174.825C307.716 174.686 307.527 174.608 307.331 174.608H161.617V146.54Z" fill="#A6A6A6"/><path d="M86.1716 159.097C86.1716 158.313 86.4833 157.562 87.0382 157.008C87.5931 156.454 88.3456 156.142 89.1303 156.142H142.386C143.171 156.142 143.923 156.454 144.478 157.008C145.033 157.562 145.345 158.313 145.345 159.097C145.345 159.881 145.033 160.632 144.478 161.186C143.923 161.74 143.171 162.052 142.386 162.052H89.1303C88.3456 162.052 87.5931 161.74 87.0382 161.186C86.4833 160.632 86.1716 159.881 86.1716 159.097Z" fill="#A5A5A5"/><g filter="url(#filter0_d)"><path d="M339.358 139.811C339.358 122.238 316.725 115.614 306.755 130.183C215.297 263.851 345.266 269.868 345.266 334.846C345.266 361.154 323.769 382.441 297.377 382.094C271.405 381.762 250.743 360.113 250.743 334.144V271.006C250.743 254.983 231.196 247.208 220.149 258.822C200.38 279.585 179.851 315.153 179.851 358.474C179.851 436.645 243.454 500.242 321.635 500.242C399.816 500.242 463.42 436.645 463.42 358.474C463.42 232.736 339.358 215.967 339.358 139.811Z" fill="url(#paint0_linear)"/></g><path d="M359.982 139.811C359.982 122.238 337.348 115.614 327.379 130.183C235.92 263.851 365.889 269.868 365.889 334.846C365.889 361.154 344.393 382.441 318 382.094C292.028 381.762 271.366 360.113 271.366 334.144V271.006C271.366 254.983 251.819 247.208 240.772 258.822C221.003 279.585 200.474 315.153 200.474 358.474C200.474 436.645 264.078 500.242 342.259 500.242C420.439 500.242 484.043 436.645 484.043 358.474C484.043 232.736 359.982 215.967 359.982 139.811V139.811Z" fill="url(#paint1_linear)"/><path d="M519.221 210.089C530.836 210.089 540.252 200.78 540.252 189.296C540.252 177.813 530.836 168.504 519.221 168.504C507.605 168.504 498.189 177.813 498.189 189.296C498.189 200.78 507.605 210.089 519.221 210.089Z" fill="#FF8EA5"/><path d="M513.825 204.095C511.181 200.681 509.62 196.569 509.34 192.279C509.06 187.988 510.074 183.712 512.252 179.991C514.43 176.27 517.675 173.271 521.578 171.373C525.48 169.476 529.864 168.765 534.174 169.331C538.485 169.896 542.53 171.713 545.796 174.551C549.063 177.389 551.405 181.121 552.526 185.275C553.647 189.429 553.497 193.818 552.095 197.888C550.693 201.958 548.102 205.525 544.649 208.139C540.017 211.637 534.17 213.176 528.391 212.418C522.612 211.66 517.374 208.667 513.825 204.095V204.095ZM547.221 178.813C544.808 175.696 541.513 173.357 537.755 172.092C533.996 170.826 529.942 170.691 526.106 171.703C522.27 172.715 518.823 174.829 516.202 177.778C513.581 180.726 511.903 184.377 511.381 188.269C510.859 192.16 511.515 196.117 513.268 199.639C515.02 203.162 517.79 206.091 521.226 208.058C524.663 210.024 528.612 210.939 532.574 210.686C536.537 210.433 540.334 209.024 543.487 206.638C547.709 203.434 550.473 198.705 551.174 193.489C551.874 188.273 550.452 182.995 547.221 178.813V178.813Z" fill="#979797"/><path d="M266.471 141.978C259.505 145.376 251.727 147.143 243.832 147.118C235.937 147.094 228.172 145.28 221.231 141.838C219.659 141.045 218.338 140.141 218.16 138.385C218.068 137.661 218.217 136.929 218.588 136.284C218.958 135.639 219.534 135.112 220.238 134.772C222.421 133.797 225.019 134.934 226.383 136.599C227.851 138.389 227.264 140.712 225.906 142.397C222.394 146.757 215.755 146.344 210.502 146.247C199.188 146.038 187.293 146.864 177.158 151.891C167.635 156.614 159.987 165.474 159.776 175.667C159.739 177.457 162.779 177.457 162.816 175.667C163.025 165.608 171.337 157.318 180.909 153.28C186.849 150.925 193.201 149.558 199.666 149.243C202.822 149.028 205.989 148.971 209.152 149.007C212.308 149.16 215.472 149.098 218.617 148.822C224.044 148.142 229.878 144.945 230.278 139.425C230.641 134.43 224.436 130.193 219.322 132.118C218.386 132.503 217.551 133.067 216.875 133.774C216.199 134.48 215.697 135.312 215.405 136.212C215.113 137.112 215.037 138.059 215.182 138.989C215.328 139.918 215.691 140.808 216.247 141.597C217.615 143.503 220.046 144.479 222.225 145.422C229.412 148.539 237.299 150.068 245.251 149.887C253.203 149.706 260.997 147.819 268.006 144.379C269.722 143.518 268.189 141.116 266.471 141.978V141.978Z" fill="#FF8F8F"/><path d="M548.704 464.26C554.309 458.174 561.279 453.5 569.042 450.624C576.805 447.747 585.14 446.748 593.365 447.709C595.687 447.993 598.401 448.106 599.758 450.307C600.297 451.127 600.541 452.106 600.451 453.084C600.361 454.061 599.942 454.979 599.261 455.687C597.428 457.459 594.474 457.17 592.433 455.921C590.117 454.503 589.67 451.7 590.368 449.251C592.075 443.266 598.651 441.153 603.933 439.425C615.967 435.487 628.16 430.312 636.881 420.8C644.95 411.999 649.364 399.135 645.501 387.487C644.825 385.449 641.712 386.634 642.385 388.662C646.216 400.214 640.709 412.851 632.199 420.83C627.017 425.494 621.074 429.239 614.626 431.901C611.344 433.331 607.983 434.574 604.588 435.71C601.221 436.68 597.946 437.947 594.803 439.495C589.768 442.245 585.478 447.805 587.046 453.838C588.509 459.466 596.251 462.292 600.916 458.629C605.336 455.158 604.352 448.19 599.451 445.677C596.944 444.391 593.54 444.307 590.776 444.138C582.455 443.616 574.124 444.965 566.394 448.085C558.665 451.206 551.735 456.017 546.115 462.167C544.685 463.763 547.277 465.852 548.704 464.26L548.704 464.26Z" fill="#EE89FF"/><rect x="242.021" y="546.805" width="182.071" height="3.32593" fill="#A3A3A3"/><path d="M181.49 497.583C182.474 495.013 186.11 495.013 187.093 497.583L191.031 507.871C191.476 509.032 192.59 509.798 193.833 509.798H205.387C208.411 509.798 209.536 513.765 206.962 515.352L198.506 520.567C197.279 521.323 196.764 522.846 197.279 524.193L200.699 533.126C201.725 535.806 198.765 538.258 196.323 536.752L185.866 530.304C184.901 529.709 183.682 529.709 182.717 530.304L172.261 536.752C169.819 538.258 166.859 535.806 167.884 533.126L171.304 524.193C171.82 522.846 171.304 521.323 170.077 520.567L161.621 515.352C159.048 513.765 160.172 509.798 163.196 509.798H174.75C175.993 509.798 177.108 509.032 177.552 507.871L181.49 497.583Z" fill="#F3A7FF"/><rect x="512.908" y="291.816" width="105.468" height="9.97783" rx="4.98891" fill="#E3A9FF"/><rect x="506.247" y="315.098" width="105.468" height="9.97781" rx="4.98891" fill="#E3A9FF"/><rect x="497.365" y="338.379" width="105.468" height="9.97781" rx="4.98891" fill="#E3A9FF"/><rect x="29.9752" y="364.987" width="1.11019" height="21.0643" fill="#C4C4C4"/><defs><filter id="filter0_d" x="53.8508" y="0.192871" width="535.569" height="630.049" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset dy="4"/><feGaussianBlur stdDeviation="63"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/></filter><linearGradient id="paint0_linear" x1="321.635" y1="122.193" x2="321.635" y2="500.242" gradientUnits="userSpaceOnUse"><stop stop-color="#6F42C1"/><stop offset="1" stop-color="#AD00FF"/></linearGradient><linearGradient id="paint1_linear" x1="342.258" y1="122.193" x2="342.258" y2="500.242" gradientUnits="userSpaceOnUse"><stop stop-color="#6F42C1" stop-opacity="0.4"/><stop offset="1" stop-color="#EB00FF" stop-opacity="0.4"/></linearGradient></defs></svg>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer text-center bgc-dark-blue">
+        <div class="ml-all-6 p-5 justify-content-center" style="line-height: 50px;">
+            <div>
+                <a href="https://github.com/CONTROLFLEX/CONTROLFLEX" class="color-light footer-link_"><i class="fab fa-github text-lg"></i>GitHub</a>
+                <a href="https://twitter.com/CONTROLFLEX_CSS" class="color-light footer-link_"><i class="fab fa-twitter text-lg"></i>Twitter</a>
+            </div>
+            <div>
+                <a href="explore.html" class="color-light footer-link_"><i class="fas fa-search text-lg"></i>Examples</a>
+                <a href="about.html" class="color-light footer-link_"><i class="fas fa-users text-lg"></i>About</a>
+            </div>
+        </div>
+        <div class="footer-des_ mt-4">
+            The website was designed by team controlflex .. We ask you to support us to facilitate many aspects of web design ___ We are in version <a href="https://github.com/CONTROLFLEX/CONTROLFLEX/tree/V.0.3" class="color-light-blue version-info_">(V.0.3)</a>
+        </div>
+    </footer>
+
+
+    <!--jQuery-->
+    <script src="jquery.min.js"></script>
+
+    <!--javascript-->
+    <script src="script.js"></script>
+    <script src="js/co.js"></script>
+</body>
+</html>

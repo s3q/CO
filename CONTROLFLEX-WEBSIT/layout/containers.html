@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!--viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--title-->
+    <title>CONTROLFLEX | Containers</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="../controlfex.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!--icons-->
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+
+    <!--window icon-->
+    <link rel="apple-touch-icon" href="../CONTROLFLEX.svg" sizes="180x180">
+    <link rel="icon" href="../CONTROLFLEX.svg" type="image/svg">
+</head>
+<body>
+
+    <div class="loading-overlay">
+        <div class="spinner spinner-pink-trans"></div>
+    </div>
+
+    <!--navbar-->
+    <nav class="navbar navbar-purple m-0">
+        <a class="navbar-link align-items-center" href="#"><i class="fas fa-fire io-sm mr-6"></i> <span class="dp-none-md">CONTROLFLEX</span></a>
+        <div class="opt-navbar">
+            <button class="bn-navbar bn-close" id="open-menu-window"  style="font-size: 24px;"><i class="fas fa-bars"></i></button>
+            <a class="p-2" href="https://github.com/CONTROLFLEX/CONTROLFLEX"><i class="link-noactive fab fa-github text-lg"></i></a>
+            <a class="p-2" href="https://twitter.com/CONTROLFLEX_CSS"><i class="link-noactive fab fa-twitter text-lg"></i></a>
+        </div>
+        <div class="collapse_ navbar-collapse">
+            <ul class="nav-collapse">
+                <li><a class="link-noactive-light p-3" href="../index.html">Home</a></li>
+                <li><a class="link-noactive-light p-3" href="../get-start.html">Get Start</a></li>
+                <li><a class="link-noactive-light p-3" href="../explore.html">Explore</a></li>
+                <li><a class="link-noactive-light p-3" href="../support.html">Support</a></li>
+                <li><a class="link-noactive-light p-3" href="../blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!---->
+
+    <nav class="navbar navbar-aside_">
+        <button class="bn" data-targets="#aside" data-pattern="slide-toggle"><i class="fas fa-bars"></i></button>
+    </nav>
+
+    <div class="menu-window navbar-dark-blue menu_" id="menu-window">
+        <div class="align-items-center">
+            <a><i class="fas fa-fire io-sm mr-6"></i> <span>CONTROLFLEX</span></a>
+            <button class="bn-close" id="close-menu-window"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="menu-content_">
+            <ul class="nav-vr w-100 mt-3 p-3 align-items-center">
+                <li class="w-85 link-menu_"><a class="link-noactive-light p-4 dp-block" href="../index.html">Home <span class="fas fa-angle-right float-right"></span></a></li>
+                <li class="w-85 link-menu_"><a class="link-noactive-light p-4 dp-block" href="../get-start.html">Get Start <span class="fas fa-angle-right float-right"></span></a></li>
+                <li class="w-85 link-menu_"><a class="link-noactive-light p-4 dp-block" href="../explore.html">Explore <span class="fas fa-angle-right float-right"></span></a></li>
+                <li class="w-85 link-menu_"><a class="link-noactive-light p-4 dp-block" href="../support.html">Support <span class="fas fa-angle-right float-right"></span></a></li>
+                <li class="w-85 link-menu_"><a class="link-noactive-light p-4 dp-block" href="../blog.html">Blog <span class="fas fa-angle-right float-right"></span></a></li>
+            </ul>
+            <div class="menu-footer_">
+                <a class="p-2" href="https://github.com/CONTROLFLEX/CONTROLFLEX"><i class="link-noactive fab fa-github text-lg"></i></a>
+                <a class="p-2" href="https://twitter.com/CONTROLFLEX_CSS"><i class="link-noactive fab fa-twitter text-lg"></i></a>
+                <a class="p-2" href="../explore.html"><i class="link-noactive fas fa-search text-lg"></i></a>
+                <a class="p-2" href="../about.html"><i class="link-noactive fas fa-users text-lg"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <main class="main_">
+        <div class="dp-flex-lg">
+            <aside class="aside_" id="aside">
+                <nav class="nav-vr">
+                    <div class="p-4 version-info_ version-style_">
+                        V.0.3
+                    </div> 
+                    <ul class="p-12">
+                        <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../get-start.html">Get Start <span class="fas fa-link float-right"></span></a></li>
+                        <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../download.html">Download <span class="fas fa-link float-right"></span></a></li>
+                        <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" data-targets="#Layout-link-lg" data-pattern="slide-toggle">Layout <span class="fas fa-angle-down float-right"></span></a>
+                            <ul id="Layout-link-lg">
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="screens.html">Screens <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-active-dark-blue p-4 dp-block" href="#">Containers <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="grid.html">Grid <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="utilities.html">Utilities <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="z-index.html">Z-index <span class="fas fa-link float-right"></span></a></li>
+                            </ul>
+                        </li>
+                        <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" data-targets="#Components-link-lg" data-pattern="slide-toggle">Components <span class="fas fa-angle-down float-right"></span></a>
+                            <ul id="Components-link-lg" style="display: none;">
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../components/alert.html">Alerts <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../components/breadcrumb.html">Breadcrumbs <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../components/button.html">Buttons <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../components/card.html">Cards <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../components/collapse.html">Collapses <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../components/dropdown.html">Dropdown <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../components/form.html">Forms <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../components/list.html">List <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../components/media.html">Media <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../components/menu.html">Menus <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../components/navbar.html">Navbars <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../components/nav.html">Navs <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../components/notice.html">Notices <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../components/pagination.html">Paginations <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../components/progres.html">Progress <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../components/spinner.html">Spinners <span class="fas fa-link float-right"></span></a></li>
+                            </ul>
+                        </li>
+                        <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" data-targets="#Utilities-link-lg" data-pattern="slide-toggle">Utilities <span class="fas fa-angle-down float-right"></span></a>
+                            <ul id="Utilities-link-lg" style="display: none;">
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../utilities/align.html">Align <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../utilities/animation.html">Animation <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../utilities/border.html">Border <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../utilities/radius.html">Radius <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../utilities/shadow.html">Shadow <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../utilities/color.html">Color <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../utilities/display.html">Display <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../utilities/flex-box.html">Flex box <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../utilities/float.html">Float <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../utilities/icon.html">Icon <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../utilities/padding.html">Padding <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../utilities/position.html">Position <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../utilities/text.html">Text <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../utilities/width.html">Width <span class="fas fa-link float-right"></span></a></li>
+                            </ul>
+                        </li>
+                        <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../about.html">About <span class="fas fa-link float-right"></span></a></li>
+                        <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="../blog.html">Blog <span class="fas fa-link float-right"></span></a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <div class="container-full container-explanation_">
+                <div class="container-full">
+                    <div class="section-12 align-items-center mt-20">
+                        <div id="getStart" class="w-100">
+                            <h2 class="h2_ link-h_">Containers <a href="#getStart"><span class="fas fa-hashtag"></span></a></h2>
+                            <article class="pragraph_ p-5 mb-40" style="color: #717171;">Containers are a fundamental building block of Controlflex that contain, pad, and align your content within a given device or viewport.</article>
+                            <div class="hr color-dark-trans" data-heading="Topics :"></div>
+                            <ul class="list mt-40 mb-40">
+                                <li class="item link-noactive-tomato"><a class="w-100 dp-block" href="#The-basic-concepts">The basic concepts</a></li>
+                                <li class="item link-noactive-tomato"><a class="w-100 dp-block" href="#Container-sizes">Container sizes</a></li>
+                                <li class="item link-noactive-tomato"><a class="w-100 dp-block" href="#Default-container">Default-container</a></li>
+                                <li class="item link-noactive-tomato"><a class="w-100 dp-block" href="#Responsive-container">Responsive container</a></li>
+                                <li class="item link-noactive-tomato"><a class="w-100 dp-block" href="#Liquid-container">liquid container</a></li>
+                                <li class="item link-noactive-tomato"><a class="w-100 dp-block" href="#Main-container">container-main</a></li>
+                            </ul>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="container-full" style="margin-top: 100px;">
+                    <div class="section-12 align-items-center">
+                        <div id="The-basic-concepts">
+                            <h2 class="link-h_">How they work <a href="#The-basic-concepts"><span class="fas fa-hashtag"></span></a></h2>
+                            <article class="text-lg p-5" style="color: #717171; white-space: pre-line;">Containers are the most basic layout element in Controlflex and are <span class="color-brown">required when using our default grid system</span>. Containers are used to contain, pad, and (sometimes) center the content within them. While containers can be nested, most layouts do not require a nested container.
+
+                                Controlflex comes with three different containers:
+                            </article>
+                        </div>
+                    </div>
+        
+                    <ul class="list">
+                        <li class="item"><span>.container</span>, Which is <span>width: 98%</span> at all screen size until the last <span>size (mxl: 1400px)</span>, where width is specified: <span>1400px</span> for container.</li>
+                        <li class="item"><span>.container-liquid</span>, Which is <span>width: 98%</span> at all screen size until the last <span>size (mxl: 1400px)</span>, where width is specified: <span>80%</span> for container.</li>
+                        <li class="item"><span>.container-main</span>, Which is <span>width: 100%</span> at all screen size until the last <span>size (mxl: 1400px)</span>, where width is specified: <span>1400px</span> for container.</li>
+                        <li class="item"><span>.container-res</span>, which sets a width at each responsive screen size.</li>
+                    </ul>
+                </div>
+
+
+                <div class="container-full" style="margin-top: 180px;">
+                    <div class="section-12 align-items-center">
+                        <div id="Container-sizes">
+                            <h2 class="link-h_">Container sizes <a href="#Container-sizes"><span class="fas fa-hashtag"></span></a></h2>
+                            <article class="text-lg p-5" style="color: #717171; white-space: pre-line;">The table below illustrates how each container’s width compares to the original .container and .container-fluid across each screen size.</article>
+                        </div>
+                    </div>
+
+
+                    <table class="table table-light radius-10 outer-shadow table-explanation_" style="margin: 40px auto 0px auto;">
+                        <thead class="text-lg text-bold">
+                            <tr>
+                                <td>Class infix</td>
+                                <td>LXS</td>
+                                <td>XS</td>
+                                <td>SM</td>
+                                <td>MD</td>
+                                <td>LG</td>
+                                <td>XL</td>
+                                <td>MXL</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="color-yellow">
+                                <td class="color-pink">.container</td>
+                                <td>98%</td>
+                                <td>98%</td>
+                                <td>98%</td>
+                                <td>98%</td>
+                                <td>98%</td>
+                                <td>98%</td>
+                                <td>1400px</td>
+                            </tr>
+                            <tr class="color-yellow">
+                                <td class="color-pink">.container-liquid</td>
+                                <td>98%</td>
+                                <td>98%</td>
+                                <td>98%</td>
+                                <td>98%</td>
+                                <td>98%</td>
+                                <td>98%</td>
+                                <td>80%</td>
+                            </tr>
+                            <tr class="color-yellow">
+                                <td class="color-pink">.container-main</td>
+                                <td>100%</td>
+                                <td>100%</td>
+                                <td>100%</td>
+                                <td>100%</td>
+                                <td>100%</td>
+                                <td>100%</td>
+                                <td>1400px</td>
+                            </tr>
+                            <tr class="color-yellow">
+                                <td class="color-pink">.container-red</td>
+                                <td>98%</td>
+                                <td>98%</td>
+                                <td>98%</td>
+                                <td>740px</td>
+                                <td>920px</td>
+                                <td>1100px</td>
+                                <td>1400px</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="container-full" style="margin-top: 180px;">
+                        <div class="section-12 align-items-center">
+                            <div id="Default-container">
+                                <h2 class="link-h_">Default-container <a href="#Default-container"><span class="fas fa-hashtag"></span></a></h2>
+                                <article class="text-lg p-5" style="color: #717171; white-space: pre-line;"><span>.container</span>, Flexible container with all screens, and stop expanding in the last size</article>
+                            </div>
+                        </div>
+
+                        <!--code-->
+                        <pre class="custom-pre"><code>&lt;div <code>class=<code>"container"</code></code>&gt;
+<span>&lt;!-- Content here --&gt;</span>
+&lt;/div&gt;</code></pre>
+
+                    </div>
+
+                    <div class="container-full" style="margin-top: 180px;">
+                        <div class="section-12 align-items-center">
+                            <div id="Responsive-container">
+                                <h2 class="link-h_">Responsive container <a href="#Responsive-container"><span class="fas fa-hashtag"></span></a></h2>
+                                <article class="text-lg p-5" style="color: #717171; white-space: pre-line;"><span>.container-res</span>, This class changes its width with every screen except for <span>lxs, xs, sm</span>. Where the width remains at 98%.</article>
+                            </div>
+                        </div>
+
+                        <!--code-->
+                        <pre class="custom-pre"><code>&lt;div <code>class=<code>"container-res"</code></code>&gt;
+<span>&lt;!-- Content here --&gt;</span>
+&lt;/div&gt;</code></pre>
+
+                    </div>
+
+                    <div class="container-full" style="margin-top: 180px;">
+                        <div class="section-12 align-items-center">
+                            <div id="Liquid-container">
+                                <h2 class="link-h_">Liquid container <a href="#Liquid-container"><span class="fas fa-hashtag"></span></a></h2>
+                                <article class="text-lg p-5" style="color: #717171; white-space: pre-line;"><span>.container-liquid</span>, This container is used in the wide content .. in the screen size less than <span>1400px</span> this container is similar to the original container .. After this size, its width becomes: <span>80%</span>.</article>
+                            </div>
+                        </div>
+
+                        <!--code-->
+                        <pre class="custom-pre"><code>&lt;div <code>class=<code>"container-liquid"</code></code>&gt;
+<span>&lt;!-- Content here --&gt;</span>
+&lt;/div&gt;</code></pre>
+
+                    </div>
+
+                    <div class="container-full" style="margin-top: 180px;">
+                        <div class="section-12 align-items-center">
+                            <div id="Main-container">
+                                <h2 class="link-h_">Main container <a href="#Main-container"><span class="fas fa-hashtag"></span></a></h2>
+                                <article class="text-lg p-5" style="color: #717171; white-space: pre-line;"><span>.container-main</span>, This container is very important in large screens, as this class can be placed in body tag.</article>
+                            </div>
+                        </div>
+
+                        <!--code-->
+                        <pre class="custom-pre"><code>&lt;body <code>class=<code>"container-main"</code></code>&gt;
+<span>&lt;!-- Content here --&gt;</span>
+&lt;/body&gt;</code></pre>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer text-center bgc-dark-blue">
+        <div class="ml-all-6 p-5 justify-content-center" style="line-height: 50px;">
+            <div>
+                <a href="https://github.com/CONTROLFLEX/CONTROLFLEX" class="color-light footer-link_"><i class="fab fa-github text-lg"></i> GitHub</a>
+                <a href="https://twitter.com/CONTROLFLEX_CSS" class="color-light footer-link_"><i class="fab fa-twitter text-lg"></i> Twitter</a>
+            </div>
+            <div>
+                <a href="../explore.html" class="color-light footer-link_"><i class="fas fa-search text-lg"></i> Examples</a>
+                <a href="../about.html" class="color-light footer-link_"><i class="fas fa-users text-lg"></i> About</a>
+            </div>
+        </div>
+        <div class="footer-des_ mt-4">
+            The website was designed by team controlflex .. We ask you to support us to facilitate many aspects of web design ___ We are in version <a href="https://github.com/CONTROLFLEX/CONTROLFLEX/tree/V.0.3" class="color-light-blue version-info_">(V.0.3)</a>
+        </div>
+    </footer>
+
+
+    <!--jQuery-->
+    <script src="../jquery.min.js"></script>
+
+    <!--javascript-->
+    <script src="../script.js"></script>
+    <script src="../js/co.js"></script>
+</body>
+</html>
