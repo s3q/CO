@@ -1,0 +1,83 @@
+// --------------------------------------------------------grid system------------------------------------------------- :
+
+// section class :
+@mixin make-sections-class($i) {
+    @each $class-name in ("", -xl, -lg, -md, -sm, -xs) {
+        .section#{$class-name}-#{$i} {
+            @content;
+        }   
+    }
+}
+// section :
+@mixin make-section-auto($add-inclass) {
+    .section-auto#{$add-inclass} {
+        width: auto !important;
+        max-width: 100% !important; 
+        flex: 0 0 auto !important;
+    }
+    .section-all-auto#{$add-inclass}{
+        @extend .section-auto#{$add-inclass};
+    }
+} 
+@mixin make-section($add-inclass) {
+
+    @for $i from 0 through 12 {
+        .section-#{$i}#{$add-inclass} {
+            max-width: ($i * (100% / 12)) !important;
+            flex: 0 0 ($i * (100% / 12)) !important;
+        }
+
+        .section-all-#{$i}#{$add-inclass} > * {
+            @extend .section-#{$i}#{$add-inclass};
+        }
+    }
+    @each $class-name, $w, $h in ("1x1", 12em, 12em), ("4x3", 12em, 10em), ("16x9", 12em, 8em), ("21x9", 12em, 6em) {
+        .section-#{$class-name}#{$add-inclass} {
+            width: $w;
+            height: $h;
+        }
+    }
+}
+
+// offset :
+@mixin make-offset($add-inclass) {
+    @for $i from 0 through 12 {
+        @each $dir-value in $map-dir {
+            .offset-#{$dir-value}-#{$i}#{$add-inclass} {
+                margin-#{$dir-value}: ($i * (100% / 12)) !important;
+            }    
+            .offset-#{$dir-value}-all-#{$i}#{$add-inclass} > * {
+                @extend .offset-#{$dir-value}-#{$i}#{$add-inclass};
+            }        
+        }
+    }
+}
+// visible-hidden
+@mixin make-visible-hidden($add-inclass) {
+    .visible#{$add-inclass} {
+        visibility: visible;
+    }
+    .hidden#{$add-inclass} {
+        visibility: hidden;
+    }
+}
+// order :
+@mixin make-order($add-inclass) {
+    @for $i from 0 through 12 {
+        .or-#{$i}#{$add-inclass}{
+            -ms-flex-order: #{$i} !important;
+            order: #{$i} !important;
+        }
+    }
+}
+@mixin make-or-first-last($add-inclass) {
+    .or-first#{$add-inclass} {
+        -ms-flex-order: -1 !important;
+        order: -1 !important;
+    }
+    .or-last#{$add-inclass} {
+        -ms-flex-order: 13 !important;
+        order: 13 !important;
+    }    
+}
+// -------------------------------------------------------------------------------------------------------------------

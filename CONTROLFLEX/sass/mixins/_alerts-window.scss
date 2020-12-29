@@ -1,0 +1,56 @@
+@mixin make-backdrop-window($zindex, $bgc) {
+    display: -ms-flexbox; 
+    display: flex; 
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center; 
+    align-items: center; 
+    z-index: $zindex;
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    top: 0px; 
+    left: 0px; 
+    background-color: $bgc;
+}
+@mixin make-alert-window($zindex, $w, $h, $p, $bo-radius, $overflow) {
+    display: -ms-flexbox; 
+    display: flex; 
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; 
+    z-index: $zindex; 
+    width: $w; 
+    height: $h; 
+    padding: $p; 
+    opacity: .5;
+    margin-top: -100px;
+    position: relative; 
+    background-color: #ffffff; 
+    color: inherit; 
+    border-radius: $bo-radius; 
+    overflow: $overflow;
+}
+@mixin make-alert-window-head($flex-dir, $p) {
+    display: -ms-flexbox; 
+    display: flex; 
+    -ms-flex-pack: space-between;
+    justify-content: space-between; 
+    flex-direction: $flex-dir; 
+    padding: $p;
+}
+@mixin make-alert-window-foot($position, $p, $w, $dp, $flex-dir, $justify-content, $bot) {
+    position: $position; 
+    left: 0px; 
+    bottom: 0px; 
+    padding: $p; 
+    width: $w; 
+    display: $dp; 
+    -webkit-flex-direction: $flex-dir;
+    -ms-flex-direction: $flex-dir;
+    flex-direction: $flex-dir; 
+    -ms-flex-pack: $justify-content;
+    justify-content: $justify-content; 
+    border-top: $bot; 
+    background-color: white;
+}

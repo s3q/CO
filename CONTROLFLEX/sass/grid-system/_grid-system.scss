@@ -1,0 +1,88 @@
+
+/* -----------------------------------------------------grid system------------------------------------------------- : */
+
+/* -------------------container : */
+.container, .container-liquid, .container-res {
+    display: flex;
+    flex-wrap: wrap;
+    width: 98%;
+    padding: 6px;
+    margin: 0px auto;
+}
+
+.container-main, .container-full {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0px auto;
+}
+
+/* -------------------------------- */
+
+@media (min-width: $md) {
+    .container-res {width: $md;}
+}
+
+@media (min-width: $lg) {
+    .container-res {width: $lg;}
+}
+
+@media (min-width: $xl) {
+    .container-res {width: $xl;}
+}
+
+@media (min-width: $mxl) {
+    .container, .container-main {width: 1400px;}
+    .container-liquid {width: 80%;}
+    .container-res {width: $mxl;}
+}
+
+/* ---------------------section, offset & order : */
+%section {    
+    display: flex;
+    display: -ms-flexbox;
+    width: 100%;
+    padding: 4px 8px;
+}
+@for $i from 0 through 12 {
+    @include make-sections-class($i) {
+      @extend %section;
+    }
+}
+
+/* section :
+divide the item specified in this class into a specific number;
+the method of divison : 
+consider that the page is divided into 12 section andthat number you 
+write in the class is occupied from 12 sections; 
+*/
+@include make-section-auto(null); 
+@include make-section(null);
+/* offset :
+"offset" work like "secton" but it's adding space on the right side for item. 
+and if the user uses arabic the space is from the left side;
+*/
+@include make-offset(null);
+/* visible & hidden : */
+@include make-visible-hidden(null);
+/* order :
+progress or delay of the item;
+*/
+@include make-order(null);
+@include make-or-first-last(null);
+@each $screen-size, $screen-name, $min-max  in  $map-screen-size-name-type {
+    @include make-media($min-max, $screen-size) {
+        @include make-section-auto("-" + #{$screen-name}); 
+        // make section :
+        @include make-section("-" + #{$screen-name});
+        // make offset :
+        @include make-offset("-" + #{$screen-name});
+        // visible & hidden :
+        @include make-visible-hidden("-" + #{$screen-name});
+        // make order :
+        // or > order
+        @include make-order("-" + #{$screen-name});
+        @include make-or-first-last("-" + #{$screen-name});
+    }
+}
+// ------------------------------------------------------------------------------------------------------------

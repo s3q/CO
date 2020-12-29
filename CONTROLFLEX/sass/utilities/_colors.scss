@@ -1,0 +1,57 @@
+
+/* ----------------------------------------color & background-color-------------------------------- : */
+@each $color-name, $color-value in $map-color {
+    //background color
+    .bgc-#{$color-name} {
+        background-color: $color-value;
+        @include if-color($color-value);
+    }
+
+    .bgc-#{$color-name}-hover {
+        &:hover {
+            background-color: $color-value;
+        }
+        @include if-color($color-value);
+
+    }
+
+    //text color :
+    .color-#{$color-name}{
+        color: $color-value;
+    }
+    .color-#{$color-name}-trans {
+        color: $color-value + b0;
+    }
+    a.color-#{$color-name}:hover, 
+    a.color-#{$color-name}:active{
+        color: $color-value + dc;
+    }
+}
+@each $color-name, $color-value, $color-transparent-value in $map-colorname-color-transparent {
+    .bgct-#{$color-name} {
+        background-color: $color-transparent-value;
+        @if $color-transparent-value == $light-transparent or $color-transparent-value == $light-blue-transparent {
+            color: $dark-blue;
+        }
+        @else {
+            color: $color-value;   
+        }
+    }
+    .bgct-#{$color-name}-hover {
+        &:hover {
+            background-color: $color-transparent-value;
+        }
+        @if $color-transparent-value == $light-transparent or $color-transparent-value == $light-blue-transparent {
+            color: $dark-blue;
+        }
+        @else {
+            color: $color-value;   
+        }
+    }
+}
+
+/* ------------------------------------------------------------------------------------------------------ */
+
+/* ---------------------------------------------------opacity------------------------------------------ : */ 
+@include  make-opacity();
+/* -------------------------------------------------------------------------------------------------------*/

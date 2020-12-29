@@ -1,0 +1,58 @@
+// variables :
+@import 'variables';
+// basic :
+@import 'basic/mixins';
+// grid system :
+@import 'grid-system/grid-system-mixin';
+// mixin :
+@import 'mixins/alerts';
+@import 'mixins/alerts-window';
+@import 'mixins/breadcrumbs';
+@import 'mixins/buttons';
+@import 'mixins/cards-text';
+@import 'mixins/cards';
+@import 'mixins/collapses';
+@import 'mixins/dropdowns';
+@import 'mixins/forms';
+@import 'mixins/group-buttons';
+@import 'mixins/group-cards';
+@import 'mixins/group-inputs';
+@import 'mixins/lists';
+@import 'mixins/media';
+@import 'mixins/menus-window';
+@import 'mixins/menus';
+@import 'mixins/models';
+@import 'mixins/navbars';
+@import 'mixins/navs';
+@import 'mixins/paginations';
+@import 'mixins/popovers';
+@import 'mixins/progress';
+@import 'mixins/spinners';
+@import 'mixins/toasts';
+
+
+// for screens :
+@mixin make-media($min-max, $screen-size) {
+    @each $screen-size in $screen-size {
+        @media (#{$min-max}-width: $screen-size){
+            @content;
+        }   
+    }
+}
+
+// prefix : 
+@mixin make-prefix($property-1,  $value, $map-property-2:()) {
+    @each $property-2 in $map-property-2 {
+        #{$property-1}#{$property-2}: #{$value}; 
+    }
+}
+
+//
+@mixin male-loop-class($add-property, $map-clas-loop: ()) {
+    @each $class in $map-class-loop {
+        #{$add-property}#{$class} {
+            @content;
+        }
+    }
+}
+

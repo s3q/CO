@@ -1,0 +1,216 @@
+/* -------------------------------------------------------------------------------------------buttons-------------------------------------------------------------------------------- : */
+.bn {
+    @include make-bn( // bn > button :
+
+        // baeckground-color :
+        $bn-bgc,
+        
+        // color :
+        $dark-blue, 
+
+        // padding :
+        $bn-default-p,
+        
+        // font-size :
+        $bn-default-fos,
+        
+        // border-radius :
+        $bn-default-bo-radius,
+        
+        // cursor :
+        $bn-cursor,
+        
+        // &:foucs : 
+            // outline :
+            $bn-outline-onfoucs
+    );
+}
+
+.bn-block {
+    display: block;
+    @extend .bn;
+}
+
+.bn-close {
+    @include make-bn-close( // bn-close > button-close :
+
+        // float :
+        $bn-close-float,
+
+        // background-color :
+        $bn-close-bgc, 
+
+        // border-radius :
+        $bn-close-bo-radius, 
+
+        // color :
+        $bn-close-color,
+    );
+}
+/* ---------------------------------------------------buttons color-------------------------------------------------- : */
+@each $bn-color, $bg-color, $color-active in 
+
+    // map to scroll colors and background color :
+    $map-colorname-color-transparent {
+
+    // function ( make buttons colors ) :
+    @include make-buttons-colors(
+
+        // class button colors :
+        "." + bn-#{$bn-color}, // bn > button 
+        
+        // class button outline :
+        "." + outline-#{$bn-color},
+
+        // background-color :
+        $bg-color, 
+
+        // &:active :
+            // color :
+            $color-active
+    );
+}
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+/* ---------------------------------------------------button group----------------------------------------------------- : */
+
+/* ---------------horizontal button group : */
+.bn-group, .bn-group-hr {
+    @include make-bn-group(
+
+        // border-radius :
+        $bo-radius-group-hr-first-child,
+        
+        // border-radius :
+        $bo-radius-group-hr-last-child, 
+
+        // type :
+        hr
+    );
+}
+/* -----------------------------------------*/
+
+/* -----------------vertical button group : */
+.bn-group-vr {
+    @include make-bn-group(
+
+        // border-radius :
+        $bo-radius-group-vr-first-child,
+        
+        // border-radius :
+        $bo-radius-group-vr-last-child, 
+
+        // type :
+        vr
+    );
+}
+/* ----------------------------------------*/
+@each $screen-size, $screen-name, $min-max  in  
+
+    // map includes ( screen-size, screen name, ( min-width or mzx-width ) ) :
+    $map-screen-size-name-type {
+        
+    // media query :
+    @include make-media ($min-max, $screen-size) {
+        .bn-group-#{$screen-name}, .bn-group-hr-#{$screen-name} {
+            @include make-bn-group(
+
+                // border-radius :
+                $bo-radius-group-hr-first-child, 
+
+                // border-radius :
+                $bo-radius-group-hr-last-child, 
+                
+                // type :
+                hr
+            );
+        }
+        /*  vertical button group */
+        .bn-group-vr-#{$screen-name} {
+            @include make-bn-group(
+
+                // border-radius :
+                $bo-radius-group-vr-first-child, 
+
+                // border-radius :
+                $bo-radius-group-vr-last-child, 
+
+                // type :
+                vr
+            );
+        }
+    }
+}
+/* -------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------button direction------------------------------------------------- : */
+/* -----------------horizontal buttons : */
+.bns-hr {
+    margin: 2px auto;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; 
+    @include make-flex-dir(row);
+    > button, > input[type="reset"], > input[type="submit"] {
+        padding {top: 5px; bottom: 5px;}
+        margin: 12px;
+    }
+}
+/* ----------------vertical buttons : */
+.bns-vr {
+    margin: 2px auto;
+    @include make-flex-dir(column);
+    > button, > input[type="reset"], > input[type="submit"] {
+        padding {top: 8px; bottom: 8px;} 
+        margin: 8px 16px;
+    }
+}
+
+/* ----------------------------------------------------ball----------------------------------------------------------- : */
+.ball {
+    @include make-ball (60px, $md-font);
+}
+/* -----------------------------------------------------pill----------------------------------------------------------- : */
+.pill{
+    @include make-pill (60px, $md-font);
+}
+
+// make class button with size and screen name :
+@each $screen-name in $map-screen-name {
+    @each $size-name in (xl, lg, md, sm, xs) {
+
+        // All buttons in different sizes and screen name give the same bn properties :
+            @include make-class(bn, -#{$size-name}, -#{$screen-name}) {
+                @extend .bn;
+            }
+    }
+}
+
+// make class button with size :
+@each $size-name in (xl, lg, md, sm, xs) {
+
+    // All buttons in different sizes give the same bn properties :
+    @include make-class(bn, -#{$size-name}, null) {
+        @extend .bn;
+    }
+}
+
+/* ---------------------------------------------control button size--------------------------------------------------- : */
+@each $size-name, $size-item, $fos in 
+
+    // map include (size-name, button-size, font-size) :
+        (xl, $bn-w-xl, $xl-font) (lg, $bn-w-lg, $lg-font) (md, $bn-w-md, $md-font) (sm, $bn-w-sm, $sm-font) (xs, $bn-w-xs, $xs-font) {
+
+    // mixin contain (screen size name, button size, font sizem) : 
+    @include make-buttons-size($size-name, $size-item, $fos, null);
+}
+@each $screen-size, $screen-name, $min-max  in $map-screen-size-name-type {
+    @include make-media($min-max, $screen-size) {
+        // map for button size and button font size :
+        @each $size-name, $size-item, $fos in (xl, $bn-w-xl, $xl-font) (lg, $bn-w-lg, $lg-font) (md, $bn-w-md, $md-font) (sm, $bn-w-sm, $sm-font) (xs, $bn-w-xs, $xs-font) {
+
+            @include make-buttons-size($size-name, $size-item, $fos, -#{$screen-name});
+
+        }
+    }
+}
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/

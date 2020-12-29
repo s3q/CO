@@ -1,0 +1,17 @@
+/*  -------------------------------------------------icons----------------------------------------- : */
+@each $items-size, $items-value in (2x, calc(70px + 1em)), (xl, calc(40px + 1em)), (lg, calc(30px + 1em)), (md, calc(20px + 1em)), (sm, calc(10px + 1em)), (xs, calc(0px + 1em)) {
+    .io-#{$items-size} {
+        font-size: $items-value;
+    } 
+}
+
+@each $screen-size, $screen-name, $min-max  in $map-screen-size-name-type{
+    @include make-media($min-max, $screen-size) {
+        @each $items-size, $items-value in (2x, calc(70px + 1em)), (xl, calc(40px + 1em)), (lg, calc(30px + 1em)), (md, calc(20px + 1em)), (sm, calc(10px + 1em)), (xs, calc(0px + 1em)) {
+            .io-#{$items-size}-#{$screen-name} {
+                font-size: $items-value;
+            } 
+        }
+    }
+}
+/* ------------------------------------------------------------------------------------------------------ */

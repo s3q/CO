@@ -1,0 +1,107 @@
+.card {
+    
+    @include make-card(
+
+        // width :
+        $card-w, 
+
+        //margin :
+        $card-m, 
+
+        //radius :
+        $card-bo-radius,
+        
+        // background-color :
+        $card-bgc,
+
+        // border :
+        $card-bo
+    );
+
+}
+
+.card-head {
+
+    @include make-card-head(
+
+        // display 
+        $card-head-dp,
+        
+        // justify-content :
+        $card-head-justify-content,
+        
+        // align-items :
+        $card-head-align-items, 
+
+        // width :
+        $card-head-w,
+        
+        // font-size :
+        $card-head-fos,
+        
+        // padding :
+        $card-head-p
+    );
+
+}
+
+.card-body {
+
+    @include make-card-body(
+
+        // overflow :
+        $card-body-overflow,
+
+        // text-align :
+        $card-body-text-align,
+        
+        // padding :
+        $card-body-p
+    );
+
+    img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.card-foot {
+
+    @include make-card-foot(
+        // padding :
+        $card-foot-p, 
+        
+        // width :
+        $card-foot-w, 
+        
+        // font-size :
+        $card-foot-fos, 
+        
+        // border-bottom :
+        $card-foot-bot);
+
+}
+
+
+@each $color-name , $color-value, $color-transparent in $map-colorname-color-transparent {
+
+    .card-#{$color-name} {
+
+        @include make-cards-color(
+            
+            // border-color-left : 
+            $color-value, 
+
+            // border-color-right :
+            $color-transparent, 
+
+            // border-color-top :
+            $color-transparent, 
+
+            // border-color-bottom :
+            $color-transparent
+        );
+
+    }
+
+}

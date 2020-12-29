@@ -1,0 +1,53 @@
+/* -------------------------------------------------------------alert -------------------------------------------- : */
+.alert {
+    @include make-alert( // alert :
+
+        // background-color :
+        $red-transparent, 
+
+        // color :
+        $red, 
+
+        // font-size :
+        $sm-font, 
+
+        // padding :
+        $alert-p, 
+
+        // width :
+        $alert-w, 
+
+        // margin :
+        $alert-m, 
+
+        // border-raduis :
+        $alert-bo-radius
+    );
+
+    .alert-foot {
+        @include make-alert-foot( // foot :
+        
+            // display :
+            $alert-foot-dp, 
+            
+            // flex direction :
+            $alert-foot-flex-dir,
+
+            // justify-content : 
+            $alert-foot-justify-content,
+
+            // margin-top :
+            $alert-foot-mt, 
+
+            // border-top : 
+            $alert-foot-bo-top,
+
+            // padding : 
+            $alert-foot-p,
+
+            // padding for content : 
+            $alert-foot-p-content
+        );
+    }
+}
+/* ----------------------------------------------------------------------------------------------------------------- */

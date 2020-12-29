@@ -1,0 +1,28 @@
+    /* bo : */
+    /* bo > border */
+@each $color-name, $color-value in $map-color {
+    .bo-#{$color-name} {
+        border: 1.5px solid $color-value;
+    }
+    .bo-top-#{$color-name} {
+        border-top: 1.5px solid $color-value;
+    }
+    .bo-right-#{$color-name} {
+        border-right: 1.5px solid $color-value;
+    }
+    .bo-bottom-#{$color-name} {
+        border-bottom: 1.5px solid $color-value;
+    }
+    .bo-left-#{$color-name} {
+        border-left: 1.5px solid $color-value;
+    }
+    .bo-none {
+        border: none;
+    }
+    .bo-#{$color-name}-hover {
+        border: 1.5px solid transparent;
+        &:hover {
+            border: 1.5px solid $color-value;
+        }
+    }
+}

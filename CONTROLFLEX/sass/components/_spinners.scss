@@ -1,0 +1,192 @@
+.spinner {
+  margin: 8px;
+  display: inline-block;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  vertical-align: text-bottom;
+  border-top: 4px solid $purple;
+  border-right: 4px solid $purple;
+  border-bottom: 4px solid #e5e5e5b0;
+  border-left: 4px solid #e5e5e5b0;
+  -webkit-animation: spinner .75s linear infinite;
+  animation: spinner .75s linear infinite;
+}
+
+.bo-quarter {
+  border-top: 4px solid $purple;
+  border-right: 4px solid #e5e5e5b0;
+  border-bottom: 4px solid #e5e5e5b0;
+  border-left: 4px solid #e5e5e5b0;
+}
+
+.bo-half {
+  border-top: 4px solid $purple;
+  border-right: 4px solid $purple;
+  border-bottom: 4px solid #e5e5e5b0;
+  border-left: 4px solid #e5e5e5b0;
+}
+
+
+.bo-eighth {
+  border-top: 4px solid $purple;
+  border-right: 4px solid $purple;
+  border-bottom: 4px solid $purple;
+  border-left: 4px solid #e5e5e5b0;
+}
+
+
+.bo-fill {
+  border-top: 4px solid $purple;
+  border-right: 4px solid $purple;
+  border-bottom: 4px solid $purple;
+  border-left: 4px solid $purple;
+}
+
+@-webkit-keyframes spinner {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+@each $color-name, $color-value in $map-color {
+  .spinner-#{$color-name} {
+    border-top-color: $color-value;
+    border-right-color: $color-value;
+
+    &.bo-quarter {
+      border-top-color: $color-value;
+    }
+    &.bo-half {
+      border-top-color: $color-value;
+      border-right-color: $color-value;
+    }
+    &.bo-eighth {
+      border-top-color: $color-value;
+      border-right-color: $color-value;
+      border-bottom-color: $color-value;
+    }
+    &.bo-fill {
+      border-top-color: $color-value;
+      border-right-color: $color-value;
+      border-bottom-color: $color-value;
+      border-left-color: $color-value;
+    }
+  }
+}
+
+@each $color-name, $color-value, $color-transparent-value in $map-colorname-color-transparent {
+  .spinner-#{$color-name}-trans {
+    border-top-color: $color-value;
+    border-right-color: $color-value;
+    border-bottom-color: $color-transparent-value;
+    border-left-color: $color-transparent-value;
+
+    &.bo-quarter {
+      border-top-color: $color-value;
+      border-right-color: $color-transparent-value;
+      border-bottom-color: $color-transparent-value;
+      border-left-color: $color-transparent-value;
+    }
+    &.bo-half {
+      border-top-color: $color-value;
+      border-right-color: $color-value;
+      border-bottom-color: $color-transparent-value;
+      border-left-color: $color-transparent-value;
+    }
+    &.bo-eighth {
+      border-top-color: $color-value;
+      border-right-color: $color-value;
+      border-bottom-color: $color-value;
+      border-left-color: $color-transparent-value;
+    }
+    &.bo-fill {
+      border-top-color: $color-value;
+      border-right-color: $color-value;
+      border-bottom-color: $color-value;
+      border-left-color: $color-value;
+    }
+  }
+}
+
+.emersion {
+  margin: 8px;
+  display: inline-block;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  vertical-align: text-bottom;
+  background-color: $purple;
+  -webkit-animation: emersion .8s cubic-bezier(0.53, 1.38, 0, 1.4) infinite both;
+  animation: emersion .8s cubic-bezier(0.53, 1.38, 0, 1.4) infinite both;
+}
+
+@-webkit-keyframes emersion {
+  from {
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: .8;
+  }
+}
+
+@keyframes emersion {
+  from {
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: .8;
+  }
+}
+

@@ -1,0 +1,77 @@
+/* ---------------------------------------------------------------position------------------------------------------------------------- */
+.sticky-sidebar {
+    position: fixed !important;
+    top: 60px;
+    z-index: 1000;
+    height: calc(100% - 60px);
+    overflow-y: scroll !important;
+    padding: 14px 8px 40px 8px !important;
+
+}
+.sticky-navbar {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0px;
+    z-index: 10000;
+    height: auto; 
+}
+
+
+.relative {position: relative;}
+.absolute {position: absolute;}
+.sticky {position: -webkit-sticky; position: sticky;}
+.fixed {position: fixed;}
+
+.position-top {
+    top: 0px;
+}
+.position-bottom {
+    bottom: 0px;
+}
+.position-left {
+    left: 0px;
+}
+
+.position-right {
+    right: 0px;
+}
+.position-right-top {
+    right: 10px;
+    top: 10px;
+}
+.position-right-bottom {
+    right: 10px;
+    bottom: 10px;
+}
+.position-left-top {
+    left: 10px;
+    top: 10px;
+}
+.position-left-bottom {
+    left: 10px;
+    bottom: 10px;
+}
+
+.position-center {
+    left: 50%;
+    bottom: 10px;
+    -moz-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+}
+
+.position-center-center {
+    left: 50%;
+    top: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.position-unset {
+    position: unset;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------- */
+

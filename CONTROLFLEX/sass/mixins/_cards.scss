@@ -1,0 +1,32 @@
+@mixin make-card($w, $m, $bo-radius, $bgc, $bo) {
+    display: block;
+    width: $w;
+    margin: $m;
+    border-radius: $bo-radius;
+    background-color: $bgc;
+    border: $bo;
+}
+
+@mixin make-card-head($dp, $justify-content, $align-items, $w, $fos, $p) {
+    display: $dp;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    width: $w;
+    font-size: $fos;
+    padding: $p;    
+}
+
+@mixin make-card-body($overflow, $text-align, $p) {
+    overflow: $overflow;
+    display: block;
+    text-align: $text-align;
+    padding: $p;
+}
+
+@mixin make-card-foot($p, $w, $fos, $bot) {
+    display: block;
+    padding: $p;
+    width: $w;
+    font-size: $fos;
+    border-top: $bot;
+}

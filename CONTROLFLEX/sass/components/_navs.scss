@@ -1,0 +1,110 @@
+
+.nav-hr {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    color: $dark-blue; 
+    * {
+        color: $dark-blue;
+    }
+    li {
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+
+
+.nav-vr {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    width: 100%;
+    color: $dark-blue;
+    * {
+        color: $dark-blue;
+    }
+    li {
+        margin-top: 8px;
+    }
+    .dropdown-res, .dropdown, .dropdown-hr, .dropdown-vr, .dropdown-menu {
+        padding: 0px;
+        .dropdown-group {
+            margin: 6px 0px;
+            width: 90%;
+        }
+    }
+}
+
+
+.nav-links {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    ol, ul {
+        display: -ms-flexbox;
+        display: flex;
+        padding: 8px;
+        -ms-flex-align: center;
+        align-items: center;
+        li {
+            padding: 5px 10px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: $bn-default-bo-radius;
+            -webkit-transition: box-shadow, background-color .4s, .4s;
+            -moz-transition: box-shadow, background-color .4s, .4s;
+            -o-transition: box-shadow, background-color .4s, .4s;
+            transition: box-shadow, background-color .4s, .4s;
+            box-shadow: none;
+            cursor: pointer;
+        }
+    }
+}
+
+@each $color-name, $color-value, $color-transparent-value in $map-colorname-color-transparent {
+    .link-noactive-#{$color-name} {
+        background-color: transparent;
+        padding: 2px 4px;
+        color: #{$color-value}b8 !important;
+        * {color: #{$color-value}b8 !important;}
+        border-radius: 4px;
+        cursor: pointer;
+        -webkit-transition: color, background-color .4s, .4s;
+        -moz-transition: color, background-color .4s, .4s;
+        -o-transition: color, background-color .4s, .4s;
+        transition: color, background-color .4s, .4s !important;
+        &:hover{
+            background-color: #{$color-value}1f !important;
+            color: $color-value !important;
+            * {color: $color-value !important;}
+        }
+    }
+
+    .link-active-#{$color-name} {
+        background-color: transparent;
+        padding: 2px 4px;
+        color: #{$color-value} !important;
+        * {color: #{$color-value} !important;}
+        border-radius: 4px;
+        cursor: pointer;
+        -webkit-transition: color, background-color .4s, .4s;
+        -moz-transition: color, background-color .4s, .4s;
+        -o-transition: color, background-color .4s, .4s;
+        transition: color, background-color .4s, .4s !important;
+        &:hover{
+            background-color: #{$color-value}1f !important;
+        }
+    }
+}

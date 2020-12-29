@@ -1,0 +1,99 @@
+
+.notice-window {
+    width: 280px;
+    position: fixed;
+    top: 80px;
+    left: 10px;
+    background-color: #ffffff;
+    padding: 0px;
+    border-radius: 7px;
+    border: 1px solid #d0cfd3;
+    overflow: hidden;
+    z-index: 9999999999999999000000000000000;
+
+    .notice-window-head {
+        width: 100%;
+        text-align: center;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 1px 8px;
+        border-bottom: 1px solid #dddddd;
+    }
+    .notice-window-body {
+        word-break: break-word;
+        padding: 14px 8px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: $xs) {
+    .notice-window {
+        width: 90%;
+    }
+}
+
+.notice {
+    z-index: 1000000000000000000000000;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    font-size: 14px;
+    bottom: 10px;
+    left: 50%;
+    background-color: #000000b0;
+    padding: 8px 12px;
+    border-radius: 10px;
+    color: #fff;
+    white-space: nowrap;
+    -moz-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+}
+ 
+
+@each $color-name, $color-value, $color-transparent-value in $map-colorname-color-transparent {
+    .notice-#{$color-name} {
+        &.notice {  
+            background-color: $color-value;
+            color: $light;
+        }    
+    
+        &.notice-window {
+            border: 1px solid $color-transparent-value;
+            .notice-window-head {
+                border-bottom: 1px solid $color-transparent-value;
+                background-color: $color-value + cf;
+                color: $light  + b0;
+                * {
+                    color: $light + b0;
+                }
+            }
+        }
+    }
+
+    .notice-#{$color-name}-trans {
+        &.notice { 
+            background-color: $color-transparent-value;
+            color: $color-value;
+        }
+    
+        &.notice-window {
+            border: 1px solid #{$color-value};
+            .notice-window-head {
+                border-bottom: 1px solid $color-transparent-value;
+                background-color: $color-value + cf;
+                color: $light + b0;
+                * {
+                    color: $light + b0;
+                }
+            }
+            .notice-window-body {
+                background-color: $color-transparent-value;
+                color: $color-value;
+            }
+        }
+    }
+}

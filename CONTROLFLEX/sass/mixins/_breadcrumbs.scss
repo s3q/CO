@@ -1,0 +1,31 @@
+@mixin make-path($p, $bgc, $m, $bo, $bo-radius, $fow, $ul-fos) {
+    padding: $p; 
+    background-color: $bgc; 
+    margin: $m; 
+    border: $bo; 
+    border-radius: $bo-radius; 
+    font-weight: $fow;
+    ul {
+        display: -ms-flexbox;
+        display: flex; 
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row; 
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        font-size: $ul-fos;
+        li {
+            color: $gray; 
+            cursor: pointer;
+            &:hover {text-decoration: underline;}
+        }
+    }
+}
+@mixin make-path-item($ml, $color) {
+    list-style: '/ '; 
+    margin-left: $ml;
+    &:last-of-type {
+        color: $color;
+        &:hover {text-decoration: none;}
+    }
+}

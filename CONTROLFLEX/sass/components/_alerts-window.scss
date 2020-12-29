@@ -1,0 +1,88 @@
+/*------------------------------------------------------------------------alert window-------------------------------------------------------- : */
+.backdrop-window {
+    @include make-backdrop-window ( // backdrop-window :
+
+        // z-index :
+        $backdrop-window-zindex,
+        
+        // background-color :
+        $backdrop-window-bgc
+    );
+}
+.alert-window {
+
+    @include make-alert-window ( // alert-window :
+
+        // z-index :
+        $alert-window-zindex, 
+
+        // width :
+        $alert-window-w, 
+
+        // height :
+        $alert-window-h, 
+
+        // padding :
+        $alert-window-p, 
+
+        // raduis :
+        $alert-window-bo-radius, 
+
+        // overflow :
+        $alert-window-overflow
+    );
+
+    .alert-window-head {
+
+        @include make-alert-window-head ( // alert-window-head :
+
+            // flex-direction :
+            $alert-window-head-flex-dir,
+            
+            // padding :
+            $alert-window-head-p
+        );
+    }
+
+
+    .alert-window-foot {
+
+        @include make-alert-window-foot ( // alert-window-foot :
+
+            // position :
+            $alert-window-foot-position,
+            
+            // padding :
+            $alert-window-foot-p,
+            
+            // width :
+            $alert-window-foot-w, 
+
+            // disply :
+            $alert-window-foot-dp,
+            
+            // flex-direction :
+            $alert-window-foot-flex-dir,
+            
+            // justify-content :
+            $alert-window-foot-justify-content,
+            
+            // border-top :
+            $alert-window-foot-bot
+        );
+    }
+}
+
+@media (min-width: $sm) and (max-width: $md) {
+    .alert-window {
+        width: 490px; 
+        height: 350px;
+    }
+}
+@media (max-width: $sm) {
+    .alert-window {
+        width: 86%; 
+        height: 60%;
+    }
+}
+/* --------------------------------------------------------------------------------------------------------------------------------------------- */

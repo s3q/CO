@@ -1,0 +1,80 @@
+.progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  width: 98%;
+  display: block;
+  margin: 2px auto;
+  height: 20px;
+  position: relative;
+  &::-webkit-progress-bar {
+    overflow: hidden;
+    background-color: #ececec;
+    border-radius: 4px;
+  }
+  &::-webkit-progress-value {
+    overflow: hidden;
+    background-color: $purple;
+    border-radius: 4px 0px 0px 4px;
+  }
+  &::-moz-progress-bar {
+    overflow: hidden;
+    background-color: $purple;
+    border-radius: 4px 0px 0px 4px;
+  }
+}
+
+.progress-pill {
+  &::-webkit-progress-bar {
+    border-radius: 9px;
+  }
+  &::-webkit-progress-value {
+    background-color: $purple;
+    border-radius: 9px 0px 0px 9px;
+  }
+  &::-moz-progress-bar {
+    background-color: $purple;
+    border-radius: 9px 0px 0px 9px;
+  }
+}
+
+[data-progress]::before {
+  content: attr(data-progress);
+  position: absolute;
+  right: 50%;
+  top: 3px;
+  font-size: 12px;
+  color: #ffffffb0;
+}  
+
+@each $color-name, $color-value in $map-color {
+  .progress-#{$color-name} {
+    &::-webkit-progress-value {
+      background-color: $color-value;
+    }
+    &::-moz-progress-bar {
+      background-color: $color-value;
+    }
+    &::before {
+      color: #ffffffb0;
+    }
+  }
+}
+
+@each $color-name, $color-value, $color-transparent-value in $map-colorname-color-transparent {
+  .progress-#{$color-name}-trans {
+    &::-webkit-progress-bar {
+      background-color: $color-transparent-value;
+    }
+    &::-webkit-progress-value {
+      background-color: $color-value;
+    }
+    &::-moz-progress-bar {
+      background-color: $color-value;
+    }
+    &::before {
+      color: #ffffffb0;
+    }
+  }
+}

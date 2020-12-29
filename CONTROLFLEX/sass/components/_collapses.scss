@@ -1,0 +1,3 @@
+.collapse {
+    @include make-collapse($collapse-p, $collapse-w, $collapse-m);
+}

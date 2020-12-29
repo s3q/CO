@@ -1,0 +1,45 @@
+/* --------------------------------------------------margin---------------------------------------- : */ 
+/* -------------------m > margin */
+@each $prefix, $margin-type in $map-margin {
+    @include  make-p-m(#{$prefix}, null, $margin-type);
+}
+
+
+.m-center, .m-all-center * {
+    margin: 0px auto;
+}
+.mt-auto {
+    margin-top: auto;
+} 
+.ml-auto {
+    margin-left: auto;
+}
+.mr-auto {
+    margin-right: auto;
+}
+.mb-auto {
+    margin-bottom: auto;
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------*/
+/* --------------------------------------------------padding--------------------------------------- : */ 
+/* -------------------p > padding */ 
+@each $prefix, $padding-type in $map-padding {
+    @include  make-p-m(#{$prefix}, null, $padding-type);
+} 
+/* --------------------------------------------------------------------------------------------------- */
+
+@each $screen-size, $screen-name, $min-max  in  $map-screen-size-name-type {
+    @include make-media($min-max, $screen-size) {
+        // margin :
+        @each $prefix, $margin-type in $map-margin {
+            @include  make-p-m(#{$prefix}, -#{$screen-name}, $margin-type);
+        }
+        // padding :
+        @each $prefix, $padding-type in $map-padding {
+            @include  make-p-m(#{$prefix}, -#{$screen-name}, $padding-type);
+        }  
+    }
+} 

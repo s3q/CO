@@ -1,0 +1,43 @@
+
+@mixin make-dropdown($z-index, $dp, $w, $p, $color) {
+    z-index: $z-index;
+    cursor: pointer;
+    position: relative;
+    display: $dp;
+    width: $w;
+    padding: $p;
+    color: $color;
+    a {text-decoration: none;}
+    @content;
+} 
+
+@mixin make-dropdown-group($dp, $w, $flex-dir, $position, $top, $overflow, $bgc, $bo, $bo-radius) {
+    display: $dp;
+    width: $w;
+    -ms-flex-direction: $flex-dir;
+    flex-direction: $flex-dir;
+    @if ($position != null) {
+        position: $position;
+        top: $top;
+    }
+    overflow: $overflow;
+    background-color: $bgc;
+    border: $bo;
+    border-radius: $bo-radius;
+    @content;
+} 
+
+@mixin make-dropdown-content($dp, $w, $p, $bgc, $transition, $bgc-hover) {
+    display: $dp;
+    width: $w;
+    padding: $p;
+    background-color: $bgc;
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+    &:hover {
+        background-color: $bgc-hover;
+    }
+    @content;
+} 

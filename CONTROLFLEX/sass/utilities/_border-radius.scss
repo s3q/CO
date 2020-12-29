@@ -1,0 +1,26 @@
+/* --------------------------------------------------border radius--------------------------------------- : */
+@each $class in ("", -tl, -tr, -bl, -br) {
+    @for $i from 0 through 12 {        
+        .radius#{$class}-#{$i} {
+            border-radius: ($i + px);
+        }
+    }
+    .radius-circle {
+        border-radius: 50%;
+    }
+}
+
+
+.group-radius {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    > * {flex-grow: 1; border-radius: unset;}
+    >:first-child {border-radius: 5px 0px 0px 5px;}
+    >:last-child {border-radius: 0px 5px 5px 0px;}
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */

@@ -1,0 +1,148 @@
+// diplay :
+@mixin make-displays($map-dis, $add-class) {
+    .dp-#{$map-dis}#{$add-class}{
+        display: #{$map-dis};
+    }
+}
+
+// width & height :
+@mixin make-w-h($class, $property, $add-inclass) {
+    .#{$class}-auto#{$add-inclass} {
+        #{$property}: auto;
+        max-#{$property}: 100%;
+    }
+    @for $i from 0 through 20 {
+        .#{$class}-#{$i*5}#{$add-inclass} {
+            #{$property}: ($i * (100% / 20)) ;
+        }
+        .#{$class}-all-#{$i*5}#{$add-inclass} * {
+            @extend .#{$class}-#{$i*5}#{$add-inclass};
+        }
+    }
+}
+
+// padding & margin :
+@mixin make-p-m($class, $add-inclass, $padding-type) {
+    @for $i from 0 through 50 {
+        .#{$class}-#{$i}#{$add-inclass} {
+            #{$padding-type}: ($i * 2) + px;
+        }
+        .#{$class}-all-#{$i}#{$add-inclass} > * {
+            @extend .#{$class}-#{$i}#{$add-inclass};
+        }
+    }
+}
+
+// opacity :
+@mixin make-opacity() {
+    @for $i from 0 through 12 {
+        .op-#{$i} {
+            opacity: $i / 12;
+        }
+        .op-all-#{$i} > * {
+            @extend .op-#{$i};
+        }
+    }
+}
+
+@mixin make-dpflex() {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+// mixin for flex wrap :
+@mixin make-flex-wrap($map-wrap) {
+    @include make-dpflex();
+    -ms-flex-wrap: #{$map-wrap};
+    flex-wrap: #{$map-wrap};
+}
+
+@mixin make-flex-dir($dir) {
+    @include make-dpflex();
+    flex-direction: $dir;
+    -ms-flex-direction: $dir;
+}
+
+// mixin for text dercoation :
+@mixin make-text-decoration($text-dec) {
+    .text-#{$text-dec}{
+        text-decoration: $text-dec;
+    }
+}
+
+// mixin for font style :
+@mixin make-font-style($font-style) {
+    .font-#{$font-style} {
+        font-style: #{$font-style};
+    }
+}
+
+// justify and items :
+@mixin make-loop-justify-items($map-loop-justify-items: (), $add-inclass) {
+    @each $property, $map-items-class in $map-loop-justify-items {
+        @each $items-class, $items-value, $prefix in $map-items-class {
+            .#{$items-class}#{$add-inclass} {
+                display: -ms-flexbox;
+                display: flex;
+                @if ($property == justify-content) {-ms-flex-pack: $prefix;} @else if ($property == align-items) {-ms-flex-align: $prefix} @else if ($property == align-content) {-ms-flex-line-pack: $prefix} @else if ($property == align-self) {-ms-flex-item-align: $prefix}
+                #{$property}: $items-value;
+            }
+        }
+    }
+}
+
+// support :
+@mixin make-support($property, $value, $browse : ()) {
+    @each $brow in $browse {
+        -#{$brow}-#{$property}: $value;
+    }
+    #{$property}: $value;
+}
+
+// font property :
+@mixin make-font-proprty($font-weight, $font-size, $line-height) {
+    font: {
+        weight: $font-weight;
+        size: $font-size;
+    }
+    line-height: $line-height;
+}
+
+
+// text and heading :
+@mixin make-text-property($diaplay, $margin-block-start, $margin-block-end, $margin-inline-start, $margin-inline-end) {
+    margin: {
+        block: {
+            start: $margin-block-start;
+            end: $margin-block-end;
+        }
+        inline: {
+            start: $margin-inline-start;
+            end: $margin-inline-end;
+        }
+    }
+}
+
+// overflow :
+@mixin make-overflow($value) {
+    @each $class in ('', '-x', '-y') {
+        .overflow#{$class}-#{$value}{
+            overflow: $value;
+        }      
+    }
+}
+
+@mixin make-justify-align($justify-value, $align-value) {
+    -ms-flex-pack: $justify-value;
+    justify-content: $justify-value;
+    -ms-flex-align: $align-value;
+    align-items: $align-value;
+}
+
+// color layout
+@mixin if-color($color-name) {
+    @if $color-name == $light {color: $dark-blue;}
+    @else if $color-name == $light-blue {color: $blue;}
+    @else {color: $light;}
+}
+

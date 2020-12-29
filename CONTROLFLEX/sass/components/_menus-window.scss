@@ -1,0 +1,30 @@
+
+/* -------------------------------------------------------------------menu------------------------------------------------------------ :*/
+.menu-window {
+    z-index: 1000000;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    max-width: 100%;
+    width: 300px;
+    height: 100%;
+    padding: 8px;
+    background-color: #ffffff;
+    color: initial;
+    overflow-y: auto;
+    -webkit-transition: left 5s 5s cubic-bezier(0.38, 0.8, 1, 1.01);
+    -moz-transition: left 5s 5s cubic-bezier(0.38, 0.8, 1, 1.01);
+    -o-transition: left 5s 5s cubic-bezier(0.38, 0.8, 1, 1.01);
+    transition: left 5s 5s cubic-bezier(0.38, 0.8, 1, 1.01);
+    a:hover{
+        text-decoration: none;
+    }
+}
+
+@media (max-width: $sm) {
+    .menu-window {
+        width: 60%;
+    }
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------- */

@@ -1,0 +1,35 @@
+.pagination, .pagination-hr {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: max-content;
+  overflow: hidden;
+  > * {
+    border-radius: 0px;
+  }
+  >:first-of-type {
+    border-radius: 4px 0px 0px 4px;
+  }
+  >:last-of-type {
+    border-radius: 0px 4px 4px 0px;
+  }
+}
+
+.pagination-vr {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: max-content;
+  overflow: hidden;
+  > * {
+    border-radius: 0px;
+  }
+  >:first-of-type {
+    border-radius: 4px 4px 0px 0px;
+  }
+  >:last-of-type {
+    border-radius: 0px 0px 4px 4px;
+  }
+}

@@ -1,0 +1,56 @@
+
+@mixin dark-mode {
+    color: $dark-links-color !important;
+    * {
+        color: $dark-link-color;
+    }
+
+    .bn-navbar {
+        color: #{$light}b0 !important;
+        * {
+            color: #{$light}b0;
+        }
+    }
+
+    .link-active{
+        color: $dark-link-color-active !important;
+        * {color: $dark-link-color-active !important;}
+    }
+    .link-noactive{
+        color: $dark-link-color-no-active !important;
+        * {color: $dark-link-color-no-active !important;}
+        transition: color .2s;
+        &:hover{
+            color: $dark-link-color-active !important;
+            * {color: $dark-link-color-active !important;}
+        }
+    }
+}
+
+@mixin light-mode {
+    color: $light-links-color !important;
+    * {
+        color: $light-link-color;
+    }
+
+    .bn-navbar {
+        color: $light-link-color !important;
+        * {
+            color: $light-link-color;
+        }
+    }
+
+    .link-active{
+        color: $light-link-color-active !important;
+        * {color: $light-link-color-active !important;}
+    }
+    .link-noactive{
+        color: $light-link-color-no-active !important;
+        * {color: $light-link-color-no-active !important;}
+        transition: color .2s;
+        &:hover{
+            color: $light-link-color-active !important;
+            * {color: $light-link-color-active !important;}
+        }
+    }
+}

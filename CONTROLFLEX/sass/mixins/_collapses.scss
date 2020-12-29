@@ -1,0 +1,7 @@
+@mixin make-collapse($p, $w, $m) {
+    overflow: hidden; 
+    padding: $p; 
+    width: $w; 
+    margin: $m;
+}
+

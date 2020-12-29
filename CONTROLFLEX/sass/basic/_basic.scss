@@ -1,0 +1,533 @@
+/*  controlflex-------------------------------------------------------------------------------- */
+/*  v.1 ------------------------------------------------------------------------------------- */
+/* screens : */
+/* desktop screen : 1366px > xl */
+/* labtop screen : 1080px > lg */
+/* tablet screen : 768px > md */
+/* tablet and phone screen : 550px > sm */
+/* extra small > phone screen : 400px > xs*/
+/* less than extra small : 400px > lxs*/
+/* note :
+the size(number or size) of the item precedes the size of the screen 
+*/
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    line-height: $normal-line-height-html;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: #ffffff00;
+}
+
+body{
+    margin: 0;
+    font: {
+        family: $basic-font;
+        weight: 400;
+        size: $md-font;
+    }
+    color: $dark;
+    background-color: transparent;
+    &:lang(en) {
+        direction: ltr;
+    }
+    &:lang(ar) {
+        direction: rtl;
+    }
+}
+
+::selection {
+    background-color: $selection-bgc;
+    color: $selection-color;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+a {
+    font-size: $md-font;
+    font-weight: 400;
+    text-decoration: none;
+    -moz-text-decoration-color: currentColor;
+    text-decoration-color: currentColor;
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+a:not([href]), a:not([href]):hover, a[class*=bn], a[class*=bn]:hover {
+    text-decoration: none;
+}
+
+span {
+    color: $span-color;
+}
+q {
+    color: $q-color;
+}
+
+p {
+    margin: 5px 0;
+}
+address {
+    font-family: inherit;
+    color: $address-color;
+    margin-bottom: 1px;
+    font-style: normal;
+}
+
+ul, ol{
+    padding-left: 0;
+    padding-right: 0;
+    list-style: none;
+    > a{
+        cursor: pointer;
+    }
+    li{
+        margin-left: 16px;
+        margin-right: 0;
+        &:lang(ar) {
+        margin-left: 0;
+        margin-right: 16px;
+        }
+        > a {
+            cursor: pointer;
+        }
+
+    }
+}
+
+ul,
+ol,
+dl {
+    color: $ul-ol-dl-color;
+    margin-top: 0;
+    margin-bottom: 1px;
+}
+
+li,
+dd{
+    color: #4e4e4e;
+}
+
+ul, ol{
+    ul, ol{
+        margin-left: 5px;
+        margin-bottom: 2px;   
+    }
+}
+
+blockquote {
+    margin: 0px;
+    font-size: 16px;
+}
+
+b, strong {
+    color: $b-strong-color;
+    font-weight: bold;
+}
+
+small{
+    font-size: $sm-font;
+}
+
+code, pre, samp, kbd {
+    font: {
+        family: $monospace;
+        size: $md-font;
+        weight: $normal-font-weight;
+    }
+}
+
+pre {
+    display: block;
+    margin: 4px auto;
+    padding: 5px 8px;
+    max-width: 95%;
+    width: auto;
+    height: auto;
+}
+
+code {
+    color: $red;
+    font-size: 16px;
+    code {
+        color: $blue;
+        code {
+            color: #228a3a;
+            code {
+                color: #d6a100;
+            }
+        }
+    }
+    span {
+        color: #525b79;
+    }
+} 
+
+pre code {
+    word-break: normal;
+}
+
+label, nav,.dropdown, .navbar, .link {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block;
+}
+  
+button,
+select,
+optgroup {
+    font-size: $bn-default-fos;
+    margin: 0;
+}
+
+textarea {
+    width: 100%;
+    height: 180px;
+    overflow: auto;
+    resize: vertical;
+}
+
+fieldset {
+    min-width: 10px;
+    padding: 6px 8px;
+    border-radius: 3px;
+    border: 0.5px solid #f1f1f1;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+output {
+    display: inline-block;
+}
+
+select {
+    padding: 3.5px 60px 3.5px 10px;
+    font-size: initial;
+    max-width: 100%;
+    border: .5px solid $dark-blue;
+    color: $dark;
+}
+
+button, [class*="link"], [class*="bn"], input[type="submit"], input[type="reset"], input[type="button"] {
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+}
+
+button, input[type="submit"], input[type="reset"], input[type="button"] {
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+}
+
+textarea, input {
+    margin: 0px auto;
+    width: 100%;
+    &:focus{
+        outline: none;
+    }
+}
+
+input[type="radio"], input[type="checkbox"], input[type="range"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+label {
+    color: #888888;
+}
+
+legend {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 8px;
+    font-size: $md-font;
+    line-height: inherit;
+    color: inherit;
+    white-space: normal;
+}
+
+kbd {
+    padding: 2px 8px;
+    color: $dark-blue;
+    background-color: $light-blue;
+    border-radius: 4px;
+}
+
+kbd kbd {
+    padding: 0;
+    font-weight: $normal-font-weight;
+}
+
+summary {
+    display: list-item;
+    cursor: pointer;
+}
+
+hr, .hr {
+    position: relative;
+    margin: 10px auto;
+    width: 95%;
+    border: 1.5px solid #cdd6e460;
+    border-radius: 10px;
+}
+
+.hr::before {
+    content: attr(data-heading);
+    background-color: #fff;
+    padding: 0px 12px;
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    z-index: 10;
+    font-size: 20px;
+    -webkit-transform: translate(-50%, 0px);
+    -moz-transform: translate(-50%, 0px);
+    -ms-transform: translate(-50%, 0px);
+    -o-transform: translate(-50%, 0px);
+    transform: translate(-50%, 0px);
+}
+
+@media (max-width: $sm) {
+    .hr::before {
+        font-size: 17px;
+    }
+}
+
+mark, .mark {
+    padding: 8px;
+    background-color: #f5f9ff;
+}
+
+iframe {
+    display: block;
+    @include make-prefix(min-, 250px, (width, height));
+    @include make-prefix(null, 400px, (width, height));
+    border: .5px solid black;
+    border-radius: 3px;
+}
+
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+  cursor: pointer;
+}
+
+::-webkit-file-upload-button {
+    font: inherit;
+    -webkit-appearance: button;
+}  
+
+[disabled] {
+    opacity: .4 !important;
+    cursor: default !important;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+.list-inline {
+    display: block;
+    padding: 0px;
+    &:lang(ar) {
+        padding-right: 12px;
+    }
+}
+.list-inline-item {
+    display: inline-block;
+}
+.list-block {
+    display: block;
+    padding: 0px;
+    padding-left: 12px;
+    &:lang(ar) {
+        padding-right: 12px;
+    }
+}
+.list-block-item {
+    display: inline-block;
+}
+
+.stair {
+    display: block;
+    height: auto;
+    padding: 8px 4px;
+    > *{
+        display: block;
+        height: auto;
+        padding: 5px;
+    }
+}
+
+.blockquote {
+    font-size: $md-font;
+    margin-bottom: 8px;
+    margin-inline-start: 8px;
+}
+
+.blockquote-footer {
+    display: block;
+    font-size: 13px;
+    margin-block-start: 4px;
+    margin-inline-start: 8px;
+    color: #94a2af;
+}
+
+.custom-frame {
+    overflow-x: auto;
+    white-space: nowrap;
+    @include make-flex-dir(row);
+    margin: 0px 0px 5px 0px;
+    padding: 5px 10px 15px 10px;
+    min-width: 1%;
+    max-width: 100%;
+    background-color: #f5f4f860;
+    @include make-prefix(border-, 5px solid #f7f9fb, (left, right));
+    border-radius: 2px;
+}
+
+.custom-img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 60px auto;
+}
+
+.img-fill {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-frame {
+    max-width: 100%;
+    height: auto;
+    padding: 8px;
+    background-color: inherit;
+    border: 1px solid #f8f7fa55;
+}
+
+.table-fill {
+    width: 98%;
+    margin: 8px auto;
+}
+
+.table {
+    font-size: inherit;
+    border: 1px solid #5f5f5f50;
+    border-collapse: collapse;
+    padding: 8px 12px;
+
+    tr, td {
+        border: 1.4px solid #5f5f5f50;
+        border-collapse: collapse;
+        padding: 8px 12px;
+        word-break: break-word;
+    }
+
+    &.table-content-center {
+        thead, th, tbody, tfoot, tr, td {
+            text-align: center;
+        }
+    }
+}
+
+@each $color-name, $color-value, $color-transparent-value in $map-colorname-color-transparent {
+    //background color
+    .table-#{$color-name} {
+        background-color: $color-value !important;
+        @include if-color($color-value);
+        border: 1.5px solid $light-transparent !important;
+        tr, td {
+            border: 1.5px solid $light-transparent !important;
+        }
+    }
+
+    .table-#{$color-name}-trans {
+        background-color: $color-transparent-value !important;
+        color: $color-value;
+        border: 1.5px solid $light-transparent !important;
+        tr, td {
+            border: 1.5px solid $light-transparent !important;
+        }
+    }
+}
+
+.card-inner{
+    overflow: hidden;
+}
+
+.card-img {
+    position: relative;
+    img {
+        width: 600px;
+        height: 360px;
+    }
+}
+
+.card-caption {
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 220px;
+    transform: translate(-50%, -50%);
+    padding: 8px;
+    border-radius: 10px;
+    color: $dark;
+    background-color: #bebebe50;
+    word-break: break-word;
+}
+
+.shadow-caption {
+    box-shadow: 0px 0px 11px 0px #4d4d4d;
+}
+
+.footer {
+    padding: 8px 12px;
+    border-top: 1px solid #cbd3dc;
+    background-color: #f6f7f9;
+}
+
+.footer-bar {
+    display: flex;
+    > {
+        margin: 0px 12px;
+    }
+}
+
+
+/* 
+sass --watch "C:\Users\SALIM ALSULAIMI\Desktop\CONTROLFLEX\controlfex.scss":"C:\Users\SALIM ALSULAIMI\Desktop\CONTROLFLEX\controlfex.css"
+*/
