@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+
+    <!--viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--title-->
+    <title>CONTROLFLEX | إبداء</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="../controlfex.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <!--icons-->
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+
+    <!--window icon-->
+    <link rel="apple-touch-icon" href="../CONTROLFLEX.svg" sizes="180x180">
+    <link rel="icon" href="../CONTROLFLEX.svg" type="image/svg">
+</head>
+<body>
+
+    <div class="loading-overlay">
+        <div class="spinner spinner-pink-trans"></div>
+    </div>
+
+    <!--navbar-->
+    <nav class="navbar navbar-purple m-0">
+        <a class="navbar-link align-items-center" href="#"><i class="fas fa-fire io-sm ml-6"></i> <span class="dp-none-md">CONTROLFLEX</span></a>
+        <div class="opt-navbar">
+            <button class="bn-navbar bn-close" id="open-menu-window"  style="font-size: 24px;"><i class="fas fa-bars"></i></button>
+            <a class="p-2" href="https://github.com/CONTROLFLEX/CONTROLFLEX"><i class="link-noactive fab fa-github text-lg"></i></a>
+            <a class="p-2" href="https://twitter.com/CONTROLFLEX_CSS"><i class="link-noactive fab fa-twitter text-lg"></i></a>
+        </div>
+        <div class="collapse_ navbar-collapse">
+            <ul class="nav-collapse">
+                <li><a class="link-noactive-light p-3" href="index.html">الصفحة الرئيسية</a></li>
+                <li><a class="link-active-light p-3" href="#">إبداء</a></li>
+                <li><a class="link-noactive-light p-3" href="explore.html">إستكشف</a></li>
+                <li><a class="link-noactive-light p-3" href="support.html">الدعم</a></li>
+                <li><a class="link-noactive-light p-3" href="blog.html">المدونة</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!---->
+
+    <nav class="navbar navbar-aside_">
+        <button class="bn" data-targets="#aside" data-pattern="slide-toggle"><i class="fas fa-bars"></i></button>
+    </nav>
+
+
+    <!--menu window-->
+    <div class="menu-window navbar-dark-blue menu_" id="menu-window">
+        <div class="align-items-center">
+            <a><i class="fas fa-fire io-sm ml-6"></i> <span>CONTROLFLEX</span></a>
+            <button class="bn-close mr-auto" id="close-menu-window"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="menu-content_">
+            <ul class="nav-vr w-100 mt-3 p-3 align-items-center">
+                <li class="w-85 link-menu_"><a class="link-noactive-light p-4 dp-block" href="index.html">الصفحة الرئيسية <span class="fas fa-angle-left"></span></a></li>
+                <li class="w-85 link-menu_"><a class="link-active-light p-4 dp-block" href="get-start.html">إبداء <span class="fas fa-angle-left"></span></a></li>
+                <li class="w-85 link-menu_"><a class="link-noactive-light p-4 dp-block" href="explore.html">إستكشف <span class="fas fa-angle-left"></span></a></li>
+                <li class="w-85 link-menu_"><a class="link-noactive-light p-4 dp-block" href="support.html">الدعم <span class="fas fa-angle-left"></span></a></li>
+                <li class="w-85 link-menu_"><a class="link-noactive-light p-4 dp-block" href="blog.html">المدونة <span class="fas fa-angle-left"></span></a></li>
+            </ul>
+            <div class="menu-footer_">
+                <a class="p-2" href="https://github.com/CONTROLFLEX/CONTROLFLEX"><i class="link-noactive fab fa-github text-lg"></i></a>
+                <a class="p-2" href="https://twitter.com/CONTROLFLEX_CSS"><i class="link-noactive fab fa-twitter text-lg"></i></a>
+                <a class="p-2" href="explore.html"><i class="link-noactive fas fa-search text-lg"></i></a>
+                <a class="p-2" href="about.html"><i class="link-noactive fas fa-users text-lg"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <main class="main_">
+        <div class="dp-flex-lg">
+            <aside class="aside_" id="aside">
+                <nav class="nav-vr">
+                    <div class="p-4 version-info_ version-style_">
+                        V.0.3
+                    </div> 
+                    <ul class="p-12">
+                        <li class="link-aside_"><a class="link-active-dark-blue p-4 dp-block" href="#">إبداء <span class="fas fa-link float-right"></span></a></li>
+                        <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="download.html">تنزيل <span class="fas fa-link float-right"></span></a></li>
+                        <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" data-targets="#Layout-link-lg" data-pattern="slide-toggle">تنسيق <span class="fas fa-angle-down float-right"></span></a>
+                            <ul id="Layout-link-lg" style="display: none;">
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="layout/screens.html">الشاشات <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="layout/containers.html">الحاويات <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="layout/grid.html">شبكة <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="layout/utilities.html">خدمات <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="layout/z-index.html">z-مؤشر <span class="fas fa-link float-right"></span></a></li>
+                            </ul>
+                        </li>
+                        <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" data-targets="#Components-link-lg" data-pattern="slide-toggle">مكونات <span class="fas fa-angle-down float-right"></span></a>
+                            <ul id="Components-link-lg" style="display: none;">
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="components/alert.html">رسائل الخطأ <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="components/breadcrumb.html">مسارات التنقل <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="components/button.html">الأزرار <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="components/card.html">البطاقات <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="components/collapse.html">الإنهيارات <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="components/dropdown.html">اسقاطات <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="components/form.html">أشكال الإدخال <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="components/list.html">القوائم <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="components/media.html">الوسائط <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="components/menu.html">قوائم النافذه <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="components/navbar.html">أشرطة التنقل <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="components/nav.html">التنقلات <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="components/notice.html">الإشعارات <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="components/pagination.html">ترقيم الصفحات <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="components/progres.html">أشرطة التقدم <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="components/spinner.html">الدوارات <span class="fas fa-link float-right"></span></a></li>
+                            </ul>
+                        </li>
+                        <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" data-targets="#Utilities-link-lg" data-pattern="slide-toggle">خدمات <span class="fas fa-angle-down float-right"></span></a>
+                            <ul id="Utilities-link-lg" style="display: none;">
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="utilities/align.html">المحاذاه <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="utilities/animation.html">الرسوم المتحركة <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="utilities/border.html">الحواف <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="utilities/radius.html">نصف القطر <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="utilities/shadow.html">الظل <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="utilities/color.html">اللون <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="utilities/display.html">العرض <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="utilities/flex-box.html">صندوق المرن <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="utilities/float.html">الطوفوا <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="utilities/icon.html">الأيقونات <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="utilities/padding.html">حشوة <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="utilities/position.html">موضع <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="utilities/text.html">النص <span class="fas fa-link float-right"></span></a></li>
+                                <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="utilities/width.html">العرض <span class="fas fa-link float-right"></span></a></li>
+                            </ul>
+                        </li>
+                        <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="about.html">عنا <span class="fas fa-link float-right"></span></a></li>
+                        <li class="link-aside_"><a class="link-noactive-dark-blue p-4 dp-block" href="blog.html">المدونة <span class="fas fa-link float-right"></span></a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <div class="container-full container-explanation_">
+                <div class="container-full">
+                    <div class="section-12 align-items-center mt-20">
+                        <div id="getStart" class="w-100">
+                            <h2 class="h2_ link-h_">المقدمة <a href="#getStart"><span class="fas fa-hashtag"></span></a></h2>
+                            <article class="pragraph_ p-5 mb-40" style="color: #717171;">ابدأ باستخدام مكتبة كونترول فلكس لإنشاء موقع حديث يتفوق على المواقع الأخرى من حيث الأداء والمظهر ، في وقت قياسي .. ابدأ في إعداد المستند للعمل مع المكتبة بشكل صحيح
+
+                                <a href="download.html" class="color-blue" style="font-size: inherit;">تنزيل</a> حزمة ملفات المكتبة أولاً
+                            </article>
+                            <div class="hr color-dark-trans" data-heading="المواضيع :"></div>
+                            <ul class="list mt-40 mb-40">
+                                <li class="item link-noactive-tomato"><a class="w-100 dp-block" href="#What’s-in-the-Download?">ماذا يوجد في التنزيل؟</a></li>
+                                <li class="item link-noactive-tomato"><a class="w-100 dp-block" href="#Using-Controlflex-CSS">استخدام Controlflex CSS</a></li>
+                                <li class="item link-noactive-tomato"><a class="w-100 dp-block" href="#Using-Controlflex-JS">استخدام Controlflex JS</a></li>
+                                <li class="item link-noactive-tomato"><a class="w-100 dp-block" href="#Starter-template">نموذج المبتدئين</a></li>
+                            </ul>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="container-full" style="margin-top: 100px;">
+                    <div class="section-12 align-items-center">
+                        <div id="What’s-in-the-Download?">
+                            <h2 class="link-h_">ماذا يوجد في التنزيل؟ <a href="#What’s-in-the-Download?"><span class="fas fa-hashtag"></span></a></h2>
+                            <article class="text-lg p-5" style="color: #717171;">تحتوي ملفات المكتبة بدون ملفات المصدر على ملفات <span class = "color-yellow"> css & javavscrpt </span> فقط .. أما بالنسبة لملفات للمصادر ، فهي تحتوي على ملفات sass مفككة وملفات css و javascript ، وهناك أيضًا ملف كامل ملف <span class = "color-yellow"> css & javascript </span>.
+                            </article>
+                        </div>
+                    </div>
+        
+                    <table class="table table-light radius-10 outer-shadow table-explanation_" style="margin: 40px auto 0px auto;">
+                        <thead class="text-lg text-bold">
+                            <tr>
+                                <td>الملفات والمجلدات</td>
+                                <td>ما هم</td>
+                                <td>من أين يجب أن تبدأ</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="color-pink">dist / css</td>
+                                <td>كل ورقة الأنماط لهذه المكتبة</td>
+                                <td class="color-yellow">co.css or co.min.css</td>
+                            </tr>
+                            <tr>
+                                <td class="color-pink">dist / js</td>
+                                <td>جميع رموز جافا سكريبت لهذه المكتبة</td>
+                                <td class="color-yellow">co.js or co.min.js</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+    
+                <div class="container-full" style="margin-top: 180px;">
+                    <div class="section-12 align-items-center">
+                        <div id="Using-Controlflex-CSS">
+                            <h2 class="link-h_">استخدام Controlflex CSS <a href="#Using-Controlflex-CSS"><span class="fas fa-hashtag"></span></a></h2>
+                            <article class="text-lg p-5" style="color: #717171; white-space: pre-line;">يحتوي ملف <span> css / co .css </span> على تخطيط <span class = "color-yellow"> الأساسي </span> بالإضافة إلى كل التنسيق الذي ستحتاجه عند استخدام controlflex. بجانبه ، ستجد ملفات مقسمة من الملف الرئيسي لاستخدامها إذا كنت تريد شيئًا محددًا وليس كل التنسيقات.
+
+                                انسخ كود الرابط والصقه بين علامتي الرأس ... وغير قيمة href إلى المسار إلى ملف <span class = "color-yellow"> CSS </span> الذي ستجده في <span> dist \ css \ co .css </span>.
+                            </article>
+                        </div>
+                    </div>
+
+
+                    <!--code-->
+                    <pre class="custom-pre"><code>&lt;link <code>rel= <code>&quot;stylesheet&quot;</code></code> <code>href=<code>&quot;your-path-to-controlflex/dist/css/co.min.css&quot;</code></code>&gt;</code></pre>
+
+                </div>
+
+
+                <div class="container-full" style="margin-top: 180px;">
+                    <div class="section-12 align-items-center">
+                        <div id="Using-Controlflex-JS">
+                            <h2 class="link-h_">إستخدم Controlflex JS <a href="#Using-Controlflex-JS"><span class="fas fa-hashtag"></span></a></h2>
+                            <article class="text-lg p-5" style="color: #717171; white-space: pre-line;">يحتوي ملف <span> js / co .js </span> على كود <span class = "color-yellow"> جافا سكريبت </span> جنبًا إلى جنب مع كل التنسيقات التي ستحتاجها عند استخدام controlflex. بجانبه ، ستجد ملفات مجزأة من الملف الرئيسي لاستخدامها إذا كنت تريد شيئًا محددًا من كود <span class = "color-yellow"> جافا سكريبت </span> ، وليس جميع الأكواد.
+
+                                انسخ رمز البرنامج النصي والصقه قبل نهاية علامة النص الأساسي ... وقم بتغيير القيمة المصدر إلى المسار إلى ملف <span class = "color-yellow"> javascript </span> الذي ستجده في <span > ملف dist \ css \ co .js </span>.
+                            </article>
+                        </div>
+                    </div>
+
+
+                    <!--code-->
+                    <pre class="custom-pre"><code>&lt;script <code>src=<code>&quot;your-path-to-controlflex/dist/js/co.min.js&quot;</code></code>&gt;&lt;/script&gt;</code></pre>
+
+                </div>
+
+            
+                <div class="container-full" style="margin-top: 180px;">
+                    <div class="section-12 align-items-center">
+                        <div id="Starter-template">
+                            <h2 class="link-h_">نموذج المبتدئين <a href="#Starter-template"><span class="fas fa-hashtag"></span></a></h2>
+                            <article class="text-lg p-5" style="color: #717171; white-space: pre-line;">تأكد من إعداد صفحاتك بأحدث معايير التصميم والتطوير. وهذا يعني استخدام <span class = "color-tomato"> HTML5 </span> Dictype وتضمين <span class = "color-yellow"> علامة meta لإطار العرض </span> للسلوكيات سريعة الاستجابة. ضع كل ذلك معًا وستظهر صفحاتك على النحو التالي:
+                            </article>
+                        </div>
+                    </div>
+
+
+                <!--code-->
+                <pre class="custom-pre" data-pre="code"><code>&lt;!DOCTYPE html&gt;
+&lt;html <code>lang=<code>&quot;en&quot;</code></code>&gt;
+&lt;head&gt;
+    &lt;meta <code>charset=<code>&quot;UTF-8&quot;</code></code>&gt;
+    &lt;meta <code>name=<code>&quot;viewport&quot;</code></code> <code>content=<code>&quot;width=device-width, initial-scale=1.0&quot;</code></code>&gt;
+
+    <span>&lt;!--description--&gt;</span>
+    &lt;meta <code>name=<code>&quot;description&quot;</code></code> <code>content=<code>&quot;description......&quot;</code></code>&gt;
+
+    &lt;title&gt;<span>Document</span>&lt;/title&gt;
+
+    <span>&lt;!--google font (optional) :--&gt;</span>  
+    &lt;link <code>href=<code>&quot;https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&amp;display=swap&quot;</code></code> <code>rel=<code>&quot;stylesheet&quot;</code></code>&gt;
+
+    <span>&lt;!--CONTROLFLEX (V.0.5)--&gt;</span>
+    <span>&lt;!--CONTROLFLEX CSS--&gt;</span>
+    &lt;link <code>rel=<code>&quot;stylesheet&quot;</code></code> <code>href=<code>&quot;your-path-to-controlflex/dist/css/co.min.css&quot;</code></code>&gt;
+
+    <span>&lt;!--window icon--&gt;</span>
+    &lt;link <code>rel=<code>&quot;icon&quot;</code></code> <code>href=<code>&quot;-----.png&quot;</code></code> <code>size=<code>&quot;32/32&quot;</code></code> <code>type=<code>&quot;image/png&quot;</code></code>&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+    <span>&lt;!--write-your-code-here--&gt;</span>
+
+    <span>&lt;!--jQuery (3.5.1)--&gt;</span>
+    &lt;script <code>src=<code>&quot;https://code.jquery.com/jquery-3.5.1.min.js&quot;</code></code>&gt;&lt;/script&gt;
+
+    <span>&lt;!--CONTROLFLEX JAVASCRIPT--&gt;</span>  
+    &lt;script <code>src=<code>&quot;your-path-to-controlflex/dist/js/co.min.js&quot;</code></code>&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer text-center bgc-dark-blue">
+        <div class="ml-all-6 p-5 justify-content-center" style="line-height: 50px;">
+            <div>
+                <a href="https://github.com/CONTROLFLEX/CONTROLFLEX" class="color-light footer-link_"> جيثهب<i class="fab fa-github text-lg"></i></a>
+                <a href="https://twitter.com/CONTROLFLEX_CSS" class="color-light footer-link_"> تويتر<i class="fab fa-twitter text-lg"></i></a>
+            </div>
+            <div>
+                <a href="explore.html" class="color-light footer-link_"> أمثلة<i class="fas fa-search text-lg"></i></a>
+                <a href="about.html" class="color-light footer-link_"> عنا<i class="fas fa-users text-lg"></i></a>
+            </div>
+        </div>
+        <div class="footer-des_ mt-4">
+            تم تصميم الموقع من قبل فريق controlflex .. نطلب منك دعمنا لتسهيل العديد من جوانب تصميم الويب ___ نحن في الإصدار <a href="https://github.com/CONTROLFLEX/CONTROLFLEX/tree/V.0.3" class="color-light-blue version-info_">(V.0.3)</a>
+        </div>
+    </footer>
+
+
+    <!--jQuery-->
+    <script src="../jquery.min.js"></script>
+
+    <!--javascript-->
+    <script src="../script.js"></script>
+    <script src="../js/co.js"></script>
+</body>
+</html>
