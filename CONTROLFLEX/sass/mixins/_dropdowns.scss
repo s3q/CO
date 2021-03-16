@@ -1,4 +1,3 @@
-
 @mixin make-dropdown($z-index, $dp, $w, $p, $color) {
     z-index: $z-index;
     cursor: pointer;
@@ -7,9 +6,11 @@
     width: $w;
     padding: $p;
     color: $color;
-    a {text-decoration: none;}
+    a {
+        text-decoration: none;
+    }
     @content;
-} 
+}
 
 @mixin make-dropdown-group($dp, $w, $flex-dir, $position, $top, $overflow, $bgc, $bo, $bo-radius) {
     display: $dp;
@@ -25,7 +26,7 @@
     border: $bo;
     border-radius: $bo-radius;
     @content;
-} 
+}
 
 @mixin make-dropdown-content($dp, $w, $p, $bgc, $transition, $bgc-hover) {
     display: $dp;
@@ -40,4 +41,4 @@
         background-color: $bgc-hover;
     }
     @content;
-} 
+}

@@ -6,21 +6,28 @@
     height: calc(100% - 60px);
     overflow-y: scroll !important;
     padding: 14px 8px 40px 8px !important;
-
 }
 .sticky-navbar {
     position: -webkit-sticky !important;
     position: sticky !important;
     top: 0px;
     z-index: 10000;
-    height: auto; 
+    height: auto;
 }
 
-
-.relative {position: relative;}
-.absolute {position: absolute;}
-.sticky {position: -webkit-sticky; position: sticky;}
-.fixed {position: fixed;}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+}
+.fixed {
+    position: fixed;
+}
 
 .position-top {
     top: 0px;
@@ -74,4 +81,3 @@
     position: unset;
 }
 /* ----------------------------------------------------------------------------------------------------------------------------------- */
-

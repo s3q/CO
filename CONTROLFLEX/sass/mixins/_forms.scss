@@ -1,5 +1,7 @@
 @mixin make-form-inputs($dp, $flex-dir, $m, $w, $position) {
-    @if ($dp == flex) {display: -ms-flexbox;}
+    @if ($dp == flex) {
+        display: -ms-flexbox;
+    }
     display: $dp;
     -ms-flex-direction: $flex-dir;
     flex-direction: $flex-dir;
@@ -23,18 +25,18 @@
     position: $position;
     @if ($status == invalid) {
         border: $invalid-bo;
-        &:focus{
+        &:focus {
             border: $invalid-bo;
-            -webkit-box-shadow: $invalid-shadow; 
-            -moz-box-shadow: $invalid-shadow; 
+            -webkit-box-shadow: $invalid-shadow;
+            -moz-box-shadow: $invalid-shadow;
             box-shadow: $invalid-shadow;
         }
     } @else if ($status == valid) {
         border: $valid-bo;
-        &:focus{
+        &:focus {
             border: $valid-bo;
-            -webkit-box-shadow: $valid-shadow; 
-            -moz-box-shadow: $valid-shadow; 
+            -webkit-box-shadow: $valid-shadow;
+            -moz-box-shadow: $valid-shadow;
             box-shadow: $valid-shadow;
         }
     }
@@ -52,11 +54,11 @@
     -moz-transition: $transition;
     -o-transition: $transition;
     transition: $transition;
-    &:focus{
+    &:focus {
         outline: none;
         border: $focus-bo;
-        -webkit-box-shadow: $focus-shadow; 
-        -moz-box-shadow: $focus-shadow; 
+        -webkit-box-shadow: $focus-shadow;
+        -moz-box-shadow: $focus-shadow;
         box-shadow: $focus-shadow;
     }
     @content;
@@ -66,8 +68,12 @@
     font-size: $xs-font;
     color: $gray;
     margin: 0px;
-    &.is-valid {color: $green;}
-    &.is-invalid {color: $red;}
+    &.is-valid {
+        color: $green;
+    }
+    &.is-invalid {
+        color: $red;
+    }
 }
 
 @mixin make-custom-form($dp, $position, $child-mt, $child-mb) {
@@ -87,11 +93,13 @@
     font-size: $fos;
 }
 
-
-
-
-// make-custom-checkbox : 
-@mixin make-custom-checkbox($dp, $checked-custom-checkbox-label-before-bo-color, $checked-custom-checkbox-label-before-bgc, $active-custom-checkbox-label-before-shadow) {
+// make-custom-checkbox :
+@mixin make-custom-checkbox(
+    $dp,
+    $checked-custom-checkbox-label-before-bo-color,
+    $checked-custom-checkbox-label-before-bgc,
+    $active-custom-checkbox-label-before-shadow
+) {
     display: $dp;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -102,10 +110,33 @@
         background-color: $checked-custom-checkbox-label-before-bgc;
     }
 
-    &:active + label.custom-checkbox-label::before {box-shadow: $active-custom-checkbox-label-before-shadow;}    
+    &:active + label.custom-checkbox-label::before {
+        box-shadow: $active-custom-checkbox-label-before-shadow;
+    }
 }
 
-@mixin make-custom-checkbox-label($flex-wrap, $flex-dir, $position, $before-dp, $before-w-h, $before-bgc, $before-p, $before-mr, $before-bo-radius, $before-bo, $before-transition, $after-dp, $after-font, $after-font-weight, $after-font-size, $after-color, $after-position, $after-top, $after-left, $after-transform) {
+@mixin make-custom-checkbox-label(
+    $flex-wrap,
+    $flex-dir,
+    $position,
+    $before-dp,
+    $before-w-h,
+    $before-bgc,
+    $before-p,
+    $before-mr,
+    $before-bo-radius,
+    $before-bo,
+    $before-transition,
+    $after-dp,
+    $after-font,
+    $after-font-weight,
+    $after-font-size,
+    $after-color,
+    $after-position,
+    $after-top,
+    $after-left,
+    $after-transform
+) {
     @include make-dpflex();
     -ms-flex-wrap: $flex-wrap;
     flex-wrap: $flex-wrap;
@@ -143,9 +174,6 @@
     }
 }
 
-
-
-
 // make custom range :
 @mixin make-custom-range-range-thumb($w, $h, $mt, $bgc, $bo-raduis, $transition) {
     width: $w;
@@ -160,18 +188,22 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    cursor: pointer;   
+    cursor: pointer;
 }
 
 @mixin make-custom-range-range-thumb-onactive($shadow) {
-    -webkit-box-shadow: $shadow; 
-    -moz-box-shadow: $shadow; 
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
     box-shadow: $shadow;
 }
 
 @mixin make-custom-range-slider-thumb($onhover-bgc, $onactive-bgc) {
-    &:hover {background-color: $onhover-bgc;}
-    &:active {background-color: $onactive-bgc;}        
+    &:hover {
+        background-color: $onhover-bgc;
+    }
+    &:active {
+        background-color: $onactive-bgc;
+    }
 }
 
 @mixin make-custom-range-range-track($w, $h, $bgc, $bo-raduis) {
@@ -182,7 +214,25 @@
     border-radius: $bo-raduis;
 }
 
-@mixin make-custom-range($max-w, $h, $p, $bgc, $range-thumb-shadow-onactive, $range-thumb-w, $range-thumb-h, $range-thumb-mt, $range-thumb-bgc, $range-thumb-bo-raduis, $range-thumb-transition, $slider-thumb-onhover-bgc, $slider-thumb-onactive-bgc, $range-track-w, $range-track-h, $range-track-bgc, $range-track-bo-raduis) {
+@mixin make-custom-range(
+    $max-w,
+    $h,
+    $p,
+    $bgc,
+    $range-thumb-shadow-onactive,
+    $range-thumb-w,
+    $range-thumb-h,
+    $range-thumb-mt,
+    $range-thumb-bgc,
+    $range-thumb-bo-raduis,
+    $range-thumb-transition,
+    $slider-thumb-onhover-bgc,
+    $slider-thumb-onactive-bgc,
+    $range-track-w,
+    $range-track-h,
+    $range-track-bgc,
+    $range-track-bo-raduis
+) {
     max-width: $max-w;
     height: $h;
     padding: $p;
@@ -191,20 +241,43 @@
     -moz-appearance: none;
     appearance: none;
 
-    &:focus {outline: none;}
+    &:focus {
+        outline: none;
+    }
 
     &::-webkit-slider-thumb {
-        @include make-custom-range-range-thumb($range-thumb-w, $range-thumb-h, $range-thumb-mt, $range-thumb-bgc, $range-thumb-bo-raduis, $range-thumb-transition);
+        @include make-custom-range-range-thumb(
+            $range-thumb-w,
+            $range-thumb-h,
+            $range-thumb-mt,
+            $range-thumb-bgc,
+            $range-thumb-bo-raduis,
+            $range-thumb-transition
+        );
     }
 
     &::-moz-range-thumb {
-        @include make-custom-range-range-thumb($range-thumb-w, $range-thumb-h, $range-thumb-mt, $range-thumb-bgc, $range-thumb-bo-raduis, $range-thumb-transition);
+        @include make-custom-range-range-thumb(
+            $range-thumb-w,
+            $range-thumb-h,
+            $range-thumb-mt,
+            $range-thumb-bgc,
+            $range-thumb-bo-raduis,
+            $range-thumb-transition
+        );
     }
 
     &::-ms-thumb {
-        @include make-custom-range-range-thumb($range-thumb-w, $range-thumb-h, $range-thumb-mt, $range-thumb-bgc, $range-thumb-bo-raduis, $range-thumb-transition);
+        @include make-custom-range-range-thumb(
+            $range-thumb-w,
+            $range-thumb-h,
+            $range-thumb-mt,
+            $range-thumb-bgc,
+            $range-thumb-bo-raduis,
+            $range-thumb-transition
+        );
     }
-    
+
     &:active {
         &::-webkit-slider-thumb {
             @include make-custom-range-range-thumb-onactive($range-thumb-shadow-onactive);
@@ -217,31 +290,52 @@
         }
     }
 
-    &::-webkit-slider-thumb { 
+    &::-webkit-slider-thumb {
         @include make-custom-range-slider-thumb($slider-thumb-onhover-bgc, $slider-thumb-onactive-bgc);
     }
 
     &::-moz-slider-thumb {
         @include make-custom-range-slider-thumb($slider-thumb-onhover-bgc, $slider-thumb-onactive-bgc);
     }
-        
+
     &::-ms-slider-thumb {
         @include make-custom-range-slider-thumb($slider-thumb-onhover-bgc, $slider-thumb-onactive-bgc);
     }
-    
+
     &::-webkit-slider-runnable-track {
-        @include make-custom-range-range-track($range-track-w, $range-track-h, $range-track-bgc, $range-track-bo-raduis);
+        @include make-custom-range-range-track(
+            $range-track-w,
+            $range-track-h,
+            $range-track-bgc,
+            $range-track-bo-raduis
+        );
     }
     &::-moz-range-track {
-        @include make-custom-range-range-track($range-track-w, $range-track-h, $range-track-bgc, $range-track-bo-raduis);
+        @include make-custom-range-range-track(
+            $range-track-w,
+            $range-track-h,
+            $range-track-bgc,
+            $range-track-bo-raduis
+        );
     }
     &::-ms-track {
-        @include make-custom-range-range-track($range-track-w, $range-track-h, $range-track-bgc, $range-track-bo-raduis);
+        @include make-custom-range-range-track(
+            $range-track-w,
+            $range-track-h,
+            $range-track-bgc,
+            $range-track-bo-raduis
+        );
     }
 }
 
-// make custom switch : 
-@mixin make-custom-switch($checked-custom-switch-label-before-bo-color, $checked-custom-switch-label-before-bgc, $checked-custom-switch-label-after-left, $checked-custom-switch-label-after-bo-color, $active-custom-switch-label-after-shadow) {
+// make custom switch :
+@mixin make-custom-switch(
+    $checked-custom-switch-label-before-bo-color,
+    $checked-custom-switch-label-before-bgc,
+    $checked-custom-switch-label-after-left,
+    $checked-custom-switch-label-after-bo-color,
+    $active-custom-switch-label-after-shadow
+) {
     display: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -257,16 +351,39 @@
             border-color: $checked-custom-switch-label-after-bo-color;
         }
     }
-    &:active { 
+    &:active {
         + label.custom-switch-label::after {
             -webkit-box-shadow: $active-custom-switch-label-after-shadow;
             -moz-box-shadow: $active-custom-switch-label-after-shadow;
             box-shadow: $active-custom-switch-label-after-shadow;
         }
-    }    
+    }
 }
 
-@mixin make-custom-switch-label($flex-wrap, $flex-dir, $position, $before-dp, $before-w, $before-h, $before-bgc, $before-mr, $before-p, $before-bo-radius, $before-bo, $before-transition, $after-dp, $after-position, $after-top, $after-left, $after-h, $after-w, $after-bo, $after-bo-raduis, $after-bgc, $after-transition) {
+@mixin make-custom-switch-label(
+    $flex-wrap,
+    $flex-dir,
+    $position,
+    $before-dp,
+    $before-w,
+    $before-h,
+    $before-bgc,
+    $before-mr,
+    $before-p,
+    $before-bo-radius,
+    $before-bo,
+    $before-transition,
+    $after-dp,
+    $after-position,
+    $after-top,
+    $after-left,
+    $after-h,
+    $after-w,
+    $after-bo,
+    $after-bo-raduis,
+    $after-bgc,
+    $after-transition
+) {
     @include make-dpflex();
     -ms-flex-wrap: $flex-wrap;
     flex-wrap: $flex-wrap;
@@ -290,7 +407,7 @@
         transition: $before-transition;
     }
 
-    &::after { 
+    &::after {
         display: $after-dp;
         content: "";
         position: $after-position;
@@ -308,27 +425,50 @@
     }
 }
 
-
 // make-group-input-hr :
 @mixin make-group-input-hr($dir, $m-not-first-last-child, $m-first-child, $m-last-child) {
     @include make-flex-dir($dir);
-    > *:not(:first-child), > *:not(:last-child) {margin: $m-not-first-last-child;}
-    > *:first-child {margin: $m-first-child;}
-    > *:last-child {margin: $m-last-child;}
+    > *:not(:first-child),
+    > *:not(:last-child) {
+        margin: $m-not-first-last-child;
+    }
+    > *:first-child {
+        margin: $m-first-child;
+    }
+    > *:last-child {
+        margin: $m-last-child;
+    }
 }
 
 // make-group-input-vr :
 @mixin make-group-input-vr($dir, $m) {
     @include make-flex-dir($dir);
-    > * {margin: $m;}
+    > * {
+        margin: $m;
+    }
 }
 
-// make-group-input : 
-@mixin make-group-input($type, $w, $m, $group-input-hr-dir, $group-input-hr-m-not-first-last-child, $group-input-hr-m-first-child, $group-input-hr-m-last-child, $group-input-vr-dir, $group-input-vr-m) {
+// make-group-input :
+@mixin make-group-input(
+    $type,
+    $w,
+    $m,
+    $group-input-hr-dir,
+    $group-input-hr-m-not-first-last-child,
+    $group-input-hr-m-first-child,
+    $group-input-hr-m-last-child,
+    $group-input-vr-dir,
+    $group-input-vr-m
+) {
     width: $w;
     margin: $m;
     @if ($type == hr) {
-        @include make-group-input-hr($group-input-hr-dir, $group-input-hr-m-not-first-last-child, $group-input-hr-m-first-child, $group-input-hr-m-last-child);
+        @include make-group-input-hr(
+            $group-input-hr-dir,
+            $group-input-hr-m-not-first-last-child,
+            $group-input-hr-m-first-child,
+            $group-input-hr-m-last-child
+        );
     } @else if ($type == vr) {
         @include make-group-input-vr($group-input-vr-dir, $group-input-vr-m);
     }
@@ -337,55 +477,70 @@
 // make-group-input-sizes :
 @mixin make-input-sizes($add-class) {
     .inputs-xl#{$add-class} {
-        input, button {
+        input,
+        button {
             padding: 12px 18px;
             font-size: $xl-font;
         }
-        label {font-size: $xl-font - 2;}
+        label {
+            font-size: $xl-font - 2;
+        }
         .input-des {
             font-size: $xs-font;
         }
     }
-    
+
     .inputs-lg#{$add-class} {
-        input, button {
+        input,
+        button {
             padding: 10px 17px;
             font-size: $lg-font;
         }
-        label {font-size: $lg-font - 2;}
+        label {
+            font-size: $lg-font - 2;
+        }
         .input-des {
             font-size: $xs-font;
         }
     }
-    
+
     .inputs-md#{$add-class} {
-        input, button {
+        input,
+        button {
             padding: 8px 15px;
             font-size: $md-font;
         }
-        label {font-size: $md-font - 2;}
+        label {
+            font-size: $md-font - 2;
+        }
         .input-des {
             font-size: $xs-font;
         }
     }
-    
+
     .inputs-sm#{$add-class} {
-        input, button {
+        input,
+        button {
             padding: 6px 14px;
             font-size: $sm-font;
         }
-        label {font-size: $sm-font - 2;}
+        label {
+            font-size: $sm-font - 2;
+        }
         .input-des {
             font-size: $xs-font - 1;
         }
     }
-    
+
     .inputs-xs#{$add-class} {
-        input, button {
+        input,
+        button {
             padding: 4px 12px;
             font-size: $xs-font;
         }
-        label {font-size: $xs-font - 2;}
+        label {
+            font-size: $xs-font - 2;
+        }
         .input-des {
             font-size: $xs-font - 2;
         }

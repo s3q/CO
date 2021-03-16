@@ -11,7 +11,9 @@
 the size(number or size) of the item precedes the size of the screen 
 */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -23,7 +25,7 @@ html {
     -webkit-tap-highlight-color: #ffffff00;
 }
 
-body{
+body {
     margin: 0;
     font: {
         family: $basic-font;
@@ -38,6 +40,62 @@ body{
     &:lang(ar) {
         direction: rtl;
     }
+}
+
+:root {
+    --mxl-screen: #{$mxl};
+    --xl-screen: #{$xl};
+    --lg-screen: #{$lg};
+    --md-screen: #{$md};
+    --sm-screen: #{$sm};
+    --xs-screen: #{$xs};
+    --lxs-screen: #{$lxs};
+
+    --xs-font: #{$xs-font};
+    --sm-font: #{$sm-font};
+    --md-font: #{$md-font};
+    --lg-font: #{$lg-font};
+    --xl-font: #{$xl-font};
+
+    --blue-color: #{$blue};
+    --purple-color: #{$purple};
+    --pink-color: #{$pink};
+    --red-color: #{$red};
+    --brown-color: #{$brown};
+    --tomato-color: #{$tomato};
+    --orange-color: #{$orange};
+    --yellow-color: #{$yellow};
+    --gold-color: #{$gold};
+    --green-color: #{$green};
+    --teal-color: #{$teal};
+    --cyan-color: #{$cyan};
+    --light-color: #{$light};
+    --light-blue-color: #{$light-blue};
+    --gray-color: #{$gray};
+    --dark-color: #{$dark};
+    --very-dark-color: #{$very-dark};
+    --black-color: #{$black};
+    --dark-blue-color: #{$dark-blue};
+
+    --blue-transparent-color: #{$blue-transparent};
+    --purple-transparent-color: #{$purple-transparent};
+    --pink-transparent-color: #{$pink-transparent};
+    --red-transparent-color: #{$red-transparent};
+    --brown-transparent-color: #{$brown-transparent};
+    --tomato-transparent-color: #{$tomato-transparent};
+    --orange-transparent-color: #{$orange-transparent};
+    --yellow-transparent-color: #{$yellow-transparent};
+    --gold-transparent-color: #{$gold-transparent};
+    --green-transparent-color: #{$green-transparent};
+    --teal-transparent-color: #{$teal-transparent};
+    --cyan-transparent-color: #{$cyan-transparent};
+    --light-transparent-color: #{$light-transparent};
+    --light-blue-transparent-color: #{$light-blue-transparent};
+    --gray-transparent-color: #{$gray-transparent};
+    --dark-transparent-color: #{$dark-transparent};
+    --very-dark-transparent-color: #{$very-dark-transparent};
+    --black-transparent-color: #{$black-transparent};
+    --dark-blue-transparent-color: #{$dark-blue-transparent};
 }
 
 ::selection {
@@ -56,13 +114,13 @@ hgroup,
 nav,
 section,
 summary {
-  display: block;
+    display: block;
 }
 
 audio,
 canvas,
 video {
-  display: inline-block;
+    display: inline-block;
 }
 
 a {
@@ -77,7 +135,10 @@ a {
     }
 }
 
-a:not([href]), a:not([href]):hover, a[class*=bn], a[class*=bn]:hover {
+a:not([href]),
+a:not([href]):hover,
+a[class*="bn"],
+a[class*="bn"]:hover {
     text-decoration: none;
 }
 
@@ -98,24 +159,24 @@ address {
     font-style: normal;
 }
 
-ul, ol{
+ul,
+ol {
     padding-left: 0;
     padding-right: 0;
     list-style: none;
-    > a{
+    > a {
         cursor: pointer;
     }
-    li{
+    li {
         margin-left: 16px;
         margin-right: 0;
         &:lang(ar) {
-        margin-left: 0;
-        margin-right: 16px;
+            margin-left: 0;
+            margin-right: 16px;
         }
         > a {
             cursor: pointer;
         }
-
     }
 }
 
@@ -128,14 +189,16 @@ dl {
 }
 
 li,
-dd{
+dd {
     color: #4e4e4e;
 }
 
-ul, ol{
-    ul, ol{
+ul,
+ol {
+    ul,
+    ol {
         margin-left: 5px;
-        margin-bottom: 2px;   
+        margin-bottom: 2px;
     }
 }
 
@@ -144,16 +207,20 @@ blockquote {
     font-size: 16px;
 }
 
-b, strong {
+b,
+strong {
     color: $b-strong-color;
     font-weight: bold;
 }
 
-small{
+small {
     font-size: $sm-font;
 }
 
-code, pre, samp, kbd {
+code,
+pre,
+samp,
+kbd {
     font: {
         family: $monospace;
         size: $md-font;
@@ -163,6 +230,7 @@ code, pre, samp, kbd {
 
 pre {
     display: block;
+    direction: ltr;
     margin: 4px auto;
     padding: 5px 8px;
     max-width: 95%;
@@ -185,20 +253,24 @@ code {
     span {
         color: #525b79;
     }
-} 
+}
 
 pre code {
     word-break: normal;
 }
 
-label, nav,.dropdown, .navbar, .link {
+label,
+nav,
+.dropdown,
+.navbar,
+.link {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
     display: inline-block;
 }
-  
+
 button,
 select,
 optgroup {
@@ -232,33 +304,44 @@ select {
     padding: 3.5px 60px 3.5px 10px;
     font-size: initial;
     max-width: 100%;
-    border: .5px solid $dark-blue;
+    border: 0.5px solid $dark-blue;
     color: $dark;
 }
 
-button, [class*="link"], [class*="bn"], input[type="submit"], input[type="reset"], input[type="button"] {
-    -webkit-user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none; 
+button,
+[class*="link"],
+[class*="bn"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 
-button, input[type="submit"], input[type="reset"], input[type="button"] {
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
     cursor: pointer;
     &:focus {
         outline: none;
     }
 }
 
-textarea, input {
+textarea,
+input {
     margin: 0px auto;
     width: 100%;
-    &:focus{
+    &:focus {
         outline: none;
     }
 }
 
-input[type="radio"], input[type="checkbox"], input[type="range"] {
+input[type="radio"],
+input[type="checkbox"],
+input[type="range"] {
     box-sizing: border-box;
     padding: 0;
 }
@@ -294,7 +377,8 @@ summary {
     cursor: pointer;
 }
 
-hr, .hr {
+hr,
+.hr {
     position: relative;
     margin: 10px auto;
     width: 95%;
@@ -324,7 +408,8 @@ hr, .hr {
     }
 }
 
-mark, .mark {
+mark,
+.mark {
     padding: 8px;
     background-color: #f5f9ff;
 }
@@ -333,7 +418,7 @@ iframe {
     display: block;
     @include make-prefix(min-, 250px, (width, height));
     @include make-prefix(null, 400px, (width, height));
-    border: .5px solid black;
+    border: 0.5px solid black;
     border-radius: 3px;
 }
 
@@ -341,16 +426,16 @@ button:not(:disabled),
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
 [type="submit"]:not(:disabled) {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 ::-webkit-file-upload-button {
     font: inherit;
     -webkit-appearance: button;
-}  
+}
 
 [disabled] {
-    opacity: .4 !important;
+    opacity: 0.4 !important;
     cursor: default !important;
 }
 
@@ -384,7 +469,7 @@ button:not(:disabled),
     display: block;
     height: auto;
     padding: 8px 4px;
-    > *{
+    > * {
         display: block;
         height: auto;
         padding: 5px;
@@ -449,7 +534,8 @@ button:not(:disabled),
     border-collapse: collapse;
     padding: 8px 12px;
 
-    tr, td {
+    tr,
+    td {
         border: 1.4px solid #5f5f5f50;
         border-collapse: collapse;
         padding: 8px 12px;
@@ -457,7 +543,12 @@ button:not(:disabled),
     }
 
     &.table-content-center {
-        thead, th, tbody, tfoot, tr, td {
+        thead,
+        th,
+        tbody,
+        tfoot,
+        tr,
+        td {
             text-align: center;
         }
     }
@@ -469,7 +560,8 @@ button:not(:disabled),
         background-color: $color-value !important;
         @include if-color($color-value);
         border: 1.5px solid $light-transparent !important;
-        tr, td {
+        tr,
+        td {
             border: 1.5px solid $light-transparent !important;
         }
     }
@@ -478,13 +570,14 @@ button:not(:disabled),
         background-color: $color-transparent-value !important;
         color: $color-value;
         border: 1.5px solid $light-transparent !important;
-        tr, td {
+        tr,
+        td {
             border: 1.5px solid $light-transparent !important;
         }
     }
 }
 
-.card-inner{
+.card-inner {
     overflow: hidden;
 }
 
@@ -526,7 +619,6 @@ button:not(:disabled),
         margin: 0px 12px;
     }
 }
-
 
 /* 
 sass --watch "C:\Users\SALIM ALSULAIMI\Desktop\CONTROLFLEX\controlfex.scss":"C:\Users\SALIM ALSULAIMI\Desktop\CONTROLFLEX\controlfex.css"

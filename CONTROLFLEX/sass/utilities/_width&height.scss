@@ -1,5 +1,5 @@
 /* ---------------------------------------------------width----------------------------------------- */
-/* ----------------------w > width */ 
+/* ----------------------w > width */
 @include make-w-h(w, width, null);
 /* ---------------------------------------------------------------------------------------------------*/
 
@@ -8,7 +8,7 @@
 @include make-w-h(h, height, null);
 /* ----------------------------------------------------------------------------------------------------*/
 
-@each $screen-size, $screen-name, $min-max  in  $map-screen-size-name-type {
+@each $screen-size, $screen-name, $min-max in $map-screen-size-name-type {
     @include make-media($min-max, $screen-size) {
         @include make-w-h(w, width, -#{$screen-name});
         @include make-w-h(h, height, -#{$screen-name});

@@ -1,32 +1,20 @@
 .card-text {
-
     @include make-card-text(
-        
         // width :
-        $card-text-w, 
-
+        $card-text-w,
         // margin :
         $card-text-m,
-        
         // padding :
         $card-text-p,
-        
         // border radius :
         $card-text-bo-radius,
-        
         // border-left :
-        $card-text-bol, 
-
+        $card-text-bol,
         // border-right :
-        $card-text-bor, 
-
+        $card-text-bor,
         // border-bottom :
-        $card-text-bob, 
-
+        $card-text-bob,
         // border-top :
         $card-text-bot
     );
-    
 }
-
-

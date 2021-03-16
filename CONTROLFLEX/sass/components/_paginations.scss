@@ -1,4 +1,5 @@
-.pagination, .pagination-hr {
+.pagination,
+.pagination-hr {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
@@ -8,10 +9,10 @@
   > * {
     border-radius: 0px;
   }
-  >:first-of-type {
+  > :first-of-type {
     border-radius: 4px 0px 0px 4px;
   }
-  >:last-of-type {
+  > :last-of-type {
     border-radius: 0px 4px 4px 0px;
   }
 }
@@ -26,10 +27,10 @@
   > * {
     border-radius: 0px;
   }
-  >:first-of-type {
+  > :first-of-type {
     border-radius: 4px 4px 0px 0px;
   }
-  >:last-of-type {
+  > :last-of-type {
     border-radius: 0px 0px 4px 4px;
   }
 }

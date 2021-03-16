@@ -1,17 +1,17 @@
 @mixin make-card-text($w, $m, $p, $bo-radius, $bol, $bor, $bob, $bot) {
-    width: $w; 
-    margin: $m; 
+    width: $w;
+    margin: $m;
     padding: $p;
-    border-radius: $bo-radius; 
-    border-left: $bol; 
-    border-right: $bor; 
-    border-bottom: $bob; 
-    border-top: $bot;    
+    border-radius: $bo-radius;
+    border-left: $bol;
+    border-right: $bor;
+    border-bottom: $bob;
+    border-top: $bot;
 }
 
 @mixin make-cards-color($bol-color, $bor-color, $bot-color, $bob-color) {
-    border-left: 4px solid $bol-color !important; 
-    border-right: 1px solid $bor-color !important;  
-    border-bottom: 1px solid $bor-color !important; 
-    border-top: 1px solid $bor-color !important;
+    border-left: 4px solid $bol-color;
+    border-right: 1px solid $bor-color;
+    border-bottom: 1px solid $bor-color;
+    border-top: 1px solid $bor-color;
 }

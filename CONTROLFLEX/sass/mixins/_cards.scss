@@ -13,7 +13,7 @@
     align-items: $align-items;
     width: $w;
     font-size: $fos;
-    padding: $p;    
+    padding: $p;
 }
 
 @mixin make-card-body($overflow, $text-align, $p) {

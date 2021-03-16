@@ -1,51 +1,39 @@
 /* -------------------------------------------------------------alert -------------------------------------------- : */
 .alert {
-    @include make-alert( // alert :
-
+    @include make-alert(
+        // alert :
         // background-color :
-        $red-transparent, 
-
+        $red-transparent,
         // color :
-        $red, 
-
+        $red,
         // font-size :
-        $sm-font, 
-
+        $sm-font,
         // padding :
-        $alert-p, 
-
+        $alert-p,
         // width :
-        $alert-w, 
-
+        $alert-w,
         // margin :
-        $alert-m, 
-
+        $alert-m,
         // border-raduis :
         $alert-bo-radius
     );
 
     .alert-foot {
-        @include make-alert-foot( // foot :
-        
+        @include make-alert-foot(
+            // foot :
             // display :
-            $alert-foot-dp, 
-            
+            $alert-foot-dp,
             // flex direction :
             $alert-foot-flex-dir,
-
-            // justify-content : 
+            // justify-content :
             $alert-foot-justify-content,
-
             // margin-top :
-            $alert-foot-mt, 
-
-            // border-top : 
+            $alert-foot-mt,
+            // border-top :
             $alert-foot-bo-top,
-
-            // padding : 
+            // padding :
             $alert-foot-p,
-
-            // padding for content : 
+            // padding for content :
             $alert-foot-p-content
         );
     }

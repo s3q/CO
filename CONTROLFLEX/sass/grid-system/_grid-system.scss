@@ -1,8 +1,9 @@
-
 /* -----------------------------------------------------grid system------------------------------------------------- : */
 
 /* -------------------container : */
-.container, .container-liquid, .container-res {
+.container,
+.container-liquid,
+.container-res {
     display: flex;
     flex-wrap: wrap;
     width: 98%;
@@ -10,7 +11,8 @@
     margin: 0px auto;
 }
 
-.container-main, .container-full {
+.container-main,
+.container-full {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -20,25 +22,38 @@
 /* -------------------------------- */
 
 @media (min-width: $md) {
-    .container-res {width: $md;}
+    .container-res {
+        width: $md;
+    }
 }
 
 @media (min-width: $lg) {
-    .container-res {width: $lg;}
+    .container-res {
+        width: $lg;
+    }
 }
 
 @media (min-width: $xl) {
-    .container-res {width: $xl;}
+    .container-res {
+        width: $xl;
+    }
 }
 
 @media (min-width: $mxl) {
-    .container, .container-main {width: 1400px;}
-    .container-liquid {width: 80%;}
-    .container-res {width: $mxl;}
+    .container,
+    .container-main {
+        width: 1400px;
+    }
+    .container-liquid {
+        width: 80%;
+    }
+    .container-res {
+        width: $mxl;
+    }
 }
 
 /* ---------------------section, offset & order : */
-%section {    
+%section {
     display: flex;
     display: -ms-flexbox;
     width: 100%;
@@ -46,7 +61,7 @@
 }
 @for $i from 0 through 12 {
     @include make-sections-class($i) {
-      @extend %section;
+        @extend %section;
     }
 }
 
@@ -56,7 +71,7 @@ the method of divison :
 consider that the page is divided into 12 section andthat number you 
 write in the class is occupied from 12 sections; 
 */
-@include make-section-auto(null); 
+@include make-section-auto(null);
 @include make-section(null);
 /* offset :
 "offset" work like "secton" but it's adding space on the right side for item. 
@@ -70,9 +85,9 @@ progress or delay of the item;
 */
 @include make-order(null);
 @include make-or-first-last(null);
-@each $screen-size, $screen-name, $min-max  in  $map-screen-size-name-type {
+@each $screen-size, $screen-name, $min-max in $map-screen-size-name-type {
     @include make-media($min-max, $screen-size) {
-        @include make-section-auto("-" + #{$screen-name}); 
+        @include make-section-auto("-" + #{$screen-name});
         // make section :
         @include make-section("-" + #{$screen-name});
         // make offset :

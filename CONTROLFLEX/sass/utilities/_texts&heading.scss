@@ -1,27 +1,30 @@
 /* ----------------------------------------------------text & pargraph------------------------------------------ : */
 p {
-    @include make-text-property(block, 1px, 1px, 1px, 0px);
+    // @include make-text-property(block, 1px, 1px, 1px, 0px);
     @include make-font-proprty($normal-font-weight, $md-font, $normal-line-height);
 }
-%text-propertys {
-    @include make-text-property(block, 1px, 1px, 1px, 0px);
-}
+// %text-propertys {
+//     // @include make-text-property(block, 1px, 1px, 1px, 0px);
+// }
 .text {
-    @extend %text-propertys;
+    // @extend %text-propertys;
     @include make-font-proprty($normal-font-weight, $md-font, $normal-line-height);
 }
 
-@each $items-size in (lg), (md), (sm) {
-    .text-#{$items-size} {
-        @extend %text-propertys;
-    }
-    @each $screen-name in (xl), (lg), (md), (sm), (xs) {
-        .text-#{$items-size}-#{$screen-name} {
-            @extend %text-propertys;
-        }
-    }    
-}
+// @each $items-size in (lg), (md), (sm) {
+//     .text-#{$items-size} {
+//         @extend %text-propertys;
+//     }
+//     @each $screen-name in (xl), (lg), (md), (sm), (xs) {
+//         .text-#{$items-size}-#{$screen-name} {
+//             @extend %text-propertys;
+//         }
+//     }
+// }
 
+.text-xs {
+    @include make-font-proprty($normal-font-weight, $xs-font, $normal-line-height);
+}
 .text-sm {
     @include make-font-proprty($normal-font-weight, $sm-font, $normal-line-height);
 }
@@ -31,15 +34,19 @@ p {
 .text-lg {
     @include make-font-proprty($normal-font-weight, $lg-font, $normal-line-height);
 }
+.text-xl {
+    @include make-font-proprty($normal-font-weight, $xl-font, $normal-line-height);
+}
 .text-flex {
     font-weight: 400;
     line-height: calc(8px + 3vw);
     font-size: calc(0px + 3vw);
 }
 
-@each $screen-size, $screen-name, $min-max  in $map-screen-size-name-type {
+@each $screen-size, $screen-name, $min-max in $map-screen-size-name-type {
     @include make-media($min-max, $screen-size) {
-        @each $items-size, $item-value in (xl, $xl-font), (lg, $lg-font), (md, $md-font),  (sm, $sm-font),  (xs, $xs-font) {
+        @each $items-size, $item-value in (xl, $xl-font), (lg, $lg-font), (md, $md-font), (sm, $sm-font), (xs, $xs-font)
+        {
             .text-#{$items-size}-#{$screen-name} {
                 @include make-font-proprty($normal-font-weight, #{$item-value}, $normal-line-height);
             }
@@ -52,29 +59,29 @@ p {
 }
 /* --------------------------------------------------------------------------------------------------------------- */
 /* -----------------------------------------------------heading------------------------------------------------- : */
-%heading-propertys {
-   @include make-text-property(block, 0px, 2px, 0px, 0px); 
-}
-@for $i from 1 through 6 {
-    h#{$i}, .h#{$i} {
-        @extend %heading-propertys;
-    }
-    @each $size in (xl), (lg), (md), (sm), (xs){
-        .h#{$i}-#{$size} {
-            @extend %heading-propertys;
-        }
-    }   
-}
-.h-flex{
+// %heading-propertys {
+//    @include make-text-property(block, 0px, 2px, 0px, 0px);
+// }
+// @for $i from 1 through 6 {
+//     h#{$i}, .h#{$i} {
+//         @extend %heading-propertys;
+//     }
+//     @each $size in (xl), (lg), (md), (sm), (xs){
+//         .h#{$i}-#{$size} {
+//             @extend %heading-propertys;
+//         }
+//     }
+// }
+.h-flex {
     line-height: calc(20px + 3vw);
     font-size: calc(25px + 3vw);
 }
 @for $i from 1 through 6 {
-    .h#{$i}{
+    .h#{$i} {
         font-size: 60px - 6 * $i;
     }
 }
-@each $screen-size, $screen-name, $min-max  in $map-screen-size-name-type{
+@each $screen-size, $screen-name, $min-max in $map-screen-size-name-type {
     @include make-media($min-max, $screen-size) {
         @for $i from 1 through 6 {
             .h#{$i}-#{$screen-name} {
@@ -96,13 +103,13 @@ p {
 /* -----------------------------------------------------------------------------------------------------------------*/
 
 /* ----------------------------------------------------text transform-----------------------------------------------*/
-.capitalize{
+.capitalize {
     text-transform: capitalize;
 }
-.lowercase{
+.lowercase {
     text-transform: lowercase;
 }
-.uppercase{
+.uppercase {
     text-transform: uppercase;
 }
 /* -----------------------------------------------------------------------------------------------------------------*/
@@ -124,7 +131,7 @@ p {
 /* ------------------------------------------------------------------------------------------------------------ */
 
 /* ----------------------------------------------------font style-------------------------------------------------- */
-@each $font-style in $map-font-style{
+@each $font-style in $map-font-style {
     @include make-font-style($font-style);
 }
 /* ------------------------------------------------------------------------------------------------------------------ */
@@ -134,11 +141,9 @@ p {
     text-align: center;
 }
 
-
 .text-left {
     text-align: left;
 }
-
 
 .text-right {
     text-align: right;
@@ -147,7 +152,6 @@ p {
 .text-justify {
     text-align: justify;
 }
-
 
 .text-bold {
     font-weight: bold;
@@ -178,7 +182,7 @@ p {
 }
 
 @each $value in (hidden, scroll, visible, auto, unset) {
-    @include make-overflow($value);  
+    @include make-overflow($value);
 }
 
 /* ------------------------------------------------------------------------------------------------------------------ */

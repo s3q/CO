@@ -5,22 +5,21 @@
     @each $class-name in ("", -xl, -lg, -md, -sm, -xs) {
         .section#{$class-name}-#{$i} {
             @content;
-        }   
+        }
     }
 }
 // section :
 @mixin make-section-auto($add-inclass) {
     .section-auto#{$add-inclass} {
         width: auto !important;
-        max-width: 100% !important; 
+        max-width: 100% !important;
         flex: 0 0 auto !important;
     }
-    .section-all-auto#{$add-inclass}{
+    .section-all-auto#{$add-inclass} {
         @extend .section-auto#{$add-inclass};
     }
-} 
+}
 @mixin make-section($add-inclass) {
-
     @for $i from 0 through 12 {
         .section-#{$i}#{$add-inclass} {
             max-width: ($i * (100% / 12)) !important;
@@ -45,10 +44,10 @@
         @each $dir-value in $map-dir {
             .offset-#{$dir-value}-#{$i}#{$add-inclass} {
                 margin-#{$dir-value}: ($i * (100% / 12)) !important;
-            }    
+            }
             .offset-#{$dir-value}-all-#{$i}#{$add-inclass} > * {
                 @extend .offset-#{$dir-value}-#{$i}#{$add-inclass};
-            }        
+            }
         }
     }
 }
@@ -64,7 +63,7 @@
 // order :
 @mixin make-order($add-inclass) {
     @for $i from 0 through 12 {
-        .or-#{$i}#{$add-inclass}{
+        .or-#{$i}#{$add-inclass} {
             -ms-flex-order: #{$i} !important;
             order: #{$i} !important;
         }
@@ -78,6 +77,6 @@
     .or-last#{$add-inclass} {
         -ms-flex-order: 13 !important;
         order: 13 !important;
-    }    
+    }
 }
 // -------------------------------------------------------------------------------------------------------------------

@@ -1,16 +1,20 @@
-.list, .list-vr, .list-hr {
+.list,
+.list-vr,
+.list-hr {
     font-size: $lg-font;
     list-style: disc;
 
     li {
         font-size: $md-font;
     }
-    li ul, li ol {
+    li ul,
+    li ol {
         list-style: circle;
     }
 }
 
-.list, .list-vr {
+.list,
+.list-vr {
     display: block;
     margin: 12px;
     .item {

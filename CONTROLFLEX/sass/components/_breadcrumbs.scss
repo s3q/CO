@@ -1,36 +1,28 @@
 .path {
-    @include make-path ( // path :
-
-        // padding :
-        $path-p, 
-
-        // background-color :
-        $path-bgc, 
-
-        // margin :
-        $path-m, 
-
-        // border :
-        $path-bo, 
-
-        // border-radius :
+    @include make-path(
+         // path
+         // padding
+        $path-p,
+         // background-color
+        $path-bgc,
+         // margin
+        $path-m,
+         // border
+        $path-bo,
+         // border-radius
         $path-bo-radius,
-        
-        // font-weight :
+         // font-weight
         $path-fow,
-
-        // font-size :
+         // font-size
         $path-fos
     );
 }
 .path-item:not(:first-of-type) {
-    
-    @include make-path-item ( // path-item :
-
-        // margin-left :
-        $path-item-ml, 
-
-        // color :
+    @include make-path-item(
+         // path-item
+         // margin-left
+        $path-item-ml,
+         // color
         $path-item-color
     );
 }

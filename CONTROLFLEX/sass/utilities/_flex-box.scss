@@ -8,7 +8,7 @@
     }
 }
 
-@each $screen-size, $screen-name, $min-max  in  $map-screen-size-name-type {
+@each $screen-size, $screen-name, $min-max in $map-screen-size-name-type {
     @include make-media($min-max, $screen-size) {
         @each $prefix, $value in $map-row-col-prefix-value {
             .flex-#{$prefix}-#{$screen-name} {
@@ -16,12 +16,11 @@
                 flex-direction: #{$value};
             }
         }
-        
     }
 }
 
-@each $prefix, $justify-value, $align-value  in $map-all-dir {
-    .#{$prefix}{
+@each $prefix, $justify-value, $align-value in $map-all-dir {
+    .#{$prefix} {
         @include make-dpflex;
         @include make-justify-align($justify-value, $align-value);
     }
@@ -31,7 +30,7 @@
 
 /* ------------------------------------------------justify & items--------------------------------------------*/
 @include make-loop-justify-items($map-loop-justify-items, null);
-@each $screen-size, $screen-name, $min-max  in  $map-screen-size-name-type {
+@each $screen-size, $screen-name, $min-max in $map-screen-size-name-type {
     @include make-media($min-max, $screen-size) {
         @include make-loop-justify-items($map-loop-justify-items, -#{$screen-name});
     }
@@ -40,7 +39,7 @@
 
 /* -------------------------------------------------------wrap--------------------------------------------------*/
 @each $property in $map-fle-wrap {
-    .flex-#{$property} { 
+    .flex-#{$property} {
         @include make-flex-wrap($property);
     }
 }

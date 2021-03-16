@@ -1,5 +1,5 @@
-    /* bo : */
-    /* bo > border */
+/* bo : */
+/* bo > border */
 @each $color-name, $color-value in $map-color {
     .bo-#{$color-name} {
         border: 1.5px solid $color-value;

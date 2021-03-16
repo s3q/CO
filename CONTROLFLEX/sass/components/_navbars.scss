@@ -1,6 +1,6 @@
-
 /* navbar */
-.navbar, .navbar-hr {
+.navbar,
+.navbar-hr {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: nowrap;
@@ -10,7 +10,7 @@
     -ms-flex-align: center;
     align-items: center;
     margin: 0px 0px 12px 0px;
-    padding: 12px;    
+    padding: 12px;
     z-index: 10000000000000;
     background-color: transparent;
 
@@ -19,7 +19,8 @@
         order: 1;
     }
 
-    .navbar-collapse, .nav-collapse {
+    .navbar-collapse,
+    .nav-collapse {
         display: -ms-flexbox;
         display: flex;
         -ms-flex-order: 2;
@@ -31,7 +32,11 @@
         }
     }
 
-    .dropdown-res, .dropdown, .dropdown-hr, .dropdown-vr, .dropdown-menu {
+    .dropdown-res,
+    .dropdown,
+    .dropdown-hr,
+    .dropdown-vr,
+    .dropdown-menu {
         padding: 0px;
         .dropdown-group {
             margin-top: 6px;
@@ -43,7 +48,9 @@
         order: 3;
     }
 
-    .navbar, .navbar-col, .navbar-row {
+    .navbar,
+    .navbar-col,
+    .navbar-row {
         padding: 0px;
     }
 
@@ -51,21 +58,23 @@
         text-decoration: none;
     }
 
-    .link{
+    .link {
         display: inline-block;
         margin: 0px;
         padding: 0px 6px;
         font-size: 18px;
     }
-    
-    ol, ul {
+
+    ol,
+    ul {
         display: -ms-flexbox;
         display: flex;
         padding-left: 0px;
         -ms-flex-align: center;
         align-items: center;
         li {
-            ul, ol {
+            ul,
+            ol {
                 margin: 1px 8px 12px 8px;
                 display: -ms-flexbox;
                 display: flex;
@@ -92,7 +101,7 @@
     -ms-flex-align: center;
     align-items: center;
     margin: 0px 0px 12px 0px;
-    padding: 12px;    
+    padding: 12px;
     z-index: 10000000000000;
     .navbar-link {
         -ms-flex-order: 1;
@@ -104,11 +113,13 @@
         order: 2;
     }
 
-    .navbar, .navbar-col, .navbar-row {
+    .navbar,
+    .navbar-col,
+    .navbar-row {
         padding: 0px;
     }
 
-    .link{
+    .link {
         display: inline-block;
         margin: 0px;
         padding: 0px 6px;
@@ -119,7 +130,8 @@
         text-decoration: none;
     }
 
-    ol, ul {
+    ol,
+    ul {
         display: -ms-flexbox;
         display: flex;
         padding-left: 0px;
@@ -127,7 +139,8 @@
         li {
             margin-left: 0px;
             margin-top: 12px;
-            ul, ol {
+            ul,
+            ol {
                 margin: 1px 8px 12px 8px;
                 display: -ms-flexbox;
                 display: flex;
@@ -145,14 +158,19 @@
         }
     }
 
-    .dropdown-res, .dropdown, .dropdown-hr, .dropdown-vr, .dropdown-menu {
+    .dropdown-res,
+    .dropdown,
+    .dropdown-hr,
+    .dropdown-vr,
+    .dropdown-menu {
         padding: 0px;
         .dropdown-group {
             margin-top: 6px;
         }
     }
 
-    .navbar-collapse, .nav-collapse {
+    .navbar-collapse,
+    .nav-collapse {
         order: 3;
         display: block;
         width: 100%;
@@ -167,8 +185,10 @@
     }
 
     li {
-        a {display: block;}
-    } 
+        a {
+            display: block;
+        }
+    }
 
     .bn-navbar {
         display: block;
@@ -207,12 +227,12 @@
     }
 }
 
-
 @media (max-width: $md) {
     .navbar {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        .navbar-collapse, .nav-collapse {
+        .navbar-collapse,
+        .nav-collapse {
             -ms-flex-order: 3;
             order: 3;
             display: block;
@@ -228,10 +248,11 @@
             }
         }
 
-        li { 
+        li {
             margin-left: 0px;
             margin-top: 12px;
-            ul, ol {
+            ul,
+            ol {
                 li {
                     padding-left: 5px;
                     padding-right: 5px;
@@ -240,7 +261,9 @@
                     width: 100%;
                 }
             }
-            a {display: block;}
+            a {
+                display: block;
+            }
         }
 
         .opt-navbar {
@@ -251,18 +274,18 @@
             display: block;
         }
     }
-    
 
     .nav-overflow {
         max-width: 100%;
         margin-top: 0px;
         overflow-y: auto;
-        &::-webkit-scrollbar {display: none;}
-        -ms-overflow-style: none;  
-        scrollbar-width: none;  
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
 }
-
 
 .navbar-sticky {
     @extend .navbar;
@@ -271,7 +294,7 @@
     @include make-prefix(null, 0px, (top, left));
 }
 
-.navbar-light{
+.navbar-light {
     background-color: $nav-light;
     .dropdown-group {
         border-color: #{$nav-dark}50;
@@ -279,7 +302,7 @@
     }
 }
 
-.navbar-light-blue{
+.navbar-light-blue {
     background-color: $nav-light-blue;
     .dropdown-group {
         border-color: #{$nav-dark-blue}50;
@@ -287,11 +310,12 @@
     }
 }
 
-.navbar-light, .navbar-light-blue {
+.navbar-light,
+.navbar-light-blue {
     @include light-mode();
 }
 
-.navbar-dark-blue{
+.navbar-dark-blue {
     background-color: $nav-dark-blue;
     .dropdown-group {
         border-color: $nav-dark-blue + dc;
@@ -306,7 +330,7 @@
     }
 }
 
-.navbar-dark{
+.navbar-dark {
     background-color: $nav-dark;
     .dropdown-group {
         border-color: $nav-dark + dc;
@@ -321,8 +345,7 @@
     }
 }
 
-
-.navbar-blue{
+.navbar-blue {
     background-color: $nav-blue;
     .dropdown-group {
         border-color: $nav-blue + dc;
@@ -337,7 +360,7 @@
     }
 }
 
-.navbar-purple{
+.navbar-purple {
     background-color: $nav-purple;
     .dropdown-group {
         border-color: $nav-purple + dc;
@@ -352,11 +375,14 @@
     }
 }
 
-.navbar-dark-blue, .navbar-dark, .navbar-blue, .navbar-purple { 
+.navbar-dark-blue,
+.navbar-dark,
+.navbar-blue,
+.navbar-purple {
     @include dark-mode();
 }
 
-.links{
+.links {
     font-size: $lg-font;
     @include make-prefix(null, 0px, (margin, padding));
     color: $dark-links-color;
@@ -372,16 +398,16 @@
     margin: 0px;
     width: auto;
     white-space: nowrap;
-    -webkit-transition: box-shadow, color .4s, .4s;
-    -moz-transition: box-shadow, color .4s, .4s;
-    -o-transition: box-shadow, color .4s, .4s;
-    transition: box-shadow, color .4s, .4s;
+    -webkit-transition: box-shadow, color 0.4s, 0.4s;
+    -moz-transition: box-shadow, color 0.4s, 0.4s;
+    -o-transition: box-shadow, color 0.4s, 0.4s;
+    transition: box-shadow, color 0.4s, 0.4s;
     cursor: $bn-cursor;
-    ul{
+    ul {
         margin: 0px;
         font-size: 20px;
     }
-    a:hover{text-decoration: none;}
+    a:hover {
+        text-decoration: none;
+    }
 }
-
-

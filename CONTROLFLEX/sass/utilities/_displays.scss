@@ -1,11 +1,10 @@
-
 /* display :*/
 /* dp display */
 @each $map-dis in $map-dis {
     @include make-displays($map-dis, null);
 }
 
-@each $screen-size, $screen-name, $min-max  in  $map-screen-size-name-type {
+@each $screen-size, $screen-name, $min-max in $map-screen-size-name-type {
     @include make-media($min-max, $screen-size) {
         @each $map-dis in $map-dis {
             @include make-displays($map-dis, -#{$screen-name});

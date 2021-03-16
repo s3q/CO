@@ -9,14 +9,14 @@
 </head>
 <body>
   
-    <div class="form-inputs inputs-lg">
+    <form class="form-inputs inputs-lg" method="GET">
         <div class="group-input">
             <input type="text" class="custom-input valid" placeholder="First Name...">
             <input type="password" class="custom-input" placeholder="Last Name...">
         </div>
         <div class="group-input-vr">
             <label for="text">Email Address :</label>
-            <input type="text" class="custom-input invalid" id="text" placeholder="Email Address...">
+            <input type="text" class="custom-input invalid" id="text" placeholder="Email Address..." blur>
         </div>
         <div class="group-input-vr">
             <label for="password">Password :</label>
@@ -28,21 +28,46 @@
             <label for="checkbox" class="custom-checkbox-label">Check me out</label>
         </div>
         <div class="custom-form">
-            <input type="range" class="custom-range" name="" id="">
+            <input type="range" class="custom-range" name="range" id="">
         </div>
         <div class="custom-form">
-            <input type="radio" class="custom-radio" name="" id="radio">
+            <input type="radio" class="custom-radio" name="radio" id="radio">
             <label for="radio" class="custom-radio-label">Check me out</label>
         </div>
         <div class="custom-form">
-            <input type="checkbox" class="custom-switch" name="" id="switch">
+            <input type="checkbox" class="custom-switch" name="checkbox" id="switch">
             <label for="switch" class="custom-switch-label">Check me out</label>
         </div>
         <div class="mt-10">
-            <button class="bn bn-purple">Submit</button>
+            <button type="submit" class="bn bn-purple">Submit</button>
+        </div>
+    </form>
+
+    <div data-target="div1" role="switch">
+        <button class="bn outline-dark">button</button>
+        <button class="bn bn-dark">button</button>
+        <button class="bn bn-dark">button</button>
+    </div>
+    <div id="div1">
+        <div>
+            ggggggggggg
+        </div>
+        <div>
+            jjjjjjjjjj
+        </div>
+        <div>
+            ddddddddddd
         </div>
     </div>
 
+    <div class="notice-window bgc-red">
+        <div class="notice-window-head">
+            none
+        </div>
+        <div class="notice-window-body">
+            none
+        </div>
+    </div>
 
 
     <mark>1234</mark>
@@ -70,7 +95,8 @@
     </div>
 
 
-    <script src="dist/js/jquery.min.js"></script>
-    <script src="dist/js/co.min.js"></script>
+    <!-- <script src="dist/js/jquery.min.js"></script> -->
+    <!-- <script src="dist/js/co.min.js"></script> -->
+    <script src="dist/js/co.js"></script>
 </body>
 </html>

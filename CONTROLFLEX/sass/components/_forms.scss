@@ -1,23 +1,56 @@
 /*----------------------------------------------------------------form------------------------------------------------------------------------- :*/
 /* --------------------------------------form-input : */
 .form-inputs {
-    @include make-form-inputs($form-inputs-dp, $form-inputs-flex-dir, $form-inputs-m, $form-inputs-w, $form-inputs-position);
+    @include make-form-inputs(
+        $form-inputs-dp,
+        $form-inputs-flex-dir,
+        $form-inputs-m,
+        $form-inputs-w,
+        $form-inputs-position
+    );
 }
 
-@media (min-width: $sm){      
-    .form-inputs{width: $sm;}
+@media (min-width: $sm) {
+    .form-inputs {
+        width: $sm;
+    }
 }
 /*---------------------------------------------------*/
 
 /*--------------------custom textarea & custom input : */
-.custom-textarea, .custom-input {
-    @include make-custom-textarea-input($custom-textarea-input-max-w, $custom-textarea-input-dp, $custom-textarea-input-p, $custom-textarea-input-bo, $custom-textarea-input-bo-radius, $custom-textarea-input-color, $custom-textarea-input-transition, $custom-textarea-input-focus-bo, $custom-textarea-input-focus-shadow);
+.custom-textarea,
+.custom-input {
+    @include make-custom-textarea-input(
+        $custom-textarea-input-max-w,
+        $custom-textarea-input-dp,
+        $custom-textarea-input-p,
+        $custom-textarea-input-bo,
+        $custom-textarea-input-bo-radius,
+        $custom-textarea-input-color,
+        $custom-textarea-input-transition,
+        $custom-textarea-input-focus-bo,
+        $custom-textarea-input-focus-shadow
+    );
     &.invalid {
-        @include make-custom-textarea-input-status(invalid, $custom-textarea-input-status-position, $custom-textarea-input-status-invalid-bo, $custom-textarea-input-status-invalid-shadow, '', '');
+        @include make-custom-textarea-input-status(
+            invalid,
+            $custom-textarea-input-status-position,
+            $custom-textarea-input-status-invalid-bo,
+            $custom-textarea-input-status-invalid-shadow,
+            "",
+            ""
+        );
     }
-    
+
     &.valid {
-        @include make-custom-textarea-input-status(valid, $custom-textarea-input-status-position, '', '', $custom-textarea-input-status-valid-bo, $custom-textarea-input-status-valid-shadow);
+        @include make-custom-textarea-input-status(
+            valid,
+            $custom-textarea-input-status-position,
+            "",
+            "",
+            $custom-textarea-input-status-valid-bo,
+            $custom-textarea-input-status-valid-shadow
+        );
     }
     &::placeholder {
         color: $gray;
@@ -28,7 +61,13 @@
 
 /*------------------------------------------input des : */
 .input-des {
-    @include make-input-des($input-des-fos, $input-des-color, $input-des-m, $input-des-valid-color, $input-des-invalid-color);
+    @include make-input-des(
+        $input-des-fos,
+        $input-des-color,
+        $input-des-m,
+        $input-des-valid-color,
+        $input-des-invalid-color
+    );
 }
 /*------------------------------------------------------*/
 
@@ -41,23 +80,65 @@
 
 /*----------------------------------------custom pre : */
 .custom-pre {
-    @include make-custom-pre($custom-pre-dp, $custom-pre-overflow-x, $custom-pre-m, $custom-pre-p, $custom-pre-w, $custom-pre-bgc, $custom-pre-bol, $custom-pre-bor, $custom-pre-bo-radius);
+    @include make-custom-pre(
+        $custom-pre-dp,
+        $custom-pre-overflow-x,
+        $custom-pre-m,
+        $custom-pre-p,
+        $custom-pre-w,
+        $custom-pre-bgc,
+        $custom-pre-bol,
+        $custom-pre-bor,
+        $custom-pre-bo-radius
+    );
 }
 /*------------------------------------------------------*/
 
 /*----------------------------------------custom lable : */
 .custom-label {
-    @include make-custom-label($custom-label-dp, $custom-label-p, $custom-label-m, $custom-label-align-items, $custom-label-fos);
+    @include make-custom-label(
+        $custom-label-dp,
+        $custom-label-p,
+        $custom-label-m,
+        $custom-label-align-items,
+        $custom-label-fos
+    );
 }
 /*--------------------------------------------------------*/
 
 /*-------------------------------------custom checkbox : */
 input.custom-checkbox {
-    @include make-custom-checkbox($custom-checkbox-dp, $custom-checkbox-checked-custom-checkbox-label-before-bo-color, $custom-checkbox-checked-custom-checkbox-label-before-bgc, $custom-checkbox-active-custom-checkbox-label-before-shadow);
+    @include make-custom-checkbox(
+        $custom-checkbox-dp,
+        $custom-checkbox-checked-custom-checkbox-label-before-bo-color,
+        $custom-checkbox-checked-custom-checkbox-label-before-bgc,
+        $custom-checkbox-active-custom-checkbox-label-before-shadow
+    );
 }
 
 label.custom-checkbox-label {
-    @include make-custom-checkbox-label($custom-checkbox-label-flex-wrap, $custom-checkbox-label-flex-dir, $custom-checkbox-label-position, $custom-checkbox-label-before-dp, $custom-checkbox-label-before-w-h, $custom-checkbox-label-before-bgc, $custom-checkbox-label-before-p, $custom-checkbox-label-before-mr, $custom-checkbox-label-before-bo-radius, $custom-checkbox-label-before-bo, $custom-checkbox-label-before-transition, $custom-checkbox-label-after-dp, $custom-checkbox-label-after-font, $custom-checkbox-label-after-font-weight, $custom-checkbox-label-after-font-size, $custom-checkbox-label-after-color, $custom-checkbox-label-after-position, $custom-checkbox-label-after-top, $custom-checkbox-label-after-left, $custom-checkbox-label-after-transform);
+    @include make-custom-checkbox-label(
+        $custom-checkbox-label-flex-wrap,
+        $custom-checkbox-label-flex-dir,
+        $custom-checkbox-label-position,
+        $custom-checkbox-label-before-dp,
+        $custom-checkbox-label-before-w-h,
+        $custom-checkbox-label-before-bgc,
+        $custom-checkbox-label-before-p,
+        $custom-checkbox-label-before-mr,
+        $custom-checkbox-label-before-bo-radius,
+        $custom-checkbox-label-before-bo,
+        $custom-checkbox-label-before-transition,
+        $custom-checkbox-label-after-dp,
+        $custom-checkbox-label-after-font,
+        $custom-checkbox-label-after-font-weight,
+        $custom-checkbox-label-after-font-size,
+        $custom-checkbox-label-after-color,
+        $custom-checkbox-label-after-position,
+        $custom-checkbox-label-after-top,
+        $custom-checkbox-label-after-left,
+        $custom-checkbox-label-after-transform
+    );
 }
 
 /*----------------------------------------------------------*/
@@ -65,20 +146,67 @@ label.custom-checkbox-label {
 /*-------------------------------------------custom range : */
 
 .custom-range {
-    @include make-custom-range($custom-range-max-w, $custom-range-h, $custom-range-p, $custom-range-bgc, $custom-range-range-thumb-shadow-onactive, $custom-range-range-thumb-w, $custom-range-range-thumb-h, $custom-range-range-thumb-mt, $custom-range-range-thumb-bgc, $custom-range-range-thumb-bo-raduis, $custom-range-range-thumb-transition, $custom-range-slider-thumb-onhover-bgc, $custom-range-slider-thumb-onactive-bgc, $custom-range-range-track-w, $custom-range-range-track-h, $custom-range-range-track-bgc, $custom-range-range-track-bo-raduis);
+    @include make-custom-range(
+        $custom-range-max-w,
+        $custom-range-h,
+        $custom-range-p,
+        $custom-range-bgc,
+        $custom-range-range-thumb-shadow-onactive,
+        $custom-range-range-thumb-w,
+        $custom-range-range-thumb-h,
+        $custom-range-range-thumb-mt,
+        $custom-range-range-thumb-bgc,
+        $custom-range-range-thumb-bo-raduis,
+        $custom-range-range-thumb-transition,
+        $custom-range-slider-thumb-onhover-bgc,
+        $custom-range-slider-thumb-onactive-bgc,
+        $custom-range-range-track-w,
+        $custom-range-range-track-h,
+        $custom-range-range-track-bgc,
+        $custom-range-range-track-bo-raduis
+    );
 }
 
 /*-----------------------------------------------------------*/
 
-/*--------------------------------------------------switch : */ 
+/*--------------------------------------------------switch : */
 input.custom-switch {
-    @include make-custom-switch($custom-switch-checked-custom-switch-label-before-bo-color, $custom-switch-checked-custom-switch-label-before-bgc, $custom-switch-checked-custom-switch-label-after-left, $custom-switch-checked-custom-switch-label-after-bo-color, $custom-switch-active-custom-switch-label-after-shadow);
+    @include make-custom-switch(
+        $custom-switch-checked-custom-switch-label-before-bo-color,
+        $custom-switch-checked-custom-switch-label-before-bgc,
+        $custom-switch-checked-custom-switch-label-after-left,
+        $custom-switch-checked-custom-switch-label-after-bo-color,
+        $custom-switch-active-custom-switch-label-after-shadow
+    );
 }
-  
+
 label.custom-switch-label {
-    @include make-custom-switch-label($custom-switch-label-flex-wrap, $custom-switch-label-flex-dir, $custom-switch-label-position, $custom-switch-label-before-dp, $custom-switch-label-before-w, $custom-switch-label-before-h, $custom-switch-label-before-bgc, $custom-switch-label-before-mr, $custom-switch-label-before-p, $custom-switch-label-before-bo-raduis, $custom-switch-label-before-bo, $custom-switch-label-before-transition, $custom-switch-label-after-dp, $custom-switch-label-after-position, $custom-switch-label-after-top, $custom-switch-label-after-left, $custom-switch-label-after-h, $custom-switch-label-after-w, $custom-switch-label-after-bo, $custom-switch-label-after-bo-raduis, $custom-switch-label-after-bgc, $custom-switch-label-after-transition);
+    @include make-custom-switch-label(
+        $custom-switch-label-flex-wrap,
+        $custom-switch-label-flex-dir,
+        $custom-switch-label-position,
+        $custom-switch-label-before-dp,
+        $custom-switch-label-before-w,
+        $custom-switch-label-before-h,
+        $custom-switch-label-before-bgc,
+        $custom-switch-label-before-mr,
+        $custom-switch-label-before-p,
+        $custom-switch-label-before-bo-raduis,
+        $custom-switch-label-before-bo,
+        $custom-switch-label-before-transition,
+        $custom-switch-label-after-dp,
+        $custom-switch-label-after-position,
+        $custom-switch-label-after-top,
+        $custom-switch-label-after-left,
+        $custom-switch-label-after-h,
+        $custom-switch-label-after-w,
+        $custom-switch-label-after-bo,
+        $custom-switch-label-after-bo-raduis,
+        $custom-switch-label-after-bgc,
+        $custom-switch-label-after-transition
+    );
 }
-  
+
 /*----------------------------------------------------------*/
 
 /*--------------------------------------------------radio : */
@@ -90,19 +218,19 @@ input.custom-radio {
             background-color: #ffffff;
         }
         + label.custom-radio-label::after {
-            border: #599cff solid .5px;
+            border: #599cff solid 0.5px;
             background-color: #599cff;
         }
     }
     &:active {
-        + label.custom-radio-label::before{
-            -webkit-box-shadow: 0 0 0 5px #599cff50; 
-            -moz-box-shadow: 0 0 0 5px #599cff50; 
+        + label.custom-radio-label::before {
+            -webkit-box-shadow: 0 0 0 5px #599cff50;
+            -moz-box-shadow: 0 0 0 5px #599cff50;
             box-shadow: 0 0 0 5px #599cff50;
         }
     }
 }
-  
+
 label.custom-radio-label {
     display: -ms-flexbox;
     display: flex;
@@ -123,10 +251,10 @@ label.custom-radio-label {
         margin-right: 10px;
         border-radius: 50%;
         border: #c0d1e2 solid 1px;
-        -webkit-transition: background-color, box-shadow .3s, .3s;
-        -moz-transition: background-color, box-shadow .3s, .3s;
-        -o-transition: background-color, box-shadow .3s, .3s;
-        transition: background-color, box-shadow .3s, .3s;
+        -webkit-transition: background-color, box-shadow 0.3s, 0.3s;
+        -moz-transition: background-color, box-shadow 0.3s, 0.3s;
+        -o-transition: background-color, box-shadow 0.3s, 0.3s;
+        transition: background-color, box-shadow 0.3s, 0.3s;
     }
 
     &::after {
@@ -141,15 +269,14 @@ label.custom-radio-label {
         border: none;
         border-radius: 50%;
         background-color: #ffffff;
-        -webkit-transition: left, border .3s, .3s;
-        -moz-transition: left, border .3s, .3s;
-        -o-transition: left, border .3s, .3s;
-        transition: left, border .3s, .3s;
+        -webkit-transition: left, border 0.3s, 0.3s;
+        -moz-transition: left, border 0.3s, 0.3s;
+        -o-transition: left, border 0.3s, 0.3s;
+        transition: left, border 0.3s, 0.3s;
     }
-    
 }
 /*--------------------------------------------------------*/
-  
+
 /*--------------------------------------------------file :*/
 input.custom-file {
     display: none;
@@ -169,7 +296,7 @@ label.custom-file-label {
     color: #888888;
     background-color: #fff;
     border: 1px solid #c5dcff;
-    border-radius: 8px;
+    border-radius: 4px;
 
     &::after {
         content: "Browse";
@@ -177,7 +304,7 @@ label.custom-file-label {
         display: -ms-flexbox;
         display: flex;
         position: absolute;
-        top: 0; 
+        top: 0;
         bottom: 0;
         right: 0;
         padding: 5px 10px;
@@ -185,21 +312,21 @@ label.custom-file-label {
         -ms-flex-align: center;
         align-items: center;
         background-color: #d1e3ff;
-        border:none;
-        border-radius: 0px 7px 7px 0px;
+        border: none;
+        border-radius: 0px 4px 4px 0px;
     }
 }
 
 /* ---for english language */
-.custom-file:lang(en){ 
+.custom-file:lang(en) {
     ~ .custom-file-label::after {
-    content: "Browse";
+        content: "Browse";
     }
 }
 /* ---for arabic language */
 .custom-file:lang(ar) {
     ~ .custom-file-label::after {
-    content: "تصفح";
+        content: "تصفح";
     }
 }
 
@@ -215,7 +342,7 @@ label.custom-file-label {
     top: 0px;
     left: 0px;
     margin: 5px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: initial;
     max-width: 100%;
     width: 100%;
@@ -223,7 +350,7 @@ label.custom-file-label {
     color: #888888;
     background-color: #fff;
     border: 1px solid #c5dcff;
-    border-radius: 8px;
+    border-radius: 4px;
 
     &:focus {
         box-shadow: none;
@@ -233,12 +360,33 @@ label.custom-file-label {
 /*--------------------------------------------------------*/
 
 /* --------------------------------------group input : */
-.group-input, .group-input-hr { 
-    @include make-group-input(hr, $group-input-w, $group-input-m, $group-input-hr-dir, $group-input-hr-m-not-first-last-child, $group-input-hr-m-first-child, $group-input-hr-m-last-child, "", "");
+.group-input,
+.group-input-hr {
+    @include make-group-input(
+        hr,
+        $group-input-w,
+        $group-input-m,
+        $group-input-hr-dir,
+        $group-input-hr-m-not-first-last-child,
+        $group-input-hr-m-first-child,
+        $group-input-hr-m-last-child,
+        "",
+        ""
+    );
 }
 
-.group-input-vr { 
-    @include make-group-input(vr, $group-input-w, $group-input-m, "", "", "", "", $group-input-vr-dir, $group-input-vr-m);
+.group-input-vr {
+    @include make-group-input(
+        vr,
+        $group-input-w,
+        $group-input-m,
+        "",
+        "",
+        "",
+        "",
+        $group-input-vr-dir,
+        $group-input-vr-m
+    );
 }
 /*-----------------------------------------------------*/
 
@@ -246,7 +394,7 @@ label.custom-file-label {
 
 @include make-input-sizes(null);
 
-@each $screen-size, $screen-name, $min-max  in $map-screen-size-name-type {
+@each $screen-size, $screen-name, $min-max in $map-screen-size-name-type {
     @include make-media($min-max, $screen-size) {
         @include make-input-sizes(-$screen-name);
     }

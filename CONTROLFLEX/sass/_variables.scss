@@ -1,5 +1,4 @@
-
-// control flex 
+// control flex
 // v.1
 // ------------------------------------------------------varibles--------------------------------------------------
 
@@ -7,8 +6,8 @@
 $xs-font: 12px;
 $sm-font: 14px;
 $md-font: 15px;
-$lg-font: 17px;
-$xl-font: 18px;
+$lg-font: 18px;
+$xl-font: 22px;
 $text-decoration: (underline, overline, line-through, none);
 // overflow :
 $overflow-hidden: hidden;
@@ -17,7 +16,7 @@ $height-overflow-hidden: max-content;
 // ---------------------------------------------------------------------------------------------------------------
 
 // -----------------------------------------------------------colors-------------------------------------------- :
-$blue : #007bff;
+$blue: #007bff;
 $purple: #6f42c1;
 $pink: #fd0076;
 $red: #eb1c30;
@@ -30,12 +29,12 @@ $green: #25b146;
 $teal: #21c795;
 $cyan: #31b7cc;
 $light: #ffffff;
-$light-blue:#cde1ff;
+$light-blue: #cde1ff;
 $gray: #a8a8a8;
 $dark: #4e4e4e;
 $very-dark: #2c2c2c;
 $black: #000000;
-$dark-blue:  #3e4653;
+$dark-blue: #3e4653;
 
 // color + transparent
 // t > transparent
@@ -63,7 +62,7 @@ $dark-blue-transparent: #{$dark-blue} + #{$t};
 // -------------------------------------------------------------------------------------------------------------
 
 //---------------------------------------------------------!default------------------------------------------------ :
-$a-color:  inherit !default;
+$a-color: inherit !default;
 $span-color: $pink !default;
 $address-color: $pink !default;
 $q-color: $dark-blue !default;
@@ -76,18 +75,19 @@ $normal-font-weight: 400 !default;
 $normal-line-height: 32px !default;
 $normal-line-height-html: 1.2 !default;
 // font family
-$basic-font: "Segoe UI","Helvetica Neue",Arial,"Noto Sans",sans-serif,"Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !default;
+$basic-font: "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji" !default;
 $monospace: monospace !default;
 // selection background color & color :
-$selection-color : #ffffff !default;
+$selection-color: #ffffff !default;
 $selection-bgc: #808080 !default;
 // nav:
 $link-font-size: 18px !default;
 // bn :
 $bn-default-p: 8px 15px !default;
-$bn-default-fos: $md-font !default;
-$bn-default-bo-radius: 5px !default;
-$bn-bgc: #EEE !default;
+$bn-default-fos: $md-font + 1 !default;
+$bn-default-bo-radius: 4px !default;
+$bn-bgc: #eee !default;
 $bn-cursor: pointer !default;
 $bn-outline-onfoucs: none !default;
 // bn close :
@@ -96,9 +96,9 @@ $bn-close-bgc: transparent;
 $bn-close-bo-radius: 1.8px;
 $bn-close-color: currentColor;
 // alert window :
-$backdrop-window-zindex: 10000000000000000 !default;
+$backdrop-window-zindex: 100 !default;
 $backdrop-window-bgc: #00000080;
-$alert-window-zindex: 10000000000000001 !default;
+$alert-window-zindex: 10000 !default;
 // alert window:
 $alert-window-w: 560px !default;
 $alert-window-h: 360px !default;
@@ -120,7 +120,7 @@ $alert-window-foot-bot: 1.5px solid #cdd6e460 !default;
 $alert-p: 10px 12px !default;
 $alert-w: 98% !default;
 $alert-m: 10px auto !default;
-$alert-bo-radius: 5px !default;
+$alert-bo-radius: 4px !default;
 // alert foot :
 $alert-foot-dp: flex !default;
 $alert-foot-flex-dir: row !default;
@@ -128,13 +128,13 @@ $alert-foot-justify-content: space-between !default;
 $alert-foot-mt: 12px !default;
 $alert-foot-bo-top: 1.5px solid $light-transparent !default;
 $alert-foot-p: 6px 4px !default;
-$alert-foot-p-content: 2px !default;  
+$alert-foot-p-content: 2px !default;
 // breadcrumbs :
 $path-p: 8px 12px;
 $path-bgc: #f9f9fd;
 $path-m: 12px;
-$path-bo: 1px solid #f3edff; 
-$path-bo-radius: 6px;
+$path-bo: 1px solid #f3edff;
+$path-bo-radius: 4px;
 $path-fow: 300;
 $path-fos: 18px;
 $path-item-ml: 18px;
@@ -143,7 +143,7 @@ $path-item-color: #9696e4;
 $card-text-w: 98%;
 $card-text-m: 8px auto;
 $card-text-p: 20px;
-$card-text-bo-radius: 5px;
+$card-text-bo-radius: 4px;
 $card-text-bol: 4px solid $purple;
 $card-text-bor: 1px solid $purple-transparent;
 $card-text-bot: 1px solid $purple-transparent;
@@ -151,7 +151,7 @@ $card-text-bob: 1px solid $purple-transparent;
 //card :
 $card-w: 100%;
 $card-m: 0 auto;
-$card-bo-radius: 3px;
+$card-bo-radius: 4px;
 $card-bgc: #ffffff;
 $card-bo: 1px solid #eaeced;
 //card-head :
@@ -184,7 +184,7 @@ $dropdown-absolute-w: max-content;
 // dropdown-menu :
 $dropdown-menu-dp: block;
 $dropdown-menu-w: auto;
-// dropdown-group : 
+// dropdown-group :
 $dropdown-group-dp: none;
 $dropdown-group-flex-dir: column;
 $dropdown-group-position: absolute;
@@ -193,25 +193,25 @@ $dropdown-group-overflow: hidden;
 $dropdown-group-pt: 0px;
 $dropdown-group-bgc: transparent;
 $dropdown-group-bo: 1px solid #e2dfe7;
-$dropdown-group-bo-radius: 3px;
+$dropdown-group-bo-radius: 4px;
 // dropdown-group-vr :
 $dropdown-group-vr-flex-dir: column;
 // dropdown-group-hr :
 $dropdown-group-hr-flex-dir: row;
 // dropdown-absolute > dropdown-group :
-$dropdown-absolute-group-w: auto; 
+$dropdown-absolute-group-w: auto;
 // dropdown-menu > dropdown-group :
-$dropdown-menu-group-w: auto; 
+$dropdown-menu-group-w: auto;
 // dropdown-content :
 $dropdown-content-dp: block;
 $dropdown-content-w: 100%;
 $dropdown-content-bgc: #ffffff;
-$dropdown-content-transition: background-color .3s linear;
+$dropdown-content-transition: background-color 0.3s linear;
 $dropdown-content-bgc-hover: #f5f6fc;
 // dropdown-absolute > dropdown-content :
-$dropdown-absolute-content-p: 12px 18px; 
+$dropdown-absolute-content-p: 12px 18px;
 // dropdown-menu > dropdown-content :
-$dropdown-menu-content-p:  8px 12px; 
+$dropdown-menu-content-p: 8px 12px;
 // form-inputs :
 $form-inputs-dp: flex;
 $form-inputs-flex-dir: column;
@@ -232,17 +232,17 @@ $custom-pre-bo-radius: 2px;
 $custom-textarea-input-max-w: 100%;
 $custom-textarea-input-dp: block;
 $custom-textarea-input-p: 8px 15px;
-$custom-textarea-input-bo: .8px solid #bcbbcc;
-$custom-textarea-input-bo-radius: 5px;
+$custom-textarea-input-bo: 0.8px solid #bcbbcc;
+$custom-textarea-input-bo-radius: 4px;
 $custom-textarea-input-color: #949494;
-$custom-textarea-input-transition: box-shadow .3s ease-in-out;
-$custom-textarea-input-focus-bo: .8px solid $purple;
+$custom-textarea-input-transition: box-shadow 0.3s ease-in-out;
+$custom-textarea-input-focus-bo: 0.8px solid $purple;
 $custom-textarea-input-focus-shadow: 0px 0px 0px 3px $purple-transparent;
 // custom-textarea-input-status :
 $custom-textarea-input-status-position: relative;
-$custom-textarea-input-status-invalid-bo: .8px solid $red;
+$custom-textarea-input-status-invalid-bo: 0.8px solid $red;
 $custom-textarea-input-status-invalid-shadow: 0px 0px 0px 3px $red-transparent;
-$custom-textarea-input-status-valid-bo: .8px solid $green;
+$custom-textarea-input-status-valid-bo: 0.8px solid $green;
 $custom-textarea-input-status-valid-shadow: 0px 0px 0px 3px $green-transparent;
 // input-des :
 $input-des-fos: $xs-font;
@@ -261,31 +261,31 @@ $custom-label-p: 9.5px 10px;
 $custom-label-m: 0;
 $custom-label-align-items: center;
 $custom-label-fos: 16px;
-// custom-checkbox : 
+// custom-checkbox :
 $custom-checkbox-dp: none;
 $custom-checkbox-checked-custom-checkbox-label-before-bo-color: #599cff;
 $custom-checkbox-checked-custom-checkbox-label-before-bgc: #599cff;
 $custom-checkbox-active-custom-checkbox-label-before-shadow: 0 0 0 2px #0077ff50;
-// custom-checkbox-label : 
+// custom-checkbox-label :
 $custom-checkbox-label-flex-wrap: nowrap;
 $custom-checkbox-label-flex-dir: row;
-$custom-checkbox-label-position: relative; 
-$custom-checkbox-label-before-dp: block; 
+$custom-checkbox-label-position: relative;
+$custom-checkbox-label-before-dp: block;
 $custom-checkbox-label-before-w-h: 16px;
 $custom-checkbox-label-before-bgc: #fff;
-$custom-checkbox-label-before-p: 8px; 
-$custom-checkbox-label-before-mr: 10px; 
-$custom-checkbox-label-before-bo-radius: 4px; 
+$custom-checkbox-label-before-p: 8px;
+$custom-checkbox-label-before-mr: 10px;
+$custom-checkbox-label-before-bo-radius: 4px;
 $custom-checkbox-label-before-bo: #c0d1e2 solid 0.8px;
-$custom-checkbox-label-before-transition: background-color .3s, box-shadow .3s; 
-$custom-checkbox-label-after-dp: block; 
-$custom-checkbox-label-after-font: "Font Awesome 5 Free"; 
-$custom-checkbox-label-after-font-weight: 900; 
-$custom-checkbox-label-after-font-size: 10px; 
-$custom-checkbox-label-after-color: #ffffff; 
-$custom-checkbox-label-after-position: absolute; 
-$custom-checkbox-label-after-top: 50%; 
-$custom-checkbox-label-after-left: 4px; 
+$custom-checkbox-label-before-transition: background-color 0.3s, box-shadow 0.3s;
+$custom-checkbox-label-after-dp: block;
+$custom-checkbox-label-after-font: "Font Awesome 5 Free";
+$custom-checkbox-label-after-font-weight: 900;
+$custom-checkbox-label-after-font-size: 10px;
+$custom-checkbox-label-after-color: #ffffff;
+$custom-checkbox-label-after-position: absolute;
+$custom-checkbox-label-after-top: 50%;
+$custom-checkbox-label-after-left: 4px;
 $custom-checkbox-label-after-transform: translateY(-50%);
 // custom-range :
 $custom-range-max-w: 100%;
@@ -298,10 +298,10 @@ $custom-range-range-thumb-h: 18px;
 $custom-range-range-thumb-mt: -5px;
 $custom-range-range-thumb-bgc: #599cff;
 $custom-range-range-thumb-bo-raduis: 50%;
-$custom-range-range-thumb-transition: background-color .3s, box-shadow .4s;
+$custom-range-range-thumb-transition: background-color 0.3s, box-shadow 0.4s;
 // custom-range-range-thumb-onactive :
 $custom-range-range-thumb-shadow-onactive: 0 0 0 5px #0077ff50;
-// custom-range-slider-thumb : 
+// custom-range-slider-thumb :
 $custom-range-slider-thumb-onhover-bgc: #599bffea;
 $custom-range-slider-thumb-onactive-bgc: #599bffd7;
 // custom-range-range-track :
@@ -325,19 +325,19 @@ $custom-switch-label-before-h: 16px;
 $custom-switch-label-before-bgc: #fff;
 $custom-switch-label-before-mr: 10px;
 $custom-switch-label-before-p: 0 14px;
-$custom-switch-label-before-bo-raduis: 8px; 
-$custom-switch-label-before-bo: #c0d1e2 solid .8px;
-$custom-switch-label-before-transition: background-color .4s;
+$custom-switch-label-before-bo-raduis: 8px;
+$custom-switch-label-before-bo: #c0d1e2 solid 0.8px;
+$custom-switch-label-before-transition: background-color 0.4s;
 $custom-switch-label-after-dp: block;
-$custom-switch-label-after-position: absolute; 
+$custom-switch-label-after-position: absolute;
 $custom-switch-label-after-top: -1px;
 $custom-switch-label-after-left: 0;
 $custom-switch-label-after-h: 18px;
 $custom-switch-label-after-w: 18px;
-$custom-switch-label-after-bo: #c0d1e2 solid .8px;
+$custom-switch-label-after-bo: #c0d1e2 solid 0.8px;
 $custom-switch-label-after-bo-raduis: 50%;
 $custom-switch-label-after-bgc: #f1f6ff;
-$custom-switch-label-after-transition: left .2s, border .3s, box-shadow .2s;
+$custom-switch-label-after-transition: left 0.2s, border 0.3s, box-shadow 0.2s;
 // group-input :
 $group-input-w: 100%;
 $group-input-m: 6px auto;
@@ -347,18 +347,18 @@ $group-input-hr-m-not-first-last-child: unset;
 $group-input-hr-m-first-child: 0 6px 0 0;
 $group-input-hr-m-last-child: 0 0 0 6px;
 // group-input-vr :
-$group-input-vr-dir: column; 
-$group-input-vr-m: 6px 0; 
+$group-input-vr-dir: column;
+$group-input-vr-m: 6px 0;
 // --------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------- nav --------------------------------------------- :
 $nav-light: $light;
 $nav-light-blue: $light-blue;
 $nav-dark-blue: $dark-blue;
 $nav-dark: $dark;
-$nav-blue :$blue;
+$nav-blue: $blue;
 $nav-purple: $purple;
 // nav-color :
-// for-light-background 
+// for-light-background
 $light-links-color: #3c4253;
 $light-link-color: #626774;
 $light-link-color-hover: #525766;
@@ -373,7 +373,7 @@ $dark-link-color-no-active: #ffffffb0;
 // --------------------------------------------------------------------------------------------------------------
 
 // head-line :
-$bc-incloud-head-line: #ffffff; 
+$bc-incloud-head-line: #ffffff;
 
 // --------------------------------------------------------button------------------------------------------------- :
 // button size :
@@ -382,7 +382,7 @@ $bn-w-lg: 80px;
 $bn-w-md: 60px;
 $bn-w-sm: 40px;
 $bn-w-xs: 35px;
-// button padding : 
+// button padding :
 $bn-ptb-md: 7.5;
 $bn-prl-md: 4;
 // button font size :
@@ -390,264 +390,114 @@ $bn-fos-md: 2.5;
 // width & height pill :
 $min-height-pill: 1.282051282051282;
 // buttons group
-$bo-radius-group-hr-first-child: 5px 0 0 5px !default;
-$bo-radius-group-hr-last-child: 0 5px 5px 0 !default;
-$bo-radius-group-vr-first-child: 5px 5px 0 0 !default;
-$bo-radius-group-vr-last-child: 0 0 5px 5px !default;
+$bo-radius-group-hr-first-child: 4px 0 0 4px !default;
+$bo-radius-group-hr-last-child: 0 4px 4px 0 !default;
+$bo-radius-group-vr-first-child: 4px 4px 0 0 !default;
+$bo-radius-group-vr-last-child: 0 0 4px 4px !default;
 // ---------------------------------------------------------------------------------------------------------------
 
-// --------------------------------------------------------- media --------------------------------------------- : 
-$mxl: 1400px; // extra large desktop & laptop screen 
-$xl: 1100px; // desktop & laptop screen 
-$lg: 920px; // laptop  & tablet screen 
-$md: 740px; // tablet screen 
+// --------------------------------------------------------- media --------------------------------------------- :
+$mxl: 1400px; // extra large desktop & laptop screen
+$xl: 1100px; // desktop & laptop screen
+$lg: 920px; // laptop  & tablet screen
+$md: 740px; // tablet screen
 $sm: 560px; // phone screen
-$xs: 380px; // extra small > phone screen 
-$lxs: 380px;  // less than extra small
+$xs: 380px; // extra small > phone screen
+$lxs: 380px; // less than extra small
 // ---------------------------------------------------------------------------------------------------------------
-
 
 // ----------------------------------------------------------- maps ---------------------------------------------- :
 // map color & transparent color :
-$map-colorname-color-transparent :
-("blue", $blue, $blue-transparent)
-("purple", $purple, $purple-transparent)
-("pink", $pink, $pink-transparent)
-("red", $red, $red-transparent) 
-("brown", $brown, $brown-transparent)
-("tomato", $tomato, $tomato-transparent)
-("orange", $orange, $orange-transparent)
-("yellow", $yellow, $yellow-transparent) 
-("gold", $gold, $gold-transparent)
-("green", $green, $green-transparent)
-("teal", $teal, $teal-transparent)
-("cyan", $cyan, $cyan-transparent) 
-("light", $light, $light-transparent)
-("light-blue", $light-blue, $light-blue-transparent)
-("gray", $gray, $gray-transparent)
-("dark", $dark, $dark-transparent)
-("very-dark", $very-dark, $very-dark-transparent)
-("black", $black, $black-transparent) 
-("dark-blue", $dark-blue, $dark-blue-transparent)
-("transparent", $transparent, $transparent);
-
-
+$map-colorname-color-transparent: ("blue", $blue, $blue-transparent) ("purple", $purple, $purple-transparent)
+    ("pink", $pink, $pink-transparent) ("red", $red, $red-transparent) ("brown", $brown, $brown-transparent)
+    ("tomato", $tomato, $tomato-transparent) ("orange", $orange, $orange-transparent)
+    ("yellow", $yellow, $yellow-transparent) ("gold", $gold, $gold-transparent) ("green", $green, $green-transparent)
+    ("teal", $teal, $teal-transparent) ("cyan", $cyan, $cyan-transparent) ("light", $light, $light-transparent)
+    ("light-blue", $light-blue, $light-blue-transparent) ("gray", $gray, $gray-transparent)
+    ("dark", $dark, $dark-transparent) ("very-dark", $very-dark, $very-dark-transparent)
+    ("black", $black, $black-transparent) ("dark-blue", $dark-blue, $dark-blue-transparent)
+    ("transparent", $transparent, $transparent);
 
 // map color & transparent color :
-$map-colorname-transparent :
-("blue", $blue-transparent)
-("purple", $purple-transparent)
-("pink", $pink-transparent)
-("red", $red-transparent) 
-("brown", $brown-transparent)
-("tomato", $tomato-transparent)
-("orange", $orange-transparent)
-("yellow", $yellow-transparent) 
-("gold", $gold-transparent)
-("green", $green-transparent)
-("teal", $teal-transparent)
-("cyan", $cyan-transparent) 
-("light", $light-transparent)
-("light-blue", $light-blue-transparent)
-("gray", $gray-transparent)
-("dark", $dark-transparent)
-("very-dark", $very-dark-transparent)
-("black", $black-transparent) 
-("dark-blue", $dark-blue-transparent)
-("transparent", $transparent);
-
+$map-colorname-transparent: ("blue", $blue-transparent) ("purple", $purple-transparent) ("pink", $pink-transparent)
+    ("red", $red-transparent) ("brown", $brown-transparent) ("tomato", $tomato-transparent)
+    ("orange", $orange-transparent) ("yellow", $yellow-transparent) ("gold", $gold-transparent)
+    ("green", $green-transparent) ("teal", $teal-transparent) ("cyan", $cyan-transparent) ("light", $light-transparent)
+    ("light-blue", $light-blue-transparent) ("gray", $gray-transparent) ("dark", $dark-transparent)
+    ("very-dark", $very-dark-transparent) ("black", $black-transparent) ("dark-blue", $dark-blue-transparent)
+    ("transparent", $transparent);
 
 // map colors :
-$map-color: 
-("blue", $blue)
-("purple", $purple)
-("pink", $pink)
-("red", $red)
-("brown", $brown)
-("tomato", $tomato)
-("orange", $orange)
-("yellow", $yellow)
-("gold", $gold)
-("green", $green)
-("teal", $teal)
-("cyan", $cyan)
-("light", $light)
-("light-blue", $light-blue)
-("gray", $gray)
-("dark", $dark)
-("very-dark", $very-dark)
-("black", $black)
-("dark-blue", $dark-blue)
-("transparent", $transparent);
-
+$map-color: ("blue", $blue) ("purple", $purple) ("pink", $pink) ("red", $red) ("brown", $brown) ("tomato", $tomato)
+    ("orange", $orange) ("yellow", $yellow) ("gold", $gold) ("green", $green) ("teal", $teal) ("cyan", $cyan)
+    ("light", $light) ("light-blue", $light-blue) ("gray", $gray) ("dark", $dark) ("very-dark", $very-dark)
+    ("black", $black) ("dark-blue", $dark-blue) ("transparent", $transparent);
 
 // map texts style :
-$map-font-style: 
-(italic, normal, oblique);
+$map-font-style: (italic, normal, oblique);
 
 //map displays :
-$map-dis: 
-("flex", "block", "inline-block", "inline", "none", "inline-flex", "list-item");
+$map-dis: ("flex", "block", "inline-block", "inline", "none", "inline-flex", "list-item");
 
 // direction: row & column :
-$map-row-col-prefix: 
-("row") 
-("row-reverse") 
-("col") 
-("col-reverse");
+$map-row-col-prefix: ("row") ("row-reverse") ("col") ("col-reverse");
 
 // direction: row & column with prefix:
-$map-row-col-prefix-value: 
-("row", row) 
-("row-reverse", row-reverse) 
-("col", column) 
-("col-reverse", column-reverse);
+$map-row-col-prefix-value: ("row", row) ("row-reverse", row-reverse) ("col", column) ("col-reverse", column-reverse);
 
-$map-fle-wrap: 
-("wrap", "nowrap", "wrap-reverse");
+$map-fle-wrap: ("wrap", "nowrap", "wrap-reverse");
 
-$map-justify-align: 
-("items", "content", "self");
-
+$map-justify-align: ("items", "content", "self");
 
 // justify content :
-$map-justify-content: 
-("justify-content-start", flex-start, start) 
-("justify-content-end", flex-end, end)  
-("justify-content-center", center, center) 
-("justify-content-between", space-between, justify) 
-("justify-content-around", space-around, distribute);
+$map-justify-content: ("justify-content-start", flex-start, start) ("justify-content-end", flex-end, end)
+    ("justify-content-center", center, center) ("justify-content-between", space-between, justify)
+    ("justify-content-around", space-around, distribute);
 
+// align-items :
+$map-align-items: ("align-items-start", flex-start, start) ("align-items-end", flex-end, end)
+    ("align-items-center", center, center) ("align-items-baseline", baseline, baseline)
+    ("align-items-stretch", stretch, stretch);
 
-// align-items : 
-$map-align-items: 
-("align-items-start", flex-start, start) 
-("align-items-end", flex-end, end) 
-("align-items-center", center, center) 
-("align-items-baseline", baseline, baseline) 
-("align-items-stretch", stretch, stretch);
+// align-content :
+$map-align-content: ("align-content-start", flex-start, start) ("align-content-end", flex-end, end)
+    ("align-content-center", center, center) ("align-content-between", space-between, justify)
+    ("align-content-around", space-around, distribute) ("align-content-stretch", stretch, stretch);
 
-// align-content : 
-$map-align-content: 
-("align-content-start", flex-start, start) 
-("align-content-end", flex-end, end) 
-("align-content-center", center, center) 
-("align-content-between", space-between, justify) 
-("align-content-around",space-around, distribute) 
-("align-content-stretch", stretch, stretch);
+// align-self :
+$map-align-self: ("align-self-start", flex-start, start) ("align-self-end", flex-end, end)
+    ("align-self-center", center, center) ("align-self-auto", auto, auto) ("align-self-baseline", baseline, baseline)
+    ("align-self-stretch", stretch, stretch);
 
-// align-self : 
-$map-align-self: 
-("align-self-start", flex-start, start) 
-("align-self-end", flex-end, end) 
-("align-self-center", center, center) 
-("align-self-auto", auto, auto) 
-("align-self-baseline", baseline, baseline) 
-("align-self-stretch", stretch, stretch);
-
-$map-loop-justify-items: 
-(justify-content, $map-justify-content) 
-(align-items, $map-align-items)
-(align-content, $map-align-content) 
-(align-self, $map-align-self);
+$map-loop-justify-items: (justify-content, $map-justify-content) (align-items, $map-align-items)
+    (align-content, $map-align-content) (align-self, $map-align-self);
 
 // map margin :
-$map-margin: 
-("m", margin) 
-("mt", margin-top) 
-("mr", margin-right) 
-("mb", margin-bottom) 
-("ml", margin-left);
+$map-margin: ("m", margin) ("mt", margin-top) ("mr", margin-right) ("mb", margin-bottom) ("ml", margin-left);
 
 // map padding :
-$map-padding: 
-("p", padding) 
-("pt", padding-top) 
-("pr", padding-right) 
-("pb", padding-bottom) 
-("pl", padding-left);
+$map-padding: ("p", padding) ("pt", padding-top) ("pr", padding-right) ("pb", padding-bottom) ("pl", padding-left);
 
 // direction :
-$map-justify-dir: 
-(top, left, center);
+$map-justify-dir: (top, left, center);
 
-$map-dir: 
-(top, right, bottom, left);
+$map-dir: (top, right, bottom, left);
 // all direction :
-$map-all-dir: 
-("right-top", flex-end,flex-start) 
-("center-top", center, flex-start) 
-("left-top", flex-start, flex-start) 
-("right-center", flex-end, center) 
-("center-center", center, center) 
-("left-center", flex-start, center) 
-("right-bottom", flex-end, flex-end) 
-("center-bottom", center, flex-end) 
-("left-bottom", flex-start, flex-end);
+$map-all-dir: ("right-top", flex-end, flex-start) ("center-top", center, flex-start)
+    ("left-top", flex-start, flex-start) ("right-center", flex-end, center) ("center-center", center, center)
+    ("left-center", flex-start, center) ("right-bottom", flex-end, flex-end) ("center-bottom", center, flex-end)
+    ("left-bottom", flex-start, flex-end);
 
-// --------------------------------------------------- screens & sizes ------------------------------------------- :  
-$map-screen-size-name-type: 
-($lxs, lxs, max) 
-($xs, xs, min) 
-($sm, sm, min) 
-($md, md, min) 
-($lg, lg, min) 
-($xl, xl, min)
-($mxl, mxl, min);
+// --------------------------------------------------- screens & sizes ------------------------------------------- :
+$map-screen-size-name-type: ($lxs, lxs, max) ($xs, xs, min) ($sm, sm, min) ($md, md, min) ($lg, lg, min) ($xl, xl, min)
+    ($mxl, mxl, min);
 
-$map-screen-size-type: 
-($lxs, lxs, max) 
-($xs, min) 
-($sm, min) 
-($md, min) 
-($lg, min) 
-($xl, min)
-($mxl, min);
+$map-screen-size-type: ($lxs, lxs, max) ($xs, min) ($sm, min) ($md, min) ($lg, min) ($xl, min) ($mxl, min);
 
-$map-screen-size: 
-($lxs) 
-($xs) 
-($sm) 
-($md) 
-($lg) 
-($xl) 
-($mxl);
+$map-screen-size: ($lxs) ($xs) ($sm) ($md) ($lg) ($xl) ($mxl);
 
-$map-screen-name: 
-(lxs) 
-(xs) 
-(sm) 
-(md) 
-(lg) 
-(xl)
-(mxl);
+$map-screen-name: (lxs) (xs) (sm) (md) (lg) (xl) (mxl);
 
 // ------------------------------------------------------------------------------------------------------------------
 
 // ------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

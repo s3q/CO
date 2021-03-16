@@ -1,9 +1,9 @@
-.media { 
+.media {
     width: 98%;
     margin: 4px auto;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: column;;
+    -ms-flex-direction: column;
     flex-direction: column;
     -ms-flex-pack: center;
     justify-content: center;
@@ -25,7 +25,8 @@
         }
     }
 }
-.media-group, .media-group-hr {
+.media-group,
+.media-group-hr {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: row;
@@ -55,11 +56,14 @@
 }
 
 @media (max-width: $sm) {
-    .media-foot {font-size: 14px;}
+    .media-foot {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: $md) {
-    .media-group, .media-group-hr {
+    .media-group,
+    .media-group-hr {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }

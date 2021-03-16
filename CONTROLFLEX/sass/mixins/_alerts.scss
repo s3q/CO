@@ -1,29 +1,33 @@
 @mixin make-alert($bgc, $color, $fos, $p, $w, $m, $bo-radius) {
-    position: relative; 
-    background-color: $bgc; 
-    color: $color; 
-    font-size: $fos; 
-    text-align: left; 
-    &:lang(ar) {text-align: right !important;} 
-    padding: $p; 
-    max-width: 100%; 
-    width: $w; 
-    margin: $m; 
-    height: auto; 
+    position: relative;
+    background-color: $bgc;
+    color: $color;
+    font-size: $fos;
+    text-align: left;
+    &:lang(ar) {
+        text-align: right !important;
+    }
+    padding: $p;
+    max-width: 100%;
+    width: $w;
+    margin: $m;
+    height: auto;
     border-radius: $bo-radius;
 }
 
 @mixin make-alert-foot($dp, $flex-dir, $justify-content, $mt, $bot, $p, $p-content) {
     display: -ms-flexbox;
-    display: $dp; 
+    display: $dp;
     -webkit-flex-direction: $flex-dir;
     -ms-flex-direction: $flex-dir;
-    flex-direction: $flex-dir; 
+    flex-direction: $flex-dir;
     -ms-flex-pack: $justify-content;
-    justify-content: $justify-content; 
-    text-align: left; 
-    margin-top: $mt; 
-    border-top: $bot; 
-    padding: $p; 
-    > * {padding: $p-content;}
+    justify-content: $justify-content;
+    text-align: left;
+    margin-top: $mt;
+    border-top: $bot;
+    padding: $p;
+    > * {
+        padding: $p-content;
+    }
 }

@@ -9,8 +9,8 @@
   border-right: 4px solid $purple;
   border-bottom: 4px solid #e5e5e5b0;
   border-left: 4px solid #e5e5e5b0;
-  -webkit-animation: spinner .75s linear infinite;
-  animation: spinner .75s linear infinite;
+  -webkit-animation: spinner 0.75s linear infinite;
+  animation: spinner 0.75s linear infinite;
 }
 
 .bo-quarter {
@@ -27,14 +27,12 @@
   border-left: 4px solid #e5e5e5b0;
 }
 
-
 .bo-eighth {
   border-top: 4px solid $purple;
   border-right: 4px solid $purple;
   border-bottom: 4px solid $purple;
   border-left: 4px solid #e5e5e5b0;
 }
-
 
 .bo-fill {
   border-top: 4px solid $purple;
@@ -76,7 +74,6 @@
     transform: rotate(360deg);
   }
 }
-
 
 @each $color-name, $color-value in $map-color {
   .spinner-#{$color-name} {
@@ -146,8 +143,8 @@
   height: 32px;
   vertical-align: text-bottom;
   background-color: $purple;
-  -webkit-animation: emersion .8s cubic-bezier(0.53, 1.38, 0, 1.4) infinite both;
-  animation: emersion .8s cubic-bezier(0.53, 1.38, 0, 1.4) infinite both;
+  -webkit-animation: emersion 0.8s cubic-bezier(0.53, 1.38, 0, 1.4) infinite both;
+  animation: emersion 0.8s cubic-bezier(0.53, 1.38, 0, 1.4) infinite both;
 }
 
 @-webkit-keyframes emersion {
@@ -166,7 +163,7 @@
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
     transform: scale(1.1);
-    opacity: .8;
+    opacity: 0.8;
   }
 }
 
@@ -186,7 +183,6 @@
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
     transform: scale(1.1);
-    opacity: .8;
+    opacity: 0.8;
   }
 }
-

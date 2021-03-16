@@ -1,107 +1,75 @@
 .card {
-    
     @include make-card(
-
         // width :
-        $card-w, 
-
+        $card-w,
         //margin :
-        $card-m, 
-
+        $card-m,
         //radius :
         $card-bo-radius,
-        
         // background-color :
         $card-bgc,
-
         // border :
         $card-bo
     );
-
 }
 
 .card-head {
-
     @include make-card-head(
-
-        // display 
+        // display
         $card-head-dp,
-        
         // justify-content :
         $card-head-justify-content,
-        
         // align-items :
-        $card-head-align-items, 
-
+        $card-head-align-items,
         // width :
         $card-head-w,
-        
         // font-size :
         $card-head-fos,
-        
         // padding :
         $card-head-p
     );
-
 }
 
 .card-body {
-
     @include make-card-body(
-
         // overflow :
         $card-body-overflow,
-
         // text-align :
         $card-body-text-align,
-        
         // padding :
         $card-body-p
     );
 
-    img{
+    img {
         max-width: 100%;
         max-height: 100%;
     }
 }
 
 .card-foot {
-
     @include make-card-foot(
         // padding :
-        $card-foot-p, 
-        
+        $card-foot-p,
         // width :
-        $card-foot-w, 
-        
+        $card-foot-w,
         // font-size :
-        $card-foot-fos, 
-        
+        $card-foot-fos,
         // border-bottom :
-        $card-foot-bot);
-
+        $card-foot-bot
+    );
 }
 
-
-@each $color-name , $color-value, $color-transparent in $map-colorname-color-transparent {
-
+@each $color-name, $color-value, $color-transparent in $map-colorname-color-transparent {
     .card-#{$color-name} {
-
         @include make-cards-color(
-            
-            // border-color-left : 
-            $color-value, 
-
+            // border-color-left :
+            $color-value,
             // border-color-right :
-            $color-transparent, 
-
+            $color-transparent,
             // border-color-top :
-            $color-transparent, 
-
+            $color-transparent,
             // border-color-bottom :
             $color-transparent
         );
-
     }
-
 }
