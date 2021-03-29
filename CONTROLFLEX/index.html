@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="controlfex.css">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+    <style>
+        * {
+            user-select: none;
+        }
+    </style>
 </head>
+
 <body>
     <div class="path">
         <ul>
@@ -57,22 +65,26 @@
         </div>
     </form>
 
-    <div data-target="div1" role="switch">
-        <button class="bn outline-dark">button</button>
-        <button class="bn bn-dark">button</button>
-        <button class="bn bn-dark">button</button>
+    <div class="mt-10">  
+        <div data-target="div1" role="switch">
+            <button class="bn outline-dark">button</button>
+            <button class="bn bn-dark">button</button>
+            <button class="bn bn-dark">button</button>
+        </div>
+        <div id="div1">
+            <div>
+                1
+            </div>
+            <div>
+                2
+            </div>
+            <div>
+                3
+            </div>
+        </div>
     </div>
-    <div id="div1">
-        <div>
-            ggggggggggg
-        </div>
-        <div>
-            jjjjjjjjjj
-        </div>
-        <div>
-            ddddddddddd
-        </div>
-    </div>
+
+
 
     <div class="notice-window bgc-red">
         <div class="notice-window-head">
@@ -84,33 +96,67 @@
     </div>
 
 
-    <mark>1234</mark>
+    <!-- <mark>1234</mark> -->
     <pre class="custom-pre">
         sdjskdhoashfhsdhf
     </pre>
 
-    <button class="bn pill-lg" aria-controls="alert-window" data-fade="alert" data-duration="100">Dowload <i class="fas fa-arrow-down text-sm ml-6"></i></button>
+    <button class="bn pill-lg" aria-controls="alert-window" data-fade="alert" data-duration="100" id="checker">Dowload
+        <i class="fas fa-arrow-down text-sm ml-6"></i></button>
 
     <!--alert-window-->
-    <div class="backdrop-window" id="alert-window" aria-expanded="false" data-event="click" style="display: none;" role="alert">
+    <div class="backdrop-window" id="alert-window" aria-expanded="false" data-event="click" style="display: none;"
+        role="alert">
         <div class="alert-window">
             <div class="alert-window-head">
-                <button aria-controls="alert-window" data-fade="alert" data-duration="100" class="bn-close"><i class="fas fa-times"></i></button>
+                <button aria-controls="alert-window" data-fade="alert" data-duration="100" class="bn-close"><i
+                        class="fas fa-times"></i></button>
                 <span class="color-red">DOWNLOAD</span>
             </div>
             <div class="mt-10">
                 <p>
-                    Download a website development package that helps you easily build your site .. This package contains the library files without the source! <a href="download.html" class="color-red">Package with source</a> 
+                    Download a website development package that helps you easily build your site .. This package
+                    contains the library files without the source! <a href="download.html" class="color-red">Package
+                        with source</a>
                 </p>
 
-                <a class="bn-block bn-dark-blue" style="margin: 20px auto;" href="https://github.com/CONTROLFLEX/CONTROLFLEX.git">Download <i class="fas fa-arrow-down text-sm ml-6"></i></a>
+                <a class="bn-block bn-dark-blue" style="margin: 20px auto;"
+                    href="https://github.com/CONTROLFLEX/CONTROLFLEX.git">Download <i
+                        class="fas fa-arrow-down text-sm ml-6"></i></a>
             </div>
         </div>
     </div>
 
+    <iframe src="" frameborder="0">
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            gggg
+        </body>
+        </html>
+    </iframe>
 
-    <!-- <script src="dist/js/jquery.min.js"></script> -->
+    <span class="p-20 bgc-dark absolute" id="test">
+
+    </span>
+
+    <script>
+   
+        // adoptNode
+        // importNode
+
+    </script>
+
+    <script src="dist/js/jquery.min.js"></script>
     <!-- <script src="dist/js/co.min.js"></script> -->
     <script src="dist/js/co.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

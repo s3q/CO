@@ -1,0 +1,39 @@
+1615903224860	geckodriver	INFO	Listening on 127.0.0.1:51055
+1615903227902	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\s3q\\AppData\\Local\\Temp\\rust_mozprofileZadAHp"
+*** You are running in headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615903231193	Marionette	INFO	Listening on port 54530
+1615903231600	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: file:///C:/Users/s3q/Documents/GitHub/CO/CONTROLFLEX/script.js, line 4: TypeError: can't access property "addEventListener", checker is null
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1:50844
+1615903293272	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\s3q\\AppData\\Local\\Temp\\rust_mozprofileDLym90"
+*** You are running in headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615903296144	Marionette	INFO	Listening on port 64227
+1615903296486	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: file:///C:/Users/s3q/Documents/GitHub/CO/CONTROLFLEX/script.js, line 4: TypeError: can't access property "addEventListener", checker is null
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1:61468
+1615903313271	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\s3q\\AppData\\Local\\Temp\\rust_mozprofileVFS41a"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615903317718	Marionette	INFO	Listening on port 60925
+1615903318079	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: file:///C:/Users/s3q/Documents/GitHub/CO/CONTROLFLEX/script.js, line 4: TypeError: can't access property "addEventListener", checker is null
+JavaScript error: resource://devtools/client/framework/devtools.js, line 734: TypeError: can't access property "inspectorFront", inspector is undefined
+JavaScript error: file:///C:/Users/s3q/Documents/GitHub/CO/CONTROLFLEX/script.js, line 4: TypeError: can't access property "addEventListener", checker is null
+JavaScript error: file:///C:/Users/s3q/Documents/GitHub/CO/CONTROLFLEX/script.js, line 4: TypeError: can't access property "addEventListener", checker is null
+1615903398796	Marionette	INFO	Stopped listening on port 60925
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615903407179	geckodriver	INFO	Listening on 127.0.0.1:53404
+1615903410267	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\s3q\\AppData\\Local\\Temp\\rust_mozprofilegUfek3"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615903413788	Marionette	INFO	Listening on port 49788
+1615903413987	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 11092, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1615903853039	Marionette	INFO	Stopped listening on port 49788
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
